@@ -4,10 +4,49 @@
   --mini-gap: 0.25rem; /* 4px */
   --standard-gap: 0.5rem; /* 8px */
   --large-gap: 1rem; /* 16px */
+  --border-gray: rgb(212, 212, 216);
+}
+
+.gap-m {
+  gap: var(--mini-gap);
+}
+
+.m-m {
+  margin: var(--mini-gap);
+}
+
+.mt-m {
+  margin-top: var(--mini-gap);
+}
+
+.mb-m {
+  margin-bottom: var(--mini-gap);
+}
+
+.mv-m {
+  margin-top: var(--mini-gap);
+  margin-bottom: var(--mini-gap);
+}
+
+.mh-m {
+  margin-left: var(--mini-gap);
+  margin-right: var(--mini-gap);
+}
+
+.ml-m {
+  margin-left: var(--mini-gap);
+}
+
+.mr-m {
+  margin-right: var(--mini-gap);
 }
 
 .gap-s {
   gap: var(--standard-gap);
+}
+
+.m-s {
+  margin: var(--standard-gap);
 }
 
 .mt-s {
@@ -32,12 +71,16 @@
   margin-left: var(--standard-gap);
 }
 
-.ml-r {
-  margin-left: auto;
+.mr-s {
+  margin-right: var(--standard-gap);
 }
 
 .gap-l {
   gap: var(--large-gap);
+}
+
+.m-l {
+  margin: var(--large-gap);
 }
 
 .mt-l {
@@ -60,6 +103,10 @@
 
 .ml-l {
   margin-left: var(--large-gap);
+}
+
+.mr-l {
+  margin-right: var(--large-gap);
 }
 
 .text-sm {
@@ -104,8 +151,7 @@ input.alu {
   outline: none;
   border-style: solid;
   font-family: var(--font-mono);
-  --tw-border-opacity: 1;
-  border-color: rgb(212 212 216 / var(--tw-border-opacity));
+  border-color: var(--border-gray);
 }
 
 input.alu[type="text"] {
@@ -115,7 +161,6 @@ input.alu[type="text"] {
 select.alu {
   padding-block: unset;
   padding-inline: unset;
-
   padding: 0.375rem 0.5rem;
   border-width: 1px;
   line-height: 1.5rem;
@@ -123,9 +168,7 @@ select.alu {
   outline: none;
   border-style: solid;
   font-family: var(--font-mono);
-  --tw-border-opacity: 1;
-  border-color: rgb(212, 212, 216);
-
+  border-color: var(--border-gray);
   -webkit-appearance: none;
   -moz-appearance: none;
   background: transparent;
@@ -151,7 +194,7 @@ button.primary.alu {
 button.alu {
   padding: 0.5rem 1rem;
   background: white;
-  border: 1px solid rgb(212, 212, 216);
+  border: 1px solid var(--border-gray);
   color: black;
   font-weight: 600;
 
@@ -197,13 +240,11 @@ h6.alu {
 .row.alu {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--standard-gap);
 }
 
 .inverted-row.alu {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--standard-gap);
   flex-direction: row-reverse;
 }
 
@@ -211,7 +252,6 @@ h6.alu {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--standard-gap);
 }
 
 .debug.alu {
@@ -237,15 +277,13 @@ textarea.alu {
   outline: none;
   border-style: solid;
   font-family: var(--font-mono);
-  --tw-border-opacity: 1;
-  border-color: rgb(212 212 216 / var(--tw-border-opacity));
+  border-color: var(--border-gray);
 }
 
 dialog.alu {
   background-color: white;
-  border: 1px solid rgb(212, 212, 216);
+  border: 1px solid var(--border-gray);
   color: black;
-  height: -moz-fit-content;
   height: fit-content;
   margin: auto;
   padding: var(--large-gap);

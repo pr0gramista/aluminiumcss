@@ -16,6 +16,44 @@
       <p>
         Aluminum CSS is a lightweight mini CSS framework that is easy to use and customize.
       </p>
+      <h3 class="alu">Margins, paddings, gaps</h3>
+      <p>
+        Aluminum CSS uses a consistent spacing system that ensures good readability and visual balance.
+        There are three sizes: mini, standard and large. The utilities are similar to Tailwind CSS.
+      </p>
+      <div class="alu row gap-m mb-m"/>
+        <div class="alu debug">
+          
+        </div>
+        <div class="alu debug">
+          
+        </div>
+        <div class="alu debug">
+          
+        </div>
+      </div>
+      <div class="alu row gap-s mb-s"/>
+        <div class="alu debug">
+          
+        </div>
+        <div class="alu debug">
+          
+        </div>
+        <div class="alu debug">
+          
+        </div>
+      </div>
+      <div class="alu row gap-l mb-l"/>
+        <div class="alu debug">
+          
+        </div>
+        <div class="alu debug">
+          
+        </div>
+        <div class="alu debug">
+          
+        </div>
+      </div>
       <h3 class="alu">
         Input
       </h3>
@@ -32,7 +70,7 @@
       </p>
       <pre class="alu"><code>&lt;textarea class="alu" placeholder="Enter your message"&gt;&lt;/textarea&gt;</code></pre>
       <textarea class="alu" placeholder="Enter your message"></textarea>
-      <h3>
+      <h3 class="alu">
         Checkbox
       </h3>
       <p>
@@ -40,7 +78,7 @@
       </p>
       <pre class="alu"><code>&lt;input class="alu" type="checkbox" /&gt;</code></pre>
       <input class="alu" type="checkbox" />
-      <h3>
+      <h3 class="alu">
         Radio
       </h3>
       <p>
@@ -64,30 +102,38 @@
       </p>
       <pre class="alu"><code>&lt;button class="alu primary"&gt;Primary&lt;/button&gt;
 &lt;button class="alu"&gt;Secondary&lt;/button&gt;</code></pre>
-      <div class="alu row">
-        <button class="alu primary">Primary</button>
-        <button class="alu">Secondary</button>
-      </div>
+        <div class="alu row gap-s">
+          <button class="alu primary">Primary</button>
+          <button class="alu">Secondary</button>
+        </div>
+        <h3 class="alu">
+          Select
+        </h3>
+        <p>
+          Select is a dropdown element
+        </p>
+        <pre class="alu"><code>&lt;select class="alu"&gt;
+          &lt;option&gt;Option 1&lt;/option&gt;
+          &lt;option&gt;Option 2&lt;/option&gt;
+          &lt;option&gt;Option 3&lt;/option&gt;
+          &lt;/select&gt;</code></pre>
+        <select class="alu">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        <p>
+          Here is another paragraph of text. I can write anything I want here,
+          too.
+        </p>
       <h3 class="alu">
-        Select
+        Debug
       </h3>
       <p>
-        Select is a dropdown element
+        Debug is a div element with a red border. Useful for debugging.
       </p>
-      <pre class="alu"><code>&lt;select class="alu"&gt;
-  &lt;option&gt;Option 1&lt;/option&gt;
-  &lt;option&gt;Option 2&lt;/option&gt;
-  &lt;option&gt;Option 3&lt;/option&gt;
-&lt;/select&gt;</code></pre>
-      <select class="alu">
-        <option>Option 1</option>
-        <option>Option 2</option>
-        <option>Option 3</option>
-      </select>
-      <p>
-        Here is another paragraph of text. I can write anything I want here,
-        too.
-      </p>
+      <pre class="alu"><code>&lt;div class="alu debug"&gt;Debug&lt;/div&gt;</code></pre>
+      <div class="alu debug">Debug</div>
       <h3 class="alu">
         Row
       </h3>
@@ -95,14 +141,14 @@
         Row is a flex container
       </p>
       <p>
-        <pre class="alu"><code>&lt;div class="alu row"&gt;
+        <pre class="alu"><code>&lt;div class="alu row gap-s"&gt;
   &lt;div class="alu debug"&gt;Item 1&lt;/div&gt;
   &lt;div class="alu debug"&gt;Item 2&lt;/div&gt;
   &lt;div class="alu debug"&gt;Item 3&lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </p>
       <div>
-        <div class="alu row">
+        <div class="alu row gap-s">
           <div class="alu debug">Item 1</div>
           <div class="alu debug">Item 2</div>
           <div>Item 3</div>
@@ -115,14 +161,14 @@
         Centered row is a flex container with items centered
       </p>
       <p>
-        <pre class="alu"><code>&lt;div class="alu centered-row"&gt;
+        <pre class="alu"><code>&lt;div class="alu centered-row gap-s"&gt;
   &lt;div class="alu debug"&gt;Item 1&lt;/div&gt;
   &lt;div class="alu debug"&gt;Item 2&lt;/div&gt;
   &lt;div&gt;Item 3&lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </p>
       <div>
-        <div class="alu centered-row">
+        <div class="alu centered-row gap-s">
           <div class="alu debug">Item 1</div>
           <div class="alu debug">Item 2</div>
           <div>Item 3</div>
@@ -157,7 +203,7 @@
         Add new item
       </h5>
       <input class="alu mb-s" type="text" placeholder="Enter item name" />
-      <div class="alu inverted-row">
+      <div class="alu inverted-row gap-s">
         <button class="alu primary" onclick="document.getElementById('dialog-example').close()">Add</button>
         <button class="alu" onclick="document.getElementById('dialog-example').close()">Cancel</button>
       </div>
