@@ -206,15 +206,9 @@ select.alu {
 }
 
 button.primary.alu {
-  padding: 0.5rem 1rem;
   background: black;
   color: white;
   border: none;
-  font-weight: 600;
-
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  cursor: pointer;
 }
 
 button.alu {
@@ -223,10 +217,10 @@ button.alu {
   border: 1px solid var(--border-gray);
   color: black;
   font-weight: 600;
-
   font-size: 0.875rem;
   line-height: 1.25rem;
   cursor: pointer;
+  font-family: var(--font-primary);
 }
 
 h1.alu {
