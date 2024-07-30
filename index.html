@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aluminum CSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="dist/aluminium.min.css" />
+  </head>
+  <body class="alu">
+    <div class="alu container-padded">
+      <h1 class="alu">Aluminum CSS</h1>
+      <p>
+        Aluminum CSS is a lightweight mini CSS framework that is easy to use and customize.
+      </p>
+      <h3 class="alu">
+        Input
+      </h3>
+      <p>
+        Input is a text field element
+      </p>
+      <pre class="alu"><code>&lt;input class="alu" type="text" placeholder="Enter your name" /&gt;</code></pre>
+      <input class="alu" type="text" placeholder="Enter your name" />
+      <h3 class="alu">
+        Textarea
+      </h3>
+      <p>
+        Textarea is a multi-line text field element
+      </p>
+      <pre class="alu"><code>&lt;textarea class="alu" placeholder="Enter your message"&gt;&lt;/textarea&gt;</code></pre>
+      <textarea class="alu" placeholder="Enter your message"></textarea>
+      <h3>
+        Checkbox
+      </h3>
+      <p>
+        Checkbox is a checkbox element
+      </p>
+      <pre class="alu"><code>&lt;input class="alu" type="checkbox" /&gt;</code></pre>
+      <input class="alu" type="checkbox" />
+      <h3>
+        Radio
+      </h3>
+      <p>
+        Radio is a radio button element
+      </p>
+      <pre class="alu"><code>&lt;input class="alu" type="radio" /&gt;</code></pre>
+      <input class="alu" type="radio" />
+      <h3 class="alu">
+        Range
+      </h3>
+      <p>
+        Range is a slider element
+      </p>
+      <pre class="alu"><code>&lt;input class="alu" type="range" /&gt;</code></pre>
+      <input class="alu" type="range" />
+      <h3 class="alu">
+        Button
+      </h3>
+      <p>
+        Button is a clickable element
+      </p>
+      <pre class="alu"><code>&lt;button class="alu primary"&gt;Primary&lt;/button&gt;
+&lt;button class="alu"&gt;Secondary&lt;/button&gt;</code></pre>
+      <div class="alu row">
+        <button class="alu primary">Primary</button>
+        <button class="alu">Secondary</button>
+      </div>
+      <h3 class="alu">
+        Select
+      </h3>
+      <p>
+        Select is a dropdown element
+      </p>
+      <pre class="alu"><code>&lt;select class="alu"&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+  &lt;option&gt;Option 3&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+      <select class="alu">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </select>
+      <p>
+        Here is another paragraph of text. I can write anything I want here,
+        too.
+      </p>
+      <h3 class="alu">
+        Row
+      </h3>
+      <p>
+        Row is a flex container
+      </p>
+      <p>
+        <pre class="alu"><code>&lt;div class="alu row"&gt;
+  &lt;div class="alu debug"&gt;Item 1&lt;/div&gt;
+  &lt;div class="alu debug"&gt;Item 2&lt;/div&gt;
+  &lt;div class="alu debug"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </p>
+      <div>
+        <div class="alu row">
+          <div class="alu debug">Item 1</div>
+          <div class="alu debug">Item 2</div>
+          <div>Item 3</div>
+        </div>
+      </div>
+      <h3 class="alu">
+        Centered row
+      </h3>
+      <p>
+        Centered row is a flex container with items centered
+      </p>
+      <p>
+        <pre class="alu"><code>&lt;div class="alu centered-row"&gt;
+  &lt;div class="alu debug"&gt;Item 1&lt;/div&gt;
+  &lt;div class="alu debug"&gt;Item 2&lt;/div&gt;
+  &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </p>
+      <div>
+        <div class="alu centered-row">
+          <div class="alu debug">Item 1</div>
+          <div class="alu debug">Item 2</div>
+          <div>Item 3</div>
+        </div>
+      </div>
+    </div>
+    <h3 class="alu">
+      Container
+    </h3>
+    <p>
+      Container is just a div with maximum width and margin auto
+    </p>
+    <p>
+      Note: This isn't in the container div above to show that it actually works
+    </p>
+    <p>
+      <pre class="alu"><code>&lt;div class="alu container"&gt;Hello, world!&lt;/div&gt;
+&lt;div class="alu container-padded"&gt;Check padding on small window size.&lt;/div&gt;</code></pre>
+    </p>
+    <div class="alu container">Hello, world!</div>
+    <div class="alu container-padded">Check padding on small window size.</div>
+  </div>
+  <div class="alu container-padded">
+    <h3 class="alu">
+      Dialog
+    </h3>
+    <p>
+      Dialog is a modal dialog element
+    </p>
+    <dialog id="dialog-example" class="alu" style="min-width: 400px;">
+      <h5 class="alu mv-s mb-l">
+        Add new item
+      </h5>
+      <input class="alu mb-s" type="text" placeholder="Enter item name" />
+      <div class="alu inverted-row">
+        <button class="alu primary" onclick="document.getElementById('dialog-example').close()">Add</button>
+        <button class="alu" onclick="document.getElementById('dialog-example').close()">Cancel</button>
+      </div>
+    </dialog>
+    <button class="alu primary" onclick="document.getElementById('dialog-example').showModal()">Open dialog</button>
+  </body>
+</html>
