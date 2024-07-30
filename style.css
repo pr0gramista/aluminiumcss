@@ -1,10 +1,36 @@
 :root {
-  --font-primary: "Noto Sans", sans-serif;
+  --font-primary: "Noto Sans", Arial, Helvetica, sans-serif;
   --font-mono: "Noto Sans Mono", monospace;
   --mini-gap: 0.25rem; /* 4px */
   --standard-gap: 0.5rem; /* 8px */
   --large-gap: 1rem; /* 16px */
   --border-gray: rgb(212, 212, 216);
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mh-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mv-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .gap-m {
@@ -239,12 +265,10 @@ h6.alu {
 
 .row.alu {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .inverted-row.alu {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row-reverse;
 }
 
