@@ -113,10 +113,10 @@
           Select is a dropdown element
         </p>
         <pre class="alu"><code>&lt;select class="alu"&gt;
-          &lt;option&gt;Option 1&lt;/option&gt;
-          &lt;option&gt;Option 2&lt;/option&gt;
-          &lt;option&gt;Option 3&lt;/option&gt;
-          &lt;/select&gt;</code></pre>
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+  &lt;option&gt;Option 3&lt;/option&gt;
+&lt;/select&gt;</code></pre>
         <select class="alu">
           <option>Option 1</option>
           <option>Option 2</option>
@@ -155,20 +155,60 @@
         </div>
       </div>
       <h3 class="alu">
-        Centered row
+        Column
       </h3>
       <p>
-        Centered row is a flex container with items centered
+        Column is a flex container
       </p>
       <p>
-        <pre class="alu"><code>&lt;div class="alu centered-row gap-s"&gt;
+        <pre class="alu"><code>&lt;div class="alu column gap-s"&gt;
+  &lt;div class="alu debug"&gt;Item 1&lt;/div&gt;
+  &lt;div class="alu debug"&gt;Item 2&lt;/div&gt;
+  &lt;div class="alu debug"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </p>
+      <div>
+        <div class="alu column gap-s">
+          <div class="alu debug">Item 1</div>
+          <div class="alu debug">Item 2</div>
+          <div>Item 3</div>
+        </div>
+      </div>
+      <h3 class="alu">
+        Centered row/column
+      </h3>
+      <p>
+        Centered items applies: justify-content: center; align-items: center;
+      </p>
+      <p>
+        <pre class="alu"><code>&lt;div class="alu row centered gap-s"&gt;
   &lt;div class="alu debug"&gt;Item 1&lt;/div&gt;
   &lt;div class="alu debug"&gt;Item 2&lt;/div&gt;
   &lt;div&gt;Item 3&lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </p>
       <div>
-        <div class="alu centered-row gap-s">
+        <div class="alu row centered gap-s">
+          <div class="alu debug">Item 1</div>
+          <div class="alu debug">Item 2</div>
+          <div>Item 3</div>
+        </div>
+      </div>
+      <h3 class="alu">
+        Inverted row/column
+      </h3>
+      <p>
+        Inverts the order of items in a row/column
+      </p>
+      <p>
+        <pre class="alu"><code>&lt;div class="alu column inverted gap-s"&gt;
+  &lt;div class="alu debug"&gt;Item 1&lt;/div&gt;
+  &lt;div class="alu debug"&gt;Item 2&lt;/div&gt;
+  &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </p>
+      <div>
+        <div class="alu column inverted gap-s">
           <div class="alu debug">Item 1</div>
           <div class="alu debug">Item 2</div>
           <div>Item 3</div>
@@ -198,6 +238,17 @@
     <p>
       Dialog is a modal dialog element
     </p>
+    <pre><code>&lt;dialog class="alu" style="min-width: 400px;"&gt;
+  &lt;h5 class="alu mv-s mb-l"&gt;
+    Add new item
+  &lt;/h5&gt;
+  &lt;input class="alu mb-s" type="text" placeholder="Enter item name" /&gt;
+  &lt;div class="alu inverted-row gap-s"&gt;
+    &lt;button class="alu primary" onclick="document.getElementById('dialog-example').close()"&gt;Add&lt;/button&gt;
+    &lt;button class="alu" onclick="document.getElementById('dialog-example').close()"&gt;Cancel&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;
+&lt;button class="alu primary" onclick="document.getElementById('dialog-example').showModal()"&gt;Open dialog&lt;/button&gt;</code></pre>
     <dialog id="dialog-example" class="alu" style="min-width: 400px;">
       <h5 class="alu mv-s mb-l">
         Add new item

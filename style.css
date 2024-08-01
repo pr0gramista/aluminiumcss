@@ -261,13 +261,20 @@ h6.alu {
   display: flex;
 }
 
-.inverted-row.alu {
+.column.alu {
   display: flex;
+  flex-direction: column;
+}
+
+.row.inverted.alu {
   flex-direction: row-reverse;
 }
 
-.centered-row.alu {
-  display: flex;
+.column.inverted.alu {
+  flex-direction: column-reverse;
+}
+
+.centered.alu {
   justify-content: center;
   align-items: center;
 }
