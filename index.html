@@ -11,113 +11,154 @@
     <link rel="stylesheet" type="text/css" href="dist/aluminium.min.css" />
   </head>
   <body class="alu">
-    <div class="alu container-padded">
-      <h1 class="alu">Aluminum CSS</h1>
+    <div class="container-padded">
+      <h1>Aluminum CSS</h1>
       <p>
         Aluminum CSS is a lightweight mini CSS framework that is easy to use and customize.
       </p>
-      <h3 class="alu">Margins, paddings, gaps</h3>
+      <h3>Margins, paddings, gaps</h3>
       <p>
         Aluminum CSS uses a consistent spacing system that ensures good readability and visual balance.
         There are three sizes: mini, standard and large. The utilities are similar to Tailwind CSS.
       </p>
-      <div class="alu row gap-m mb-m"/>
-        <div class="alu debug">
+      <div class="row gap-m mb-m"/>
+        <div class="debug">
           
         </div>
-        <div class="alu debug">
+        <div class="debug">
           
         </div>
-        <div class="alu debug">
-          
-        </div>
-      </div>
-      <div class="alu row gap-s mb-s"/>
-        <div class="alu debug">
-          
-        </div>
-        <div class="alu debug">
-          
-        </div>
-        <div class="alu debug">
+        <div class="debug">
           
         </div>
       </div>
-      <div class="alu row gap-l mb-l"/>
-        <div class="alu debug">
+      <div class="row gap-md mb-s"/>
+        <div class="debug">
           
         </div>
-        <div class="alu debug">
+        <div class="debug">
           
         </div>
-        <div class="alu debug">
+        <div class="debug">
           
         </div>
       </div>
-      <h3 class="alu">
+      <div class="row gap-lg mb-l"/>
+        <div class="debug">
+          
+        </div>
+        <div class="debug">
+          
+        </div>
+        <div class="debug">
+          
+        </div>
+      </div>
+      <h3>Selective styling</h3>
+      <p>
+          Aluminium CSS is designed to be easily used with other CSS styles. You can apply it globally by putting the <code>.alu</code> class on the <code>body</code> element, or you can use it selectively by adding the class to specific elements.
+      </p>
+      <p>
+        If you want to remove styling from certain elements you can apply <code>.notalu</code> to the elements or their parent.
+      </p>
+      <div class="column gap-md">
+        <div>
+          <button>Styled via parent</button>
+        </div>
+        <div>
+          <button class="alu">Styled directly</button>
+        </div>
+        <div class="notalu">
+          <button>Unstyled via parent</button>
+        </div>
+        <div>
+          <button class="notalu">Unstyled directly</button>
+        </div>
+      </div>
+        <pre><code>&lt;div class="column gap-md"&gt;
+  &lt;div&gt;
+    &lt;button&gt;Styled via parent&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button class="alu"&gt;Styled directly&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="notalu"&gt;
+    &lt;button&gt;Unstyled via parent&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;button class="notalu"&gt;Unstyled directly&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <h3 class="alu">Link</h3>
+      <p>
+          Link is a clickable element
+      </p>
+      <pre><code>&lt;a href="#"&gt;Link&lt;/a&gt;</code></pre>
+      <a href="#">Link</a>
+      <h3>
         Input
       </h3>
       <p>
         Input is a text field element
       </p>
-      <pre class="alu"><code>&lt;input class="alu" type="text" placeholder="Enter your name" /&gt;</code></pre>
-      <input class="alu" type="text" placeholder="Enter your name" />
-      <h3 class="alu">
+      <pre><code>&lt;input type="text" placeholder="Enter your name" /&gt;</code></pre>
+      <input type="text" placeholder="Enter your name" />
+      <h3>
         Textarea
       </h3>
       <p>
         Textarea is a multi-line text field element
       </p>
-      <pre class="alu"><code>&lt;textarea class="alu" placeholder="Enter your message"&gt;&lt;/textarea&gt;</code></pre>
-      <textarea class="alu" placeholder="Enter your message"></textarea>
-      <h3 class="alu">
+      <pre><code>&lt;textarea placeholder="Enter your message"&gt;&lt;/textarea&gt;</code></pre>
+      <textarea placeholder="Enter your message"></textarea>
+      <h3>
         Checkbox
       </h3>
       <p>
         Checkbox is a checkbox element
       </p>
-      <pre class="alu"><code>&lt;input class="alu" type="checkbox" /&gt;</code></pre>
-      <input class="alu" type="checkbox" />
-      <h3 class="alu">
+      <pre><code>&lt;input type="checkbox" /&gt;</code></pre>
+      <input type="checkbox" />
+      <h3>
         Radio
       </h3>
       <p>
         Radio is a radio button element
       </p>
-      <pre class="alu"><code>&lt;input class="alu" type="radio" /&gt;</code></pre>
-      <input class="alu" type="radio" />
-      <h3 class="alu">
+      <pre><code>&lt;input type="radio" /&gt;</code></pre>
+      <input type="radio" />
+      <h3>
         Range
       </h3>
       <p>
         Range is a slider element
       </p>
-      <pre class="alu"><code>&lt;input class="alu" type="range" /&gt;</code></pre>
-      <input class="alu" type="range" />
-      <h3 class="alu">
+      <pre><code>&lt;input type="range" /&gt;</code></pre>
+      <input type="range" />
+      <h3>
         Button
       </h3>
       <p>
         Button is a clickable element
       </p>
-      <pre class="alu"><code>&lt;button class="alu primary"&gt;Primary&lt;/button&gt;
-&lt;button class="alu"&gt;Secondary&lt;/button&gt;</code></pre>
-        <div class="alu row gap-s">
-          <button class="alu primary">Primary</button>
-          <button class="alu">Secondary</button>
+      <pre><code>&lt;button class="primary"&gt;Primary&lt;/button&gt;
+&lt;button&gt;Secondary&lt;/button&gt;</code></pre>
+        <div class="row gap-md">
+          <button class="primary">Primary</button>
+          <button>Secondary</button>
         </div>
-        <h3 class="alu">
+        <h3>
           Select
         </h3>
         <p>
           Select is a dropdown element
         </p>
-        <pre class="alu"><code>&lt;select class="alu"&gt;
+        <pre><code>&lt;select&gt;
   &lt;option&gt;Option 1&lt;/option&gt;
   &lt;option&gt;Option 2&lt;/option&gt;
   &lt;option&gt;Option 3&lt;/option&gt;
 &lt;/select&gt;</code></pre>
-        <select class="alu">
+        <select>
           <option>Option 1</option>
           <option>Option 2</option>
           <option>Option 3</option>
@@ -126,96 +167,96 @@
           Here is another paragraph of text. I can write anything I want here,
           too.
         </p>
-      <h3 class="alu">
+      <h3>
         Debug
       </h3>
       <p>
         Debug is a div element with a red border. Useful for debugging.
       </p>
-      <pre class="alu"><code>&lt;div class="alu debug"&gt;Debug&lt;/div&gt;</code></pre>
-      <div class="alu debug">Debug</div>
-      <h3 class="alu">
+      <pre><code>&lt;div class="debug"&gt;Debug&lt;/div&gt;</code></pre>
+      <div class="debug">Debug</div>
+      <h3>
         Row
       </h3>
       <p>
         Row is a flex container
       </p>
       <p>
-        <pre class="alu"><code>&lt;div class="alu row gap-s"&gt;
-  &lt;div class="alu debug"&gt;Item 1&lt;/div&gt;
-  &lt;div class="alu debug"&gt;Item 2&lt;/div&gt;
-  &lt;div class="alu debug"&gt;Item 3&lt;/div&gt;
+        <pre><code>&lt;div class="row gap-md"&gt;
+  &lt;div class="debug"&gt;Item 1&lt;/div&gt;
+  &lt;div class="debug"&gt;Item 2&lt;/div&gt;
+  &lt;div class="debug"&gt;Item 3&lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </p>
       <div>
-        <div class="alu row gap-s">
-          <div class="alu debug">Item 1</div>
-          <div class="alu debug">Item 2</div>
+        <div class="row gap-md">
+          <div class="debug">Item 1</div>
+          <div class="debug">Item 2</div>
           <div>Item 3</div>
         </div>
       </div>
-      <h3 class="alu">
+      <h3>
         Column
       </h3>
       <p>
         Column is a flex container
       </p>
       <p>
-        <pre class="alu"><code>&lt;div class="alu column gap-s"&gt;
-  &lt;div class="alu debug"&gt;Item 1&lt;/div&gt;
-  &lt;div class="alu debug"&gt;Item 2&lt;/div&gt;
-  &lt;div class="alu debug"&gt;Item 3&lt;/div&gt;
+        <pre><code>&lt;div class="column gap-md"&gt;
+  &lt;div class="debug"&gt;Item 1&lt;/div&gt;
+  &lt;div class="debug"&gt;Item 2&lt;/div&gt;
+  &lt;div class="debug"&gt;Item 3&lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </p>
       <div>
-        <div class="alu column gap-s">
-          <div class="alu debug">Item 1</div>
-          <div class="alu debug">Item 2</div>
+        <div class="column gap-md">
+          <div class="debug">Item 1</div>
+          <div class="debug">Item 2</div>
           <div>Item 3</div>
         </div>
       </div>
-      <h3 class="alu">
+      <h3>
         Centered row/column
       </h3>
       <p>
         Centered items applies: justify-content: center; align-items: center;
       </p>
       <p>
-        <pre class="alu"><code>&lt;div class="alu row centered gap-s"&gt;
-  &lt;div class="alu debug"&gt;Item 1&lt;/div&gt;
-  &lt;div class="alu debug"&gt;Item 2&lt;/div&gt;
+        <pre><code>&lt;div class="row centered gap-md"&gt;
+  &lt;div class="debug"&gt;Item 1&lt;/div&gt;
+  &lt;div class="debug"&gt;Item 2&lt;/div&gt;
   &lt;div&gt;Item 3&lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </p>
       <div>
-        <div class="alu row centered gap-s">
-          <div class="alu debug">Item 1</div>
-          <div class="alu debug">Item 2</div>
+        <div class="row centered gap-md">
+          <div class="debug">Item 1</div>
+          <div class="debug">Item 2</div>
           <div>Item 3</div>
         </div>
       </div>
-      <h3 class="alu">
+      <h3>
         Inverted row/column
       </h3>
       <p>
         Inverts the order of items in a row/column
       </p>
       <p>
-        <pre class="alu"><code>&lt;div class="alu column inverted gap-s"&gt;
-  &lt;div class="alu debug"&gt;Item 1&lt;/div&gt;
-  &lt;div class="alu debug"&gt;Item 2&lt;/div&gt;
+        <pre><code>&lt;div class="column inverted gap-md"&gt;
+  &lt;div class="debug"&gt;Item 1&lt;/div&gt;
+  &lt;div class="debug"&gt;Item 2&lt;/div&gt;
   &lt;div&gt;Item 3&lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </p>
       <div>
-        <div class="alu column inverted gap-s">
-          <div class="alu debug">Item 1</div>
-          <div class="alu debug">Item 2</div>
+        <div class="column inverted gap-md">
+          <div class="debug">Item 1</div>
+          <div class="debug">Item 2</div>
           <div>Item 3</div>
         </div>
       </div>
     </div>
-    <h3 class="alu">
+    <h3>
       Container
     </h3>
     <p>
@@ -225,122 +266,158 @@
       Note: This isn't in the container div above to show that it actually works
     </p>
     <p>
-      <pre class="alu"><code>&lt;div class="alu container"&gt;Hello, world!&lt;/div&gt;
-&lt;div class="alu container-padded"&gt;Check padding on small window size.&lt;/div&gt;</code></pre>
+      <pre><code>&lt;div class="container"&gt;Hello, world!&lt;/div&gt;
+&lt;div class="container-padded"&gt;Check padding on small window size.&lt;/div&gt;</code></pre>
     </p>
-    <div class="alu container">Hello, world!</div>
-    <div class="alu container-padded">Check padding on small window size.</div>
+    <div class="container">Hello, world!</div>
+    <div class="container-padded">Check padding on small window size.</div>
   </div>
-  <div class="alu container-padded">
-    <h3 class="alu">
+  <div class="container-padded">
+    <h3>
       Dialog
     </h3>
     <p>
       Dialog is a modal dialog element
     </p>
-    <pre><code>&lt;dialog class="alu" style="min-width: 400px;"&gt;
-  &lt;h5 class="alu mv-s mb-l"&gt;
+    <pre><code>&lt;dialog style="min-width: 400px;"&gt;
+  &lt;h5 class="mv-s mb-l"&gt;
     Add new item
   &lt;/h5&gt;
-  &lt;input class="alu mb-s" type="text" placeholder="Enter item name" /&gt;
-  &lt;div class="alu inverted-row gap-s"&gt;
-    &lt;button class="alu primary" onclick="document.getElementById('dialog-example').close()"&gt;Add&lt;/button&gt;
-    &lt;button class="alu" onclick="document.getElementById('dialog-example').close()"&gt;Cancel&lt;/button&gt;
+  &lt;input class="mb-s" type="text" placeholder="Enter item name" /&gt;
+  &lt;div class="inverted-row gap-md"&gt;
+    &lt;button class="primary" onclick="document.getElementById('dialog-example').close()"&gt;Add&lt;/button&gt;
+    &lt;button onclick="document.getElementById('dialog-example').close()"&gt;Cancel&lt;/button&gt;
   &lt;/div&gt;
 &lt;/dialog&gt;
-&lt;button class="alu primary" onclick="document.getElementById('dialog-example').showModal()"&gt;Open dialog&lt;/button&gt;</code></pre>
-    <dialog id="dialog-example" class="alu" style="min-width: 400px;">
-      <h5 class="alu mv-s mb-l">
+&lt;button class="primary" onclick="document.getElementById('dialog-example').showModal()"&gt;Open dialog&lt;/button&gt;</code></pre>
+    <dialog id="dialog-example" style="min-width: 400px;">
+      <h5 class="mv-sm mb-lg">
         Add new item
       </h5>
-      <input class="alu mb-s" type="text" placeholder="Enter item name" />
-      <div class="alu inverted-row gap-s">
-        <button class="alu primary" onclick="document.getElementById('dialog-example').close()">Add</button>
-        <button class="alu" onclick="document.getElementById('dialog-example').close()">Cancel</button>
+      <input class="mb-sm" type="text" placeholder="Enter item name" />
+      <div class="inverted-row gap-md">
+        <button class="primary" onclick="document.getElementById('dialog-example').close()">Add</button>
+        <button onclick="document.getElementById('dialog-example').close()">Cancel</button>
       </div>
     </dialog>
-    <button class="alu primary" onclick="document.getElementById('dialog-example').showModal()">Open dialog</button>
-    <h3 class="alu">Spacer</h3>
+    <button class="primary" onclick="document.getElementById('dialog-example').showModal()">Open dialog</button>
+    <h3>Spacer</h3>
     <p>
       Spacer is a div element that fills the available space in a flexbox container
     </p>
-    <pre><code>&lt;div class="alu row gap-s w-full"&gt;
-  &lt;div class="alu debug"&gt;Item 1&lt;/div&gt;
-  &lt;div class="alu debug"&gt;Item 2&lt;/div&gt;
-  &lt;div class="alu spacer"&gt;&lt;/div&gt;
-  &lt;div class="alu debug"&gt;Item 3&lt;/div&gt;
+    <pre><code>&lt;div class="row gap-md w-full"&gt;
+  &lt;div class="debug"&gt;Item 1&lt;/div&gt;
+  &lt;div class="debug"&gt;Item 2&lt;/div&gt;
+  &lt;div class="spacer"&gt;&lt;/div&gt;
+  &lt;div class="debug"&gt;Item 3&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-    <div class="alu row gap-s w-full">
-      <div class="alu debug">Item 1</div>
-      <div class="alu debug">Item 2</div>
-      <div class="alu spacer"></div>
-      <div class="alu debug">Item 3</div>
+    <div class="row gap-md w-full">
+      <div class="debug">Item 1</div>
+      <div class="debug">Item 2</div>
+      <div class="spacer"></div>
+      <div class="debug">Item 3</div>
     </div>
   </div>
-  <div class="alu container-padded">
+  <div class="container-padded">
 
-    <h3 class="alu">
+    <h3>
       Navbar
     </h3>
     <p>
       Navbar is a navigation bar element
     </p>
-    <pre><code>&lt;nav class="alu"&gt;
-  &lt;div class="alu row gap-l w-full"&gt;
-    &lt;span class="mr-l font-mono"&gt;Aluminium CSS&lt;/span&gt;
-    &lt;a&gt;Home&lt;/a&gt;
-    &lt;a&gt;About&lt;/a&gt;
-    &lt;a&gt;Contact&lt;/a&gt;
-    &lt;div class="alu spacer"&gt;&lt;/div&gt;
-    &lt;a&gt;Login&lt;/a&gt;
+    <pre><code>&lt;nav&gt;
+  &lt;div class="nav-top"&gt;
+    &lt;label for="nav-check" id="nav-button"&gt;
+      &lt;svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      fill="currentColor"
+      class="bi bi-list"
+      viewBox="0 0 16 16"
+      &gt;
+      &lt;path
+      fill-rule="evenodd"
+      d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+      /&gt;
+      &lt;/svg&gt;
+    &lt;/label&gt;
+    &lt;div class="font-mono"&gt;Aluminium CSS&lt;/div&gt;
   &lt;/div&gt;
-&lt;/nav&gt;</code></pre>
+  &lt;div class="nav-links"&gt;
+    &lt;a class="nav-link"&gt;Home&lt;/a&gt;
+    &lt;a class="nav-link"&gt;About&lt;/a&gt;
+    &lt;a class="nav-link"&gt;Contact&lt;/a&gt;
+    &lt;div class="spacer"&gt;&lt;/div&gt;
+    &lt;a class="nav-link"&gt;Login&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
   </div> 
   </div>
-  <nav class="alu">
-    <div class="alu row gap-l w-full">
-      <span class="mr-l font-mono">Aluminium CSS</span>
-      <a>Home</a>
-      <a>About</a>
-      <a>Contact</a>
-      <div class="alu spacer"></div>
-      <a>Login</a>
+  <nav>
+    <input type="checkbox" id="nav-check" />
+    <div class="nav-top">
+      <label for="nav-check" id="nav-button">
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="30"
+        fill="currentColor"
+        class="bi bi-list"
+        viewBox="0 0 16 16"
+        >
+        <path
+        fill-rule="evenodd"
+        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+        />
+        </svg>
+      </label>
+      <div class="font-mono mh-md">Aluminium CSS</div>
+    </div>
+    <div class="nav-links">
+      <a class="nav-link">Home</a>
+      <a class="nav-link">About</a>
+      <a class="nav-link">Contact</a>
+      <div class="spacer"></div>
+      <a class="nav-link">Login</a>
     </div>
   </nav>
-  <div class="alu container-padded">
-    <h3 class="alu">
+  <div class="container-padded">
+    <h3>
       Footer
     </h3>
     <p>
       Footer is a footer element
     </p>
-    <pre><code>&lt;footer class="alu"&gt;
-  &lt;div class="alu container-padded"&gt;
-    &lt;div class="alu mb-s"&gt;
+    <pre><code>&lt;footer&gt;
+  &lt;div class="container-padded"&gt;
+    &lt;div class="mb-s"&gt;
       &lt;span class="font-mono"&gt;Aluminium CSS&lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class="alu row gap-l mb-l"&gt;
+    &lt;div class="row gap-lg mb-l"&gt;
       &lt;a&gt;Home&lt;/a&gt;
       &lt;a&gt;About&lt;/a&gt;
       &lt;a&gt;Contact&lt;/a&gt;
     &lt;/div&gt;
-    &lt;div class="alu text-sm"&gt;
+    &lt;div class="text-sm"&gt;
       Copyright &amp;copy; 2023 Aluminium CSS
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/footer&gt;</code></pre>
   </div>
-  <footer class="alu">
-    <div class="alu container-padded">
-      <div class="alu mb-s">
+  <footer>
+    <div class="container-padded">
+      <div class="mb-s">
         <span class="font-mono">Aluminium CSS</span>
       </div>
-      <div class="alu row gap-l mb-l">
+      <div class="row gap-lg mb-l">
         <a>Home</a>
         <a>About</a>
         <a>Contact</a>
       </div>
-      <div class="alu text-sm">
+      <div class="text-sm">
         Copyright &copy; 2023 Aluminium CSS
       </div>
     </div>
