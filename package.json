@@ -1,6 +1,6 @@
 {
   "name": "aluminiumcss",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Brutalist mini CSS framework",
   "main": "build.js",
   "scripts": {
