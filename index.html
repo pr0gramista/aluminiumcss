@@ -9,6 +9,25 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="dist/aluminium.min.css" />
+    <style>
+      .inline-block {
+        display: inline-block;
+      }
+      .green {
+        background-color: green;
+        color: white;
+      }
+      .red {
+        background-color: red;
+        color: white;
+      }
+      .blue {
+        background-color: blue;
+        color: white;
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   </head>
   <body class="alu">
     <div class="container-padded">
@@ -16,44 +35,90 @@
       <p>
         Aluminum CSS is a lightweight mini CSS framework that is easy to use and customize.
       </p>
+      <h3>Installation</h3>
+      <p>
+        Aluminum CSS is available as a NPM package or a single file served via CDN.
+      </p>
+      <pre><code>npm install aluminiumcss</code></pre>
+<pre><code>// In your JS file with a bundler
+require('aluminiumcss/dist/aluminium.min.css')</code></pre>
+      </code></pre>
+      <p>To use the CDN version, add the following script tag to your head HTML element:</p>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aluminiumcss/dist/aluminium.min.css">
+      <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aluminiumcss/dist/aluminium.min.css"&gt;</pre></code>
+      <h3>Customization</h3>
+      <p>
+        Aluminum CSS is easily customizable via a selection of CSS variables.
+      </p>
       <h3>Margins, paddings, gaps</h3>
       <p>
         Aluminum CSS uses a consistent spacing system that ensures good readability and visual balance.
-        There are three sizes: mini, standard and large. The utilities are similar to Tailwind CSS.
+        There are four sizes: <code>sm, md, lg, xl</code>. To apply margins, paddings, gaps you can use Tailwind CSS like classes.
       </p>
-      <div class="row gap-m mb-m"/>
-        <div class="debug">
-          
-        </div>
-        <div class="debug">
-          
-        </div>
-        <div class="debug">
-          
-        </div>
+      <div class="row gap-sm mb-sm"/>
+        <div class="debug"></div>
+        <div class="debug"></div>
+        <div class="debug"></div>
       </div>
-      <div class="row gap-md mb-s"/>
-        <div class="debug">
-          
-        </div>
-        <div class="debug">
-          
-        </div>
-        <div class="debug">
-          
-        </div>
+      <div class="row gap-md mb-sm"/>
+        <div class="debug"></div>
+        <div class="debug"></div>
+        <div class="debug"></div>
       </div>
-      <div class="row gap-lg mb-l"/>
-        <div class="debug">
-          
-        </div>
-        <div class="debug">
-          
-        </div>
-        <div class="debug">
-          
-        </div>
+      <div class="row gap-lg mb-sm"/>
+        <div class="debug"></div>
+        <div class="debug"></div>
+        <div class="debug"></div>
       </div>
+      <div class="row gap-xl mb-sm"/>
+        <div class="debug"></div>
+        <div class="debug"></div>
+        <div class="debug"></div>
+      </div>
+      <pre><code>&lt;div class="row gap-sm mb-sm"&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row gap-md mb-sm"&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row gap-lg mb-sm"&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row gap-xl mb-sm"&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <div>
+        <span class="inline-block mv-lg mh-sm p-sm green">green mv-lg p-sm</span>
+        <span class="inline-block mt-xl mb-sm mr-md ml-lg pt-xl pb-sm pr-lg pl-md blue">blue mt-xl mb-sm mr-md ml-lg pt-xl pb-sm pr-lg pl-md</span>
+        <span class="inline-block m-sm p-xl red">red m-sm p-xl</span>
+      </div>
+      <pre><code>&lt;div&gt;
+  &lt;span class="inline-block mv-lg mh-sm p-sm green font-mono"&gt;green mv-lg p-sm&lt;/span&gt;
+  &lt;span class="inline-block mt-xl mb-sm mr-md ml-lg pt-xl pb-sm pr-lg pl-md blue font-mono"&gt;blue mt-xl mb-sm mr-md ml-lg pt-xl pb-sm pr-lg pl-md&lt;/span&gt;
+  &lt;span class="inline-block m-sm p-xl red font-mono"&gt;red m-sm p-xl&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+      <h3>Positioning</h3>
+      <p>
+        Aluminum CSS provides a set of positioning utilities. You can use the classes <code>fixed, absolute, relative, sticky, static, top-[0/sm/md/lg/xl], right-[0/sm/md/lg/xl], bottom-[0/sm/md/lg/xl], left-[0/sm/md/lg/xl]</code> to position elements.
+      </p>
+      <div class="relative" style="height: 200px; width: 200px; background-color: lightgray">
+        <div class="absolute debug top-0 left-0">top-0, left-0</div>
+        <div class="absolute debug top-xl left-xl">top-xl, left-xl</div>
+        <div class="absolute debug bottom-lg right-sm">bottom-lg right-sm</div>
+      </div>
+      <pre><code>&lt;div class="relative" style="height: 200px; width: 200px; background-color: lightgray"&gt;
+  &lt;div class="absolute debug top-0 left-0"&gt;top-0, left-0&lt;/div&gt;
+  &lt;div class="absolute debug top-xl left-xl"&gt;top-xl, left-xl&lt;/div&gt;
+  &lt;div class="absolute debug bottom-lg right-sm"&gt;bottom-lg right-sm&lt;/div&gt;
+&lt;/div&gt;</code></pre>
       <h3>Selective styling</h3>
       <p>
           Aluminium CSS is designed to be easily used with other CSS styles. You can apply it globally by putting the <code>.alu</code> class on the <code>body</code> element, or you can use it selectively by adding the class to specific elements.
@@ -192,7 +257,7 @@
         <div class="row gap-md">
           <div class="debug">Item 1</div>
           <div class="debug">Item 2</div>
-          <div>Item 3</div>
+          <div class="debug">Item 3</div>
         </div>
       </div>
       <h3>
@@ -212,7 +277,7 @@
         <div class="column gap-md">
           <div class="debug">Item 1</div>
           <div class="debug">Item 2</div>
-          <div>Item 3</div>
+          <div class="debug">Item 3</div>
         </div>
       </div>
       <h3>
@@ -319,7 +384,48 @@
     </div>
   </div>
   <div class="container-padded">
-
+    <h3>Grid</h3>
+    <p>
+      A responsive grid system. The grid is 12 columns wide and will stack on smaller screens.
+      The classes mimic the Bootstrap grid system, but the implementation is based on CSS grid instead.
+    </p>
+    <div class="grid mb-lg">
+      <div class="debug col-lg-2 col-md-3 col-xs-6">.col-lg-2 .col-md-3 .col-xs-6</div>
+      <div class="debug col-lg-2 col-md-3 col-xs-6">.col-lg-2 .col-md-3 .col-xs-6</div>
+      <div class="debug col-lg-2 col-md-3 col-xs-6">.col-lg-2 .col-md-3 .col-xs-6</div>
+      <div class="debug col-lg-2 col-md-3 col-xs-6">.col-lg-2 .col-md-3 .col-xs-6</div>
+      <div class="debug col-lg-2 col-md-3 col-xs-6">.col-lg-2 .col-md-3 .col-xs-6</div>
+      <div class="debug col-lg-2 col-md-3 col-xs-6">.col-lg-2 .col-md-3 .col-xs-6</div>
+    </div>
+    <pre><code>&lt;div class="grid"&gt;
+  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;.col-lg-2 .col-md-3 .col-xs-6&lt;/div&gt;
+  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;.col-lg-2 .col-md-3 .col-xs-6&lt;/div&gt;
+  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;.col-lg-2 .col-md-3 .col-xs-6&lt;/div&gt;
+  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;.col-lg-2 .col-md-3 .col-xs-6&lt;/div&gt;
+  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;.col-lg-2 .col-md-3 .col-xs-6&lt;/div&gt;
+  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;.col-lg-2 .col-md-3 .col-xs-6&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    <p>
+      If no class is applied the column will be 1/12th of the grid.
+    </p>
+    <div class="grid">
+      <div class="debug col-lg-3 col-md-2 col-xs-6">.col-lg-3 .col-md-2 .col-xs-6</div>
+      <div class="debug"></div>
+      <div class="debug"></div>
+      <div class="debug"></div>
+      <div class="debug"></div>
+      <div class="debug"></div>
+      <div class="debug"></div>
+    </div>
+    <pre><code>&lt;div class="grid"&gt;
+  &lt;div class="debug col-lg-3 col-md-2 col-xs-6"&gt;.col-lg-3 .col-md-2 .col-xs-6&lt;/div&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+  &lt;div class="debug"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
     <h3>
       Navbar
     </h3>
@@ -422,5 +528,6 @@
       </div>
     </div>
   </footer>
+  <script>hljs.highlightAll();</script>
   </body>
 </html>
