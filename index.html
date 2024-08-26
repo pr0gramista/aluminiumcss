@@ -26,7 +26,7 @@
         color: white;
       }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/github.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   </head>
   <body class="alu">
@@ -158,8 +158,20 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       <p>
           Link is a clickable element
       </p>
-      <pre><code>&lt;a href="#"&gt;Link&lt;/a&gt;</code></pre>
       <a href="#">Link</a>
+      <pre><code>&lt;a href="#"&gt;Link&lt;/a&gt;</code></pre>
+      <h3 class="alu">Blockquote</h3>
+      <p>
+        Blockquote is a section that is quoted from another source
+      </p>
+      <blockquote>
+        <p class="mb-md">It’s not faith in technology. It’s faith in people.</p>
+        ~ Steve Jobs
+      </blockquote>
+      <pre><code>&lt;blockquote&gt;
+  &lt;p class="mb-md"&gt;It’s not faith in technology. It’s faith in people.&lt;/p&gt;
+  ~ Steve Jobs
+&lt;/blockquote&gt;</code></pre>
       <h3>
         Input
       </h3>
@@ -167,7 +179,10 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         Input is a text field element
       </p>
       <pre><code>&lt;input type="text" placeholder="Enter your name" /&gt;</code></pre>
-      <input type="text" placeholder="Enter your name" />
+      <div class="column gap-sm">
+        <input type="text" placeholder="Enter your name" />
+        <input type="text" disabled placeholder="Disabled input" />
+      </div>
       <h3>
         Textarea
       </h3>
@@ -175,7 +190,10 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         Textarea is a multi-line text field element
       </p>
       <pre><code>&lt;textarea placeholder="Enter your message"&gt;&lt;/textarea&gt;</code></pre>
-      <textarea placeholder="Enter your message"></textarea>
+      <div class="column gap-sm">
+        <textarea placeholder="Enter your message"></textarea>
+        <textarea disabled placeholder="Disabled textarea"></textarea>
+      </div>
       <h3>
         Checkbox
       </h3>
@@ -183,7 +201,21 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         Checkbox is a checkbox element
       </p>
       <pre><code>&lt;input type="checkbox" /&gt;</code></pre>
-      <input type="checkbox" />
+      <div class="column gap-sm">
+        <div class="checkbox">
+          <input id="check1" type="checkbox">
+          <label for="check1">Checkbox</label>
+        </div>
+        <div class="checkbox">
+          <input id="check2" type="checkbox" disabled>
+          <label for="check2">Disabled</label>
+        </div>
+        <div class="checkbox">
+          <input id="check3" type="checkbox" disabled checked>
+          <label for="check3">Disabled checked</label>
+        </div>
+      </div>
+      <pre</pre>
       <h3>
         Radio
       </h3>
@@ -191,15 +223,24 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         Radio is a radio button element
       </p>
       <pre><code>&lt;input type="radio" /&gt;</code></pre>
-      <input type="radio" />
-      <h3>
-        Range
-      </h3>
-      <p>
-        Range is a slider element
-      </p>
-      <pre><code>&lt;input type="range" /&gt;</code></pre>
-      <input type="range" />
+      <div class="column gap-sm">
+        <div class="radio">
+          <input id="radio1" type="radio" name="radio-examples">
+          <label for="radio1">Radio</label>
+        </div>
+        <div class="radio">
+          <input id="radio2" type="radio" name="radio-examples">
+          <label for="radio2">Radio</label>
+        </div>
+        <div class="radio">
+          <input id="radio3" type="radio" name="radio-examples2" disabled>
+          <label for="radio3">Disabled</label>
+        </div>
+        <div class="radio">
+          <input id="radio4" type="radio" name="radio-examples2" disabled checked>
+          <label for="radio4">Disabled</label>
+        </div>
+      </div>
       <h3>
         Button
       </h3>
@@ -210,7 +251,9 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 &lt;button&gt;Secondary&lt;/button&gt;</code></pre>
         <div class="row gap-md">
           <button class="primary">Primary</button>
+          <button class="primary" disabled>Primary disabled</button>
           <button>Secondary</button>
+          <button disabled>Disabled</button>
         </div>
         <h3>
           Select
@@ -224,6 +267,11 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   &lt;option&gt;Option 3&lt;/option&gt;
 &lt;/select&gt;</code></pre>
         <select>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+        <select disabled>
           <option>Option 1</option>
           <option>Option 2</option>
           <option>Option 3</option>
@@ -390,26 +438,26 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       The classes mimic the Bootstrap grid system, but the implementation is based on CSS grid instead.
     </p>
     <div class="grid mb-lg">
-      <div class="debug col-lg-2 col-md-3 col-xs-6">.col-lg-2 .col-md-3 .col-xs-6</div>
-      <div class="debug col-lg-2 col-md-3 col-xs-6">.col-lg-2 .col-md-3 .col-xs-6</div>
-      <div class="debug col-lg-2 col-md-3 col-xs-6">.col-lg-2 .col-md-3 .col-xs-6</div>
-      <div class="debug col-lg-2 col-md-3 col-xs-6">.col-lg-2 .col-md-3 .col-xs-6</div>
-      <div class="debug col-lg-2 col-md-3 col-xs-6">.col-lg-2 .col-md-3 .col-xs-6</div>
-      <div class="debug col-lg-2 col-md-3 col-xs-6">.col-lg-2 .col-md-3 .col-xs-6</div>
+      <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
+      <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
+      <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
+      <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
+      <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
+      <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
     </div>
     <pre><code>&lt;div class="grid"&gt;
-  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;.col-lg-2 .col-md-3 .col-xs-6&lt;/div&gt;
-  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;.col-lg-2 .col-md-3 .col-xs-6&lt;/div&gt;
-  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;.col-lg-2 .col-md-3 .col-xs-6&lt;/div&gt;
-  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;.col-lg-2 .col-md-3 .col-xs-6&lt;/div&gt;
-  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;.col-lg-2 .col-md-3 .col-xs-6&lt;/div&gt;
-  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;.col-lg-2 .col-md-3 .col-xs-6&lt;/div&gt;
+  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;col-lg-2 col-md-3 col-xs-6&lt;/div&gt;
+  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;col-lg-2 col-md-3 col-xs-6&lt;/div&gt;
+  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;col-lg-2 col-md-3 col-xs-6&lt;/div&gt;
+  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;col-lg-2 col-md-3 col-xs-6&lt;/div&gt;
+  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;col-lg-2 col-md-3 col-xs-6&lt;/div&gt;
+  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;col-lg-2 col-md-3 col-xs-6&lt;/div&gt;
 &lt;/div&gt;</code></pre>
     <p>
       If no class is applied the column will be 1/12th of the grid.
     </p>
     <div class="grid">
-      <div class="debug col-lg-3 col-md-2 col-xs-6">.col-lg-3 .col-md-2 .col-xs-6</div>
+      <div class="debug col-lg-3 col-md-2 col-xs-6">col-lg-3 col-md-2 col-xs-6</div>
       <div class="debug"></div>
       <div class="debug"></div>
       <div class="debug"></div>
@@ -418,7 +466,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       <div class="debug"></div>
     </div>
     <pre><code>&lt;div class="grid"&gt;
-  &lt;div class="debug col-lg-3 col-md-2 col-xs-6"&gt;.col-lg-3 .col-md-2 .col-xs-6&lt;/div&gt;
+  &lt;div class="debug col-lg-3 col-md-2 col-xs-6"&gt;col-lg-3 col-md-2 col-xs-6&lt;/div&gt;
   &lt;div class="debug"&gt;&lt;/div&gt;
   &lt;div class="debug"&gt;&lt;/div&gt;
   &lt;div class="debug"&gt;&lt;/div&gt;

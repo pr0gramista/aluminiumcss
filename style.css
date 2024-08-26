@@ -8,15 +8,47 @@
 
   --border-width: 1px;
   --border-color: rgb(212, 212, 216);
+  --border-radius: 0px;
 
   --nav-background: black;
   --nav-color: white;
   --nav-height: 48px;
   --nav-menu-hover-background: rgb(33, 33, 33);
 
+  --active-color: #3d79d4;
+  --primary-text-color: white;
+  --secondary-text-color: rgb(90, 90, 90);
+  --focus-color: #3d79d4cc;
+  --disabled-color: rgb(240, 240, 240, 0.3);
+  --disabled-active-color: #bcbcbc;
   --link-color: black;
 
   --pre-background: #f5f5f5;
+
+  --transition-duration: 100ms;
+
+  --button-primary-background: black;
+  --button-primary-color: white;
+  --button-disabled-background: rgb(0, 0, 0, 0.3);
+
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 2rem;
+
+  --line-height-sm: 1.25rem;
+  --line-height-md: 1.5rem;
+  --line-height-lg: 1.75rem;
+  --line-height-xl: 2rem;
+
+  --input-padding: 0.375rem 0.5rem;
+  --input-font-size: var(--font-size-sm);
+  --input-line-height: var(--line-height-sm);
+
+  --blockquote-ornamentation: 4px solid var(--border-color);
+  --blockquote-text-color: var(--secondary-text-color);
+
+  --container-width: 1200px;
 
   /* Note: Media queries can't depend on CSS variables */
   /* Changing these will not affect responsiveness of the grid */
@@ -29,20 +61,26 @@
 /* Text sizes */
 .alu .text-sm:not(.notalu):not(.notalu .text-sm),
 .alu.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
 }
 
 .alu .text-md:not(.notalu):not(.notalu .text-md),
 .alu.text-md {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
 }
 
 .alu .text-lg:not(.notalu):not(.notalu .text-lg),
 .alu.text-lg {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}
+
+.alu .text-xl:not(.notalu):not(.notalu .text-xl),
+.alu.text-xl {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
 }
 
 .alu .font-mono:not(.notalu):not(.notalu .font-mono),
@@ -545,15 +583,15 @@
 /* Containers */
 .alu .container:not(.notalu):not(.notalu .container),
 .container.alu {
-  max-width: 1200px;
-  padding: 0 8px;
+  max-width: var(--container-width);
+  padding: 0 var(--md-gap);
   margin: 0 auto;
 }
 
 .alu .container-padded:not(.notalu):not(.notalu .container-padded),
 .container-padded.alu {
-  max-width: 1200px;
-  padding: 0 8px;
+  max-width: var(--container-width);
+  padding: 0 var(--md-gap);
   margin: 0 auto;
 }
 
@@ -578,28 +616,70 @@ a.alu {
   color: var(--link-color);
 }
 
+.alu a:not(.notalu):not(.notalu a):focus,
+a.alu:focus {
+  box-shadow: 0 0 0 2px var(--focus-color);
+  outline: none;
+}
+
+.alu blockquote:not(.notalu):not(.notalu a),
+blockquote.alu {
+  border-left: var(--blockquote-ornamentation);
+  padding-left: var(--md-gap);
+  margin-right: var(--md-gap);
+  margin-left: var(--md-gap);
+  margin-top: var(--lg-gap);
+  margin-bottom: var(--lg-gap);
+  color: var(--blockquote-text-color);
+}
+
 .alu pre:not(.notalu):not(.notalu pre),
 pre.alu {
   font-family: var(--font-mono);
   background: var(--pre-background);
-  margin: 0.5rem 0;
-  padding: 0.5rem;
+  margin-left: var(--md-gap);
+  margin-right: var(--md-gap);
+  padding: var(--md-gap);
 }
 
 /* Inputs */
-
-.alu input:not(.notalu):not(.notalu input),
-input.alu {
+.alu input[type="text"]:not(.notalu):not(.notalu input),
+input[type="text"].alu {
+  border-radius: var(--border-radius);
   padding-block: unset;
   padding-inline: unset;
-  padding: 0.375rem 0.5rem;
+  padding: var(--input-padding);
   border-width: var(--border-width);
-  line-height: 1.5rem;
-  font-size: 0.875rem;
+  line-height: var(--input-line-height);
+  font-size: var(--input-font-size);
   outline: none;
   border-style: solid;
   font-family: var(--font-mono);
   border-color: var(--border-color);
+}
+
+.alu input[type="text"]:not(.notalu):not(.notalu input[type="text"]):focus,
+input[type="text"].alu:focus {
+  box-shadow: 0 0 0 2px var(--focus-color);
+  outline: none;
+}
+
+.alu input[type="text"]:not(.notalu):not(.notalu input[type="text"]):disabled,
+input[type="text"].alu:disabled {
+  background-color: var(--disabled-color);
+}
+
+.alu
+  input[type="text"]:not(.notalu):not(.notalu input[type="text"])::placeholder,
+input[type="text"].alu::placeholder {
+  color: var(--secondary-text-color);
+}
+
+/* For standard range / checkbox / radio using keyboard */
+.alu input:not(.notalu):not(.notalu input):focus-visible,
+input.alu:focus-visible {
+  box-shadow: 0 0 0 2px var(--focus-color);
+  outline: none;
 }
 
 .alu input[type="text"]:not(.notalu):not(.notalu input[type="text"]),
@@ -609,12 +689,13 @@ input.alu[type="text"] {
 
 .alu select:not(.notalu):not(.notalu select),
 select.alu {
+  border-radius: var(--border-radius);
   padding-block: unset;
   padding-inline: unset;
-  padding: 0.375rem 0.5rem;
+  padding: var(--input-padding);
   border-width: var(--border-width);
-  line-height: 1.5rem;
-  font-size: 0.875rem;
+  line-height: var(--input-line-height);
+  font-size: var(--input-font-size);
   outline: none;
   border-style: solid;
   font-family: var(--font-mono);
@@ -626,18 +707,35 @@ select.alu {
   background-repeat: no-repeat;
   background-position-x: 100%;
   background-position-y: 5px;
-  padding-right: 2rem;
+  padding-right: var(--xl-gap);
+}
+
+.alu select:not(.notalu):not(.notalu select):focus,
+select.alu:focus {
+  box-shadow: 0 0 0 2px var(--focus-color);
+  outline: none;
+}
+
+.alu select:not(.notalu):not(.notalu select):disabled,
+select.alu:disabled {
+  background-color: var(--disabled-color);
 }
 
 .alu button.primary:not(.notalu button):not(.notalu),
 button.primary.alu {
-  background: black;
-  color: white;
+  background: var(--button-primary-background);
+  color: var(--button-primary-color);
   border: none;
+}
+
+.alu button.primary:not(.notalu button):not(.notalu):disabled,
+button.primary.alu:disabled {
+  background: var(--button-disabled-background);
 }
 
 .alu button:not(.notalu button):not(.notalu),
 button.alu {
+  border-radius: var(--border-radius);
   padding: 0.5rem 1rem;
   background: white;
   border: var(--border-width) solid var(--border-color);
@@ -649,21 +747,51 @@ button.alu {
   font-family: var(--font-primary);
 }
 
+.alu button:not(.notalu button):not(.notalu):focus,
+button.alu:focus {
+  box-shadow: 0 0 0 2px var(--focus-color);
+  outline: none;
+}
+
+.alu button:not(.notalu button):not(.notalu):disabled,
+button.alu:disabled {
+  cursor: not-allowed;
+  background-color: var(--disabled-color);
+}
+
 .alu textarea:not(.notalu):not(.notalu textarea),
 textarea.alu {
+  border-radius: var(--border-radius);
   width: 100%;
-  padding: 0.375rem 0.5rem;
+  padding: var(--input-padding);
   border-width: var(--border-width);
-  line-height: 1.5rem;
-  font-size: 0.875rem;
+  line-height: var(--input-line-height);
+  font-size: var(--input-font-size);
   outline: none;
   border-style: solid;
   font-family: var(--font-mono);
   border-color: var(--border-color);
 }
 
+.alu textarea:not(.notalu):not(.notalu textarea):focus,
+textarea.alu:focus {
+  box-shadow: 0 0 0 2px var(--focus-color);
+  outline: none;
+}
+
+.alu textarea:not(.notalu):not(.notalu textarea):disabled,
+textarea.alu:disabled {
+  background-color: var(--disabled-color);
+}
+
+.alu textarea:not(.notalu):not(.notalu textarea)::placeholder,
+textarea.alu::placeholder {
+  color: var(--secondary-text-color);
+}
+
 .alu dialog:not(.notalu):not(.notalu dialog),
 dialog.alu {
+  border-radius: var(--border-radius);
   background-color: white;
   border: 1px solid var(--border-color);
   color: black;
@@ -1096,4 +1224,145 @@ footer.alu {
   background-color: #000;
   color: #eee;
   padding: calc(var(--lg-gap) * 2) 0;
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .alu .checkbox:not(.notalu):not(.notalu .checkbox) > input[type="checkbox"],
+  .alu.checkbox > input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 20px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    cursor: pointer;
+    border: var(--border-width) solid var(--border-color);
+    transition: border-color var(--transition-duration),
+      background-color var(--transition-duration),
+      box-shadow var(--transition-duration);
+    width: 20px;
+    border-radius: var(--border-radius);
+  }
+  .alu
+    .checkbox:not(.notalu):not(.notalu .checkbox)
+    > input[type="checkbox"]:checked:after,
+  .alu.checkbox > input[type="checkbox"]:checked:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 8px;
+    border: 2px solid var(--primary-text-color);
+    border-top: 0;
+    border-left: 0;
+    left: 7.5px;
+    top: 4px;
+    transform: rotate(45deg);
+  }
+  .alu
+    .checkbox:not(.notalu):not(.notalu .checkbox)
+    > input[type="checkbox"]:checked,
+  .alu.checkbox > input[type="checkbox"]:checked {
+    background: var(--active-color);
+  }
+  .alu
+    .checkbox:not(.notalu):not(.notalu .checkbox)
+    > input[type="checkbox"]:focus,
+  .alu.checkbox > input[type="checkbox"]:focus {
+    box-shadow: 0 0 0 2px var(--focus-color);
+  }
+  .alu
+    .checkbox:not(.notalu):not(.notalu .checkbox)
+    > input[type="checkbox"]
+    + label,
+  .alu.checkbox > input[type="checkbox"] + label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: var(--md-gap);
+  }
+  .alu
+    .checkbox:not(.notalu):not(.notalu .checkbox)
+    > input[type="checkbox"]:disabled,
+  .alu.checkbox > input[type="checkbox"]:disabled {
+    background: var(--disabled-color);
+    cursor: not-allowed;
+  }
+  .alu
+    .checkbox:not(.notalu):not(.notalu .checkbox)
+    > input[type="checkbox"]:disabled
+    + label,
+  .alu.checkbox > input[type="checkbox"]:disabled + label {
+    cursor: not-allowed;
+  }
+  .alu
+    .checkbox:not(.notalu):not(.notalu .checkbox)
+    > input[type="checkbox"]:disabled:checked,
+  .alu.checkbox > input[type="checkbox"]:disabled:checked {
+    background: var(--disabled-active-color);
+  }
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .alu .radio:not(.notalu):not(.notalu .radio) > input[type="radio"],
+  .alu.radio > input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 20px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    cursor: pointer;
+    border: var(--border-width) solid var(--border-color);
+    transition: border-color var(--transition-duration),
+      background-color var(--transition-duration),
+      box-shadow var(--transition-duration);
+    width: 20px;
+    border-radius: 50%;
+  }
+  .alu .radio:not(.notalu):not(.notalu .radio) > input[type="radio"]:after,
+  .alu.radio > input[type="radio"]:after {
+    content: "";
+    display: block;
+    position: absolute;
+  }
+  .alu .radio:not(.notalu):not(.notalu .radio) > input[type="radio"]:checked,
+  .alu.radio > input[type="radio"]:checked {
+    background-color: var(--active-color);
+    border-color: var(--active-color);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  }
+  .alu .radio:not(.notalu):not(.notalu .radio) > input[type="radio"]:focus,
+  .alu.radio > input[type="radio"]:focus {
+    box-shadow: 0 0 0 2px var(--focus-color);
+  }
+  .alu .radio:not(.notalu):not(.notalu .radio) > input[type="radio"] + label,
+  .alu.radio > input[type="radio"] + label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: var(--md-gap);
+  }
+  .alu .radio:not(.notalu):not(.notalu .radio) > input[type="radio"]:disabled,
+  .alu.radio > input[type="radio"]:disabled {
+    background: var(--disabled-color);
+    border-color: var(--border-color);
+    cursor: not-allowed;
+  }
+  .alu
+    .radio:not(.notalu):not(.notalu .radio)
+    > input[type="radio"]:disabled
+    + label,
+  .alu.radio > input[type="radio"]:disabled + label {
+    cursor: not-allowed;
+  }
+  .alu
+    .radio:not(.notalu):not(.notalu .radio)
+    > input[type="radio"]:disabled:checked,
+  .alu.radio > input[type="radio"]:disabled:checked {
+    background-color: var(--disabled-active-color);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  }
 }
