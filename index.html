@@ -39,8 +39,8 @@
       <p>
         Aluminum CSS is available as a NPM package or a single file served via CDN.
       </p>
-      <pre><code>npm install aluminiumcss</code></pre>
-<pre><code>// In your JS file with a bundler
+      <pre><code class="language-bash">npm install aluminiumcss</code></pre>
+<pre><code class="language-javascript">// In your JS file with a bundler
 require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       </code></pre>
       <p>To use the CDN version, add the following script tag to your head HTML element:</p>
@@ -75,7 +75,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         <div class="debug"></div>
         <div class="debug"></div>
       </div>
-      <pre><code>&lt;div class="row gap-sm mb-sm"&gt;
+      <pre><code class="language-html">&lt;div class="row gap-sm mb-sm"&gt;
   &lt;div class="debug"&gt;&lt;/div&gt;
   &lt;div class="debug"&gt;&lt;/div&gt;
   &lt;div class="debug"&gt;&lt;/div&gt;
@@ -100,7 +100,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         <span class="inline-block mt-xl mb-sm mr-md ml-lg pt-xl pb-sm pr-lg pl-md blue">blue mt-xl mb-sm mr-md ml-lg pt-xl pb-sm pr-lg pl-md</span>
         <span class="inline-block m-sm p-xl red">red m-sm p-xl</span>
       </div>
-      <pre><code>&lt;div&gt;
+      <pre><code class="language-html">&lt;div&gt;
   &lt;span class="inline-block mv-lg mh-sm p-sm green font-mono"&gt;green mv-lg p-sm&lt;/span&gt;
   &lt;span class="inline-block mt-xl mb-sm mr-md ml-lg pt-xl pb-sm pr-lg pl-md blue font-mono"&gt;blue mt-xl mb-sm mr-md ml-lg pt-xl pb-sm pr-lg pl-md&lt;/span&gt;
   &lt;span class="inline-block m-sm p-xl red font-mono"&gt;red m-sm p-xl&lt;/span&gt;
@@ -114,7 +114,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         <div class="absolute debug top-xl left-xl">top-xl, left-xl</div>
         <div class="absolute debug bottom-lg right-sm">bottom-lg right-sm</div>
       </div>
-      <pre><code>&lt;div class="relative" style="height: 200px; width: 200px; background-color: lightgray"&gt;
+      <pre><code class="language-html">&lt;div class="relative" style="height: 200px; width: 200px; background-color: lightgray"&gt;
   &lt;div class="absolute debug top-0 left-0"&gt;top-0, left-0&lt;/div&gt;
   &lt;div class="absolute debug top-xl left-xl"&gt;top-xl, left-xl&lt;/div&gt;
   &lt;div class="absolute debug bottom-lg right-sm"&gt;bottom-lg right-sm&lt;/div&gt;
@@ -140,7 +140,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
           <button class="notalu">Unstyled directly</button>
         </div>
       </div>
-        <pre><code>&lt;div class="column gap-md"&gt;
+        <pre><code class="language-html">&lt;div class="column gap-md"&gt;
   &lt;div&gt;
     &lt;button&gt;Styled via parent&lt;/button&gt;
   &lt;/div&gt;
@@ -159,7 +159,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
           Link is a clickable element
       </p>
       <a href="#">Link</a>
-      <pre><code>&lt;a href="#"&gt;Link&lt;/a&gt;</code></pre>
+      <pre><code class="language-html">&lt;a href="#"&gt;Link&lt;/a&gt;</code></pre>
       <h3 class="alu">Blockquote</h3>
       <p>
         Blockquote is a section that is quoted from another source
@@ -168,7 +168,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         <p class="mb-md">It’s not faith in technology. It’s faith in people.</p>
         ~ Steve Jobs
       </blockquote>
-      <pre><code>&lt;blockquote&gt;
+      <pre><code class="language-html">&lt;blockquote&gt;
   &lt;p class="mb-md"&gt;It’s not faith in technology. It’s faith in people.&lt;/p&gt;
   ~ Steve Jobs
 &lt;/blockquote&gt;</code></pre>
@@ -178,7 +178,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       <p>
         Input is a text field element
       </p>
-      <pre><code>&lt;input type="text" placeholder="Enter your name" /&gt;</code></pre>
+      <pre><code class="language-html">&lt;input type="text" placeholder="Enter your name" /&gt;</code></pre>
       <div class="column gap-sm">
         <input type="text" placeholder="Enter your name" />
         <input type="text" disabled placeholder="Disabled input" />
@@ -189,7 +189,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       <p>
         Textarea is a multi-line text field element
       </p>
-      <pre><code>&lt;textarea placeholder="Enter your message"&gt;&lt;/textarea&gt;</code></pre>
+      <pre><code class="language-html">&lt;textarea placeholder="Enter your message"&gt;&lt;/textarea&gt;</code></pre>
       <div class="column gap-sm">
         <textarea placeholder="Enter your message"></textarea>
         <textarea disabled placeholder="Disabled textarea"></textarea>
@@ -200,7 +200,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       <p>
         Checkbox is a checkbox element
       </p>
-      <pre><code>&lt;input type="checkbox" /&gt;</code></pre>
+      <pre><code class="language-html">&lt;input type="checkbox" /&gt;</code></pre>
       <div class="column gap-sm">
         <div class="checkbox">
           <input id="check1" type="checkbox">
@@ -222,7 +222,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       <p>
         Radio is a radio button element
       </p>
-      <pre><code>&lt;input type="radio" /&gt;</code></pre>
+      <pre><code class="language-html">&lt;input type="radio" /&gt;</code></pre>
       <div class="column gap-sm">
         <div class="radio">
           <input id="radio1" type="radio" name="radio-examples">
@@ -247,7 +247,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       <p>
         Button is a clickable element
       </p>
-      <pre><code>&lt;button class="primary"&gt;Primary&lt;/button&gt;
+      <pre><code class="language-html">&lt;button class="primary"&gt;Primary&lt;/button&gt;
 &lt;button&gt;Secondary&lt;/button&gt;</code></pre>
         <div class="row gap-md">
           <button class="primary">Primary</button>
@@ -261,7 +261,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         <p>
           Select is a dropdown element
         </p>
-        <pre><code>&lt;select&gt;
+        <pre><code class="language-html">&lt;select&gt;
   &lt;option&gt;Option 1&lt;/option&gt;
   &lt;option&gt;Option 2&lt;/option&gt;
   &lt;option&gt;Option 3&lt;/option&gt;
@@ -286,7 +286,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       <p>
         Debug is a div element with a red border. Useful for debugging.
       </p>
-      <pre><code>&lt;div class="debug"&gt;Debug&lt;/div&gt;</code></pre>
+      <pre><code class="language-html">&lt;div class="debug"&gt;Debug&lt;/div&gt;</code></pre>
       <div class="debug">Debug</div>
       <h3>
         Row
@@ -295,7 +295,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         Row is a flex container
       </p>
       <p>
-        <pre><code>&lt;div class="row gap-md"&gt;
+        <pre><code class="language-html">&lt;div class="row gap-md"&gt;
   &lt;div class="debug"&gt;Item 1&lt;/div&gt;
   &lt;div class="debug"&gt;Item 2&lt;/div&gt;
   &lt;div class="debug"&gt;Item 3&lt;/div&gt;
@@ -315,7 +315,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         Column is a flex container
       </p>
       <p>
-        <pre><code>&lt;div class="column gap-md"&gt;
+        <pre><code class="language-html">&lt;div class="column gap-md"&gt;
   &lt;div class="debug"&gt;Item 1&lt;/div&gt;
   &lt;div class="debug"&gt;Item 2&lt;/div&gt;
   &lt;div class="debug"&gt;Item 3&lt;/div&gt;
@@ -335,7 +335,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         Centered items applies: justify-content: center; align-items: center;
       </p>
       <p>
-        <pre><code>&lt;div class="row centered gap-md"&gt;
+        <pre><code class="language-html">&lt;div class="row centered gap-md"&gt;
   &lt;div class="debug"&gt;Item 1&lt;/div&gt;
   &lt;div class="debug"&gt;Item 2&lt;/div&gt;
   &lt;div&gt;Item 3&lt;/div&gt;
@@ -355,7 +355,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         Inverts the order of items in a row/column
       </p>
       <p>
-        <pre><code>&lt;div class="column inverted gap-md"&gt;
+        <pre><code class="language-html">&lt;div class="column inverted gap-md"&gt;
   &lt;div class="debug"&gt;Item 1&lt;/div&gt;
   &lt;div class="debug"&gt;Item 2&lt;/div&gt;
   &lt;div&gt;Item 3&lt;/div&gt;
@@ -379,7 +379,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       Note: This isn't in the container div above to show that it actually works
     </p>
     <p>
-      <pre><code>&lt;div class="container"&gt;Hello, world!&lt;/div&gt;
+      <pre><code class="language-html">&lt;div class="container"&gt;Hello, world!&lt;/div&gt;
 &lt;div class="container-padded"&gt;Check padding on small window size.&lt;/div&gt;</code></pre>
     </p>
     <div class="container">Hello, world!</div>
@@ -392,7 +392,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
     <p>
       Dialog is a modal dialog element
     </p>
-    <pre><code>&lt;dialog style="min-width: 400px;"&gt;
+    <pre><code class="language-html">&lt;dialog style="min-width: 400px;"&gt;
   &lt;h5 class="mv-s mb-l"&gt;
     Add new item
   &lt;/h5&gt;
@@ -418,7 +418,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
     <p>
       Spacer is a div element that fills the available space in a flexbox container
     </p>
-    <pre><code>&lt;div class="row gap-md w-full"&gt;
+    <pre><code class="language-html">&lt;div class="row gap-md w-full"&gt;
   &lt;div class="debug"&gt;Item 1&lt;/div&gt;
   &lt;div class="debug"&gt;Item 2&lt;/div&gt;
   &lt;div class="spacer"&gt;&lt;/div&gt;
@@ -445,7 +445,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
       <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
     </div>
-    <pre><code>&lt;div class="grid"&gt;
+    <pre><code class="language-html">&lt;div class="grid"&gt;
   &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;col-lg-2 col-md-3 col-xs-6&lt;/div&gt;
   &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;col-lg-2 col-md-3 col-xs-6&lt;/div&gt;
   &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;col-lg-2 col-md-3 col-xs-6&lt;/div&gt;
@@ -465,7 +465,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       <div class="debug"></div>
       <div class="debug"></div>
     </div>
-    <pre><code>&lt;div class="grid"&gt;
+    <pre><code class="language-html">&lt;div class="grid"&gt;
   &lt;div class="debug col-lg-3 col-md-2 col-xs-6"&gt;col-lg-3 col-md-2 col-xs-6&lt;/div&gt;
   &lt;div class="debug"&gt;&lt;/div&gt;
   &lt;div class="debug"&gt;&lt;/div&gt;
@@ -480,7 +480,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
     <p>
       Navbar is a navigation bar element
     </p>
-    <pre><code>&lt;nav&gt;
+    <pre><code class="language-html">&lt;nav&gt;
   &lt;div class="nav-top"&gt;
     &lt;label for="nav-check" id="nav-button"&gt;
       &lt;svg
@@ -545,7 +545,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
     <p>
       Footer is a footer element
     </p>
-    <pre><code>&lt;footer&gt;
+    <pre><code class="language-html">&lt;footer&gt;
   &lt;div class="container-padded"&gt;
     &lt;div class="mb-s"&gt;
       &lt;span class="font-mono"&gt;Aluminium CSS&lt;/span&gt;

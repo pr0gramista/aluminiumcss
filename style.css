@@ -1,5 +1,6 @@
 :root {
   --alu-font-primary: "Noto Sans", Arial, Helvetica, sans-serif;
+  --alu-font-heading: var(--alu-font-primary);
   --alu-font-mono: "Noto Sans Mono", monospace;
   --alu-sm-gap: 0.25rem; /* 4px */
   --alu-md-gap: 0.5rem; /* 8px */
@@ -14,6 +15,9 @@
   --alu-nav-color: white;
   --alu-nav-height: 48px;
   --alu-nav-menu-hover-background: rgb(33, 33, 33);
+
+  --alu-footer-background: black;
+  --alu-footer-color: white;
 
   --alu-primary-text-color: white;
   --alu-link-color: black;
@@ -30,6 +34,8 @@
 
   --alu-button-primary-background: black;
   --alu-button-primary-color: white;
+  --alu-button-primary-border: var(--alu-border-width) solid
+    var(--alu-button-primary-background);
   --alu-button-disabled-background: rgb(0, 0, 0, 0.3);
 
   --alu-font-size-sm: 0.875rem;
@@ -43,6 +49,7 @@
   --alu-line-height-xl: 2rem;
 
   --alu-input-padding: 0.375rem 0.5rem;
+  --alu-input-font-family: var(--alu-font-mono);
   --alu-input-font-size: var(--alu-font-size-sm);
   --alu-input-line-height: var(--alu-line-height-sm);
 
@@ -84,9 +91,19 @@
   line-height: var(--alu-line-height-xl);
 }
 
+.alu-all .font-primary:not(.notalu):not(.notalu .font-primary),
+.alu.font-primary {
+  font-family: var(--alu-font-primary);
+}
+
 .alu-all .font-mono:not(.notalu):not(.notalu .font-mono),
 .alu.font-mono {
   font-family: var(--alu-font-mono);
+}
+
+.alu-all .font-heading:not(.notalu):not(.notalu .font-heading),
+.alu.font-heading {
+  font-family: var(--alu-font-heading);
 }
 
 .alu-all .text-base:not(.notalu):not(.notalu .text-base),
@@ -635,28 +652,19 @@ blockquote.alu {
   color: var(--alu-blockquote-text-color);
 }
 
-.alu-all pre:not(.notalu):not(.notalu pre),
-pre.alu {
-  font-family: var(--alu-font-mono);
-  background: var(--alu-pre-background);
-  margin-left: var(--alu-md-gap);
-  margin-right: var(--alu-md-gap);
-  padding: var(--alu-md-gap);
-}
-
 /* Inputs */
 .alu-all input[type="text"]:not(.notalu):not(.notalu input),
 input[type="text"].alu {
   border-radius: var(--alu-border-radius);
   padding-block: unset;
   padding-inline: unset;
+  font-family: var(--alu-input-font-family);
   padding: var(--alu-input-padding);
   border-width: var(--alu-border-width);
   line-height: var(--alu-input-line-height);
   font-size: var(--alu-input-font-size);
   outline: none;
   border-style: solid;
-  font-family: var(--alu-font-mono);
   border-color: var(--alu-border-color);
   transition: border-color var(--alu-transition-duration),
     background-color var(--alu-transition-duration),
@@ -675,7 +683,7 @@ input[type="text"].alu:disabled {
   background-color: var(--alu-disabled-color);
 }
 
-.alu
+.alu-all
   input[type="text"]:not(.notalu):not(.notalu input[type="text"])::placeholder,
 input[type="text"].alu::placeholder {
   color: var(--alu-secondary-text-color);
@@ -700,12 +708,12 @@ select.alu {
   padding-inline: unset;
   padding: var(--alu-input-padding);
   border-width: var(--alu-border-width);
+  border-style: solid;
+  border-color: var(--alu-border-color);
+  font-family: var(--alu-input-font-family);
   line-height: var(--alu-input-line-height);
   font-size: var(--alu-input-font-size);
   outline: none;
-  border-style: solid;
-  font-family: var(--alu-font-mono);
-  border-color: var(--alu-border-color);
   -webkit-appearance: none;
   -moz-appearance: none;
   background: transparent;
@@ -734,12 +742,13 @@ select.alu:disabled {
 button.primary.alu {
   background: var(--alu-button-primary-background);
   color: var(--alu-button-primary-color);
-  border: none;
+  border: var(--alu-button-primary-border);
 }
 
 .alu-all button.primary:not(.notalu button):not(.notalu):disabled,
 button.primary.alu:disabled {
   background: var(--alu-button-disabled-background);
+  border-color: var(--alu-button-disabled-background);
 }
 
 .alu-all button:not(.notalu button):not(.notalu),
@@ -776,12 +785,12 @@ textarea.alu {
   border-radius: var(--alu-border-radius);
   width: 100%;
   padding: var(--alu-input-padding);
+  font-family: var(--alu-input-font-family);
   border-width: var(--alu-border-width);
   line-height: var(--alu-input-line-height);
   font-size: var(--alu-input-font-size);
   outline: none;
   border-style: solid;
-  font-family: var(--alu-font-mono);
   border-color: var(--alu-border-color);
   transition: border-color var(--alu-transition-duration),
     background-color var(--alu-transition-duration),
@@ -824,42 +833,42 @@ dialog.alu::backdrop {
 .alu-all h1:not(.notalu):not(.notalu h1),
 h1.alu {
   font-size: 3rem;
-  font-family: var(--alu-font-primary);
+  font-family: var(--alu-font-heading);
   font-weight: bold;
 }
 
 .alu-all h2:not(.notalu):not(.notalu h2),
 h2.alu {
   font-size: 2.25rem;
-  font-family: var(--alu-font-primary);
+  font-family: var(--alu-font-heading);
   font-weight: bold;
 }
 
 .alu-all h3:not(.notalu):not(.notalu h3),
 h3.alu {
   font-size: 1.875rem;
-  font-family: var(--alu-font-primary);
+  font-family: var(--alu-font-heading);
   font-weight: bold;
 }
 
 .alu-all h4:not(.notalu):not(.notalu h4),
 h4.alu {
   font-size: 1.5rem;
-  font-family: var(--alu-font-primary);
+  font-family: var(--alu-font-heading);
   font-weight: bold;
 }
 
 .alu-all h5:not(.notalu):not(.notalu h5),
 h5.alu {
   font-size: 1.25rem;
-  font-family: var(--alu-font-primary);
+  font-family: var(--alu-font-heading);
   font-weight: bold;
 }
 
 .alu-all h6:not(.notalu):not(.notalu h6),
 h6.alu {
   font-size: 1rem;
-  font-family: var(--alu-font-primary);
+  font-family: var(--alu-font-heading);
   font-weight: bold;
 }
 
@@ -1236,8 +1245,8 @@ nav.alu a:hover {
 
 .alu-all footer:not(.notalu):not(.notalu footer),
 footer.alu {
-  background-color: #000;
-  color: #eee;
+  background-color: var(--alu-footer-background);
+  color: var(--alu-footer-color);
   padding: calc(var(--alu-lg-gap) * 2) 0;
 }
 
@@ -1273,7 +1282,7 @@ footer.alu {
     border: 2px solid var(--alu-primary-text-color);
     border-top: 0;
     border-left: 0;
-    left: 7.5px;
+    left: calc(8.5px - var(--alu-border-width));
     top: 4px;
     transform: rotate(45deg);
   }
@@ -1294,7 +1303,6 @@ footer.alu {
     > input[type="checkbox"]
     + label,
   .alu.checkbox > input[type="checkbox"] + label {
-    display: inline-block;
     vertical-align: middle;
     cursor: pointer;
     margin-left: var(--alu-md-gap);
@@ -1362,7 +1370,6 @@ footer.alu {
     > input[type="radio"]
     + label,
   .alu.radio > input[type="radio"] + label {
-    display: inline-block;
     vertical-align: middle;
     cursor: pointer;
     margin-left: var(--alu-md-gap);
