@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aluminum CSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/jpeg" href="/assets/icon.jpg" />
+    <link rel="stylesheet" type="text/css" href="dist/aluminium.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  </head>
+  <body class="alu-all">
+    <div class="container-padded">
+      <h1>
+        <div class="row align-items gap-md">
+          <img src="/assets/icon.jpg" alt="Aluminum CSS" class="mr-lg" style="width: 100%; max-width: 64px;" />  
+          <div>
+            Aluminum CSS
+          </div>
+        </div>
+      </h1>
+      <p>
+        Aluminum CSS is a minimal CSS boilerplate make your page shine.
+      </p>
+      <h3>Installation</h3>
+      <p>
+        Aluminum CSS is available as a NPM package or a single file served via CDN.
+      </p>
+      <pre><code class="language-bash">npm install aluminiumcss</code></pre>
+<pre><code class="language-javascript">// In your JS file with a bundler
+require('aluminiumcss/dist/aluminium.min.css')</code></pre>
+      </code></pre>
+      <p>To use the CDN version, add the following script tag to your head HTML element:</p>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aluminiumcss/dist/aluminium.min.css">
+      <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aluminiumcss/dist/aluminium.min.css"&gt;</pre></code>
+      <h3>Customization</h3>
+      <p>
+        Aluminum CSS is easily customizable via a selection of CSS variables.
+      </p>
+      <h3>Margins, paddings, gaps</h3>
+      <p>
+        Aluminum CSS uses a consistent spacing system that ensures good readability and visual balance.
+        There are four sizes: <code>sm, md, lg, xl</code>. To apply margins, paddings, gaps you can use Tailwind CSS like classes.
+      </p>
+      {{{positioning}}}
+      <pre><code class="language-html mv-md">{{positioning}}</code></pre>
+      <h3>Selective styling</h3>
+      <p>
+          Aluminium CSS is designed to be easily used with other CSS styles. You can apply it globally by putting the <code>.alu-all</code> class on the <code>body</code> element, or you can use it selectively by adding <code>.alu</code> class to specific elements.
+      </p>
+      <p>
+        If you want to remove styling from certain elements you can apply <code>.notalu</code> to the elements or their parent.
+      </p>
+      <div class="column gap-md">
+        {{{selective}}}
+      </div>
+      <pre><code class="language-html mv-md">{{selective}}</code></pre>
+      <h3>Link</h3>
+      <p>
+          Link is a clickable element
+      </p>
+      <a href="#">Link</a>
+      <pre><code class="language-html mv-md">&lt;a href="#"&gt;Link&lt;/a&gt;</code></pre>
+      <h3>Abbreviation</h3>
+      <p>
+        Abbreviation is an abbreviation element
+      </p>
+      <p>
+        <abbr title="HyperText Markup Language">HTML</abbr> is the code that is used to structure a web page and its content.
+      </p>
+      <pre><code class="language-html mv-md">&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;</code></pre>
+      <h3>Table</h3>
+      <p>
+        Table is a table element
+      </p>
+      {{{table}}}
+      <pre><code class="language-html mv-md">{{table}}</code></pre>
+      <h3>Blockquote</h3>
+      <p>
+        Blockquote is a section that is quoted from another source
+      </p>
+      {{{blockquote}}}
+      <pre><code class="language-html mv-md">{{blockquote}}</code></pre>
+      <h3>
+        Input
+      </h3>
+      <p>
+        Input is a text field element
+      </p>
+      {{{input}}}
+      <pre><code class="language-html mv-md">{{input}}</code></pre>
+      <h3>
+        Textarea
+      </h3>
+      <p>
+        Textarea is a multi-line text field element
+      </p>
+      {{{textarea}}}
+      <pre><code class="language-html mv-md">{{textarea}}</code></pre>
+      <h3>
+        Checkbox
+      </h3>
+      <p>
+        Checkbox is a checkbox element
+      </p>
+      <div class="column gap-sm">
+        {{{checkbox}}}
+      </div>
+      <pre><code class="language-html mv-md">{{checkbox}}</code></pre>
+      <h3>
+        Radio
+      </h3>
+      <p>
+        Radio is a radio button element
+      </p>
+      <div class="column gap-sm">
+        {{{radio}}}
+      </div>
+      <pre><code class="language-html mv-md">{{radio}}</code></pre>
+      <h3>
+        Button
+      </h3>
+      <p>
+        Button is a clickable element
+      </p>
+      <div class="row gap-md">
+        {{{button}}}
+      </div>
+      <pre><code class="language-html mv-md">{{button}}</code></pre>
+      <h3>
+        Select
+      </h3>
+      <p>
+        Select is a dropdown element
+      </p>
+      {{{select}}}
+      <pre><code class="language-html mv-md">{{select}}</code></pre>
+      <h3>
+        Debug
+      </h3>
+      <p>
+        Debug is a div element with a red border. Useful for debugging.
+      </p>
+      <div class="debug">Debug</div>
+      <pre><code class="language-html mv-md">&lt;div class="debug"&gt;Debug&lt;/div&gt;</code></pre>
+      <h3>
+        Row
+      </h3>
+      <p>
+        Row is a flex container
+      </p>
+      {{{row}}}
+      <pre><code class="language-html mv-md">{{row}}</code></pre>
+      <h3>
+        Column
+      </h3>
+      <p>
+        Column is a flex container
+      </p>
+      {{{column}}}
+      <pre><code class="language-html mv-md">{{column}}</code></pre>
+      </p>
+      <h3>
+        Centered row/column
+      </h3>
+      <p>
+        Centered items applies: <code>justify-content: center; align-items: center;</code>
+      </p>
+      {{{centered}}}
+      <pre><code class="language-html mv-md">{{centered}}</code></pre>
+      <h3>Spacer</h3>
+      <p>
+        Spacer is a div element that fills the available space in a flexbox container
+      </p>
+      {{{spacer}}}
+      <pre><code class="language-html mv-md">{{spacer}}</code></pre>
+    </div>
+    <h3>
+      Container
+    </h3>
+    <p>
+      Container is just a div with maximum width and margin auto
+    </p>
+    <p>
+      Note: This isn't in the container div above to show that it actually works
+    </p>
+    {{{container}}}
+  </div>
+  <div class="container-padded">
+    <pre><code class="language-html mv-md">{{container}}</code></pre>
+    <h3>Details</h3>
+    <p>
+      Details is a collapsible element
+    </p>
+    <div class="column gap-md" style="max-width: 500px">
+      {{{details}}}
+    </div>
+    <pre><code class="language-html mv-md">{{details}}</code></pre>
+    <h3>
+      Dialog
+    </h3>
+    <p>
+      Dialog is a modal dialog element
+    </p>
+    {{{dialog}}}
+    <pre><code class="language-html mv-md">{{dialog}}</code></pre>
+  </div>
+  <div class="container-padded">
+    <h3>Grid</h3>
+    <p>
+      A responsive grid system. The grid is 12 columns wide and will stack on smaller screens.
+      The classes mimic the Bootstrap grid system, but the implementation is based on CSS grid instead.
+    </p>
+    {{{grid}}}
+    <pre><code class="language-html mv-md">{{grid}}</code></pre>
+    <p>
+      If no class is applied the column will be 1/12th of the grid.
+    </p>
+    {{{gridDefault}}}
+    <pre><code class="language-html mv-md">{{gridDefault}}</code></pre>
+    <h3>
+      Navbar
+    </h3>
+    <p>
+      Navbar is a navigation bar element
+    </p>
+  </div>
+  {{{nav}}}
+  <div class="container-padded">
+    <pre><code class="language-html mv-md">{{nav}}</code></pre>
+    <h3>
+      Footer
+    </h3>
+    <p>
+      Footer is a footer element
+    </p>
+    <pre><code class="language-html mv-md">{{footer}}</code></pre>
+  </div>
+  {{{footer}}}
+  <script>hljs.highlightAll();</script>
+  </body>
+</html>

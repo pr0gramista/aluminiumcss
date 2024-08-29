@@ -1,19 +1,20 @@
 {
   "name": "aluminiumcss",
   "version": "0.1.5",
-  "description": "Brutalist mini CSS framework",
+  "description": "Minimal CSS boilerplate to make your next page shine",
   "main": "build.js",
   "scripts": {
     "build": "node build.js",
-    "dev": "nodemon --watch 'style.css' build.js",
+    "dev": "nodemon --watch 'style.css' --watch 'index.template.html' --watch parts build.js",
     "serve": "serve"
   },
-  "author": "",
+  "author": "Bartosz Wiśniewski",
   "license": "MIT",
   "dependencies": {
     "clean-css": "^5.3.3"
   },
   "devDependencies": {
+    "mustache": "^4.2.0",
     "nodemon": "^3.0.3",
     "serve": "^14.2.1"
   }

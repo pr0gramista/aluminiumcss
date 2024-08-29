@@ -1,7 +1,7 @@
 :root {
   --alu-font-primary: "Noto Sans", Arial, Helvetica, sans-serif;
-  --alu-font-heading: var(--alu-font-primary);
   --alu-font-mono: "Noto Sans Mono", monospace;
+  --alu-font-heading: var(--alu-font-primary);
   --alu-sm-gap: 0.25rem; /* 4px */
   --alu-md-gap: 0.5rem; /* 8px */
   --alu-lg-gap: 1rem; /* 16px */
@@ -21,7 +21,17 @@
 
   --alu-primary-text-color: white;
   --alu-link-color: black;
-  --alu-secondary-text-color: rgb(90, 90, 90);
+  --alu-secondary-color: rgb(90, 90, 90);
+
+  --alu-code-background: #f5f5f5;
+  --alu-code-color: black;
+
+  --alu-summary-background: #f5f5f5;
+  --alu-summary-color: black;
+  --alu-summary-font-size: var(--alu-font-size-md);
+
+  --alu-details-background: #f5f5f5;
+  --alu-details-color: black;
 
   --alu-focus-color: #3d79d4cc;
   --alu-active-color: #3d79d4;
@@ -29,7 +39,6 @@
   --alu-disabled-color: rgb(240, 240, 240, 0.3);
   --alu-disabled-active-color: #bcbcbc;
 
-  --alu-pre-background: #f5f5f5;
   --alu-transition-duration: 200ms;
 
   --alu-button-primary-background: black;
@@ -54,7 +63,7 @@
   --alu-input-line-height: var(--alu-line-height-sm);
 
   --alu-blockquote-ornamentation: 4px solid var(--alu-border-color);
-  --alu-blockquote-text-color: var(--alu-secondary-text-color);
+  --alu-blockquote-color: var(--alu-secondary-color);
 
   --alu-container-width: 1200px;
 
@@ -649,7 +658,74 @@ blockquote.alu {
   margin-left: var(--alu-md-gap);
   margin-top: var(--alu-lg-gap);
   margin-bottom: var(--alu-lg-gap);
-  color: var(--alu-blockquote-text-color);
+  color: var(--alu-blockquote-color);
+}
+
+.alu-all pre:not(.notalu):not(.notalu pre),
+pre.alu {
+  margin: 0;
+}
+
+.alu-all code:not(.notalu):not(.notalu code),
+code.alu {
+  background: var(--alu-code-background);
+  color: var(--alu-code-color);
+}
+
+.alu-all summary:not(.notalu):not(.notalu summary),
+summary.alu {
+  padding: var(--alu-lg-gap);
+  color: var(--alu-summary-color);
+  background: var(--alu-summary-background);
+  border-radius: var(--alu-border-radius);
+  font-size: var(--alu-summary-font-size);
+}
+
+.alu-all summary:not(.notalu):not(.notalu summary) > span:only-child,
+summary.alu > span:only-child {
+  margin-left: var(--alu-md-gap);
+}
+
+.alu-all summary:not(.notalu):not(.notalu summary) > h1:only-child,
+summary.alu > h1:only-child,
+.alu-all summary:not(.notalu):not(.notalu summary) > h2:only-child,
+summary.alu > h2:only-child,
+.alu-all summary:not(.notalu):not(.notalu summary) > h3:only-child,
+summary.alu > h3:only-child,
+.alu-all summary:not(.notalu):not(.notalu summary) > h4:only-child,
+summary.alu > h4:only-child,
+.alu-all summary:not(.notalu):not(.notalu summary) > h5:only-child,
+summary.alu > h5:only-child,
+.alu-all summary:not(.notalu):not(.notalu summary) > h6:only-child,
+summary.alu > h6:only-child {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: var(--alu-lg-gap);
+}
+
+.alu-all details:not(.notalu):not(.notalu details),
+details.alu {
+  background: var(--alu-details-background);
+  color: var(--alu-details-color);
+  border-radius: var(--alu-border-radius);
+}
+
+.alu-all table:not(.notalu):not(.notalu table),
+table.alu {
+  /* background: var(--alu-details-background); */
+  color: var(--alu-details-color);
+  border-radius: var(--alu-border-radius);
+}
+.alu-all td:not(.notalu):not(.notalu td),
+.alu-all th:not(.notalu):not(.notalu th),
+td.alu,
+th.alu {
+  padding: var(--alu-md-gap);
+  background: transparent;
+  border: var(--alu-border-width) solid var(--alu-border-color);
+  color: var(--alu-details-color);
+  border-radius: var(--alu-border-radius);
 }
 
 /* Inputs */
@@ -686,7 +762,7 @@ input[type="text"].alu:disabled {
 .alu-all
   input[type="text"]:not(.notalu):not(.notalu input[type="text"])::placeholder,
 input[type="text"].alu::placeholder {
-  color: var(--alu-secondary-text-color);
+  color: var(--alu-secondary-color);
 }
 
 /* For standard range / checkbox / radio using keyboard */
@@ -810,7 +886,7 @@ textarea.alu:disabled {
 
 .alu-all textarea:not(.notalu):not(.notalu textarea)::placeholder,
 textarea.alu::placeholder {
-  color: var(--alu-secondary-text-color);
+  color: var(--alu-secondary-color);
 }
 
 .alu-all dialog:not(.notalu):not(.notalu dialog),
@@ -1144,20 +1220,20 @@ h6.alu {
   flex-direction: column;
 }
 
-.alu-all .row.inverted:not(.notalu):not(.notalu .row.inverted),
-.row.inverted.alu {
-  flex-direction: row-reverse;
-}
-
-.alu-all .column.inverted:not(.notalu):not(.notalu .column.inverted),
-.column.inverted.alu {
-  flex-direction: column-reverse;
-}
-
 .alu-all .centered:not(.notalu):not(.notalu .centered),
 .centered.alu {
   justify-content: center;
   align-items: center;
+}
+
+.alu-all .align-items:not(.notalu):not(.notalu .align-items),
+.align-items.alu {
+  align-items: center;
+}
+
+.alu-all .justify-content:not(.notalu):not(.notalu .justify-content),
+.justify-content.alu {
+  justify-content: center;
 }
 
 .alu-all .spacer:not(.notalu):not(.notalu .spacer),
@@ -1168,6 +1244,7 @@ h6.alu {
 /* Navbar */
 .alu-all nav:not(.notalu):not(.notalu nav),
 nav.alu {
+  top: 0;
   min-height: var(--alu-nav-height);
   position: sticky;
   display: flex;
@@ -1282,7 +1359,7 @@ footer.alu {
     border: 2px solid var(--alu-primary-text-color);
     border-top: 0;
     border-left: 0;
-    left: calc(8.5px - var(--alu-border-width));
+    left: calc(7.5px - var(--alu-border-width));
     top: 4px;
     transform: rotate(45deg);
   }

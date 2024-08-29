@@ -4,36 +4,28 @@
     <title>Aluminum CSS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/jpeg" href="/assets/icon.jpg" />
     <link rel="stylesheet" type="text/css" href="dist/aluminium.min.css" />
-    <style>
-      .inline-block {
-        display: inline-block;
-      }
-      .green {
-        background-color: green;
-        color: white;
-      }
-      .red {
-        background-color: red;
-        color: white;
-      }
-      .blue {
-        background-color: blue;
-        color: white;
-      }
-    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/github.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   </head>
   <body class="alu-all">
     <div class="container-padded">
-      <h1>Aluminum CSS</h1>
+      <h1>
+        <div class="row align-items gap-md">
+          <img src="/assets/icon.jpg" alt="Aluminum CSS" class="mr-lg" style="width: 100%; max-width: 64px;" />  
+          <div>
+            Aluminum CSS
+          </div>
+        </div>
+      </h1>
       <p>
-        Aluminum CSS is a lightweight mini CSS framework that is easy to use and customize.
+        Aluminum CSS is a minimal CSS boilerplate make your page shine.
       </p>
       <h3>Installation</h3>
       <p>
@@ -55,70 +47,62 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         Aluminum CSS uses a consistent spacing system that ensures good readability and visual balance.
         There are four sizes: <code>sm, md, lg, xl</code>. To apply margins, paddings, gaps you can use Tailwind CSS like classes.
       </p>
-      <div class="row gap-sm mb-sm"/>
-        <div class="debug"></div>
-        <div class="debug"></div>
-        <div class="debug"></div>
-      </div>
-      <div class="row gap-md mb-sm"/>
-        <div class="debug"></div>
-        <div class="debug"></div>
-        <div class="debug"></div>
-      </div>
-      <div class="row gap-lg mb-sm"/>
-        <div class="debug"></div>
-        <div class="debug"></div>
-        <div class="debug"></div>
-      </div>
-      <div class="row gap-xl mb-sm"/>
-        <div class="debug"></div>
-        <div class="debug"></div>
-        <div class="debug"></div>
-      </div>
-      <pre><code class="language-html">&lt;div class="row gap-sm mb-sm"&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="row gap-md mb-sm"&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="row gap-lg mb-sm"&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="row gap-xl mb-sm"&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-      <div>
-        <span class="inline-block mv-lg mh-sm p-sm green">green mv-lg p-sm</span>
-        <span class="inline-block mt-xl mb-sm mr-md ml-lg pt-xl pb-sm pr-lg pl-md blue">blue mt-xl mb-sm mr-md ml-lg pt-xl pb-sm pr-lg pl-md</span>
-        <span class="inline-block m-sm p-xl red">red m-sm p-xl</span>
-      </div>
-      <pre><code class="language-html">&lt;div&gt;
-  &lt;span class="inline-block mv-lg mh-sm p-sm green font-mono"&gt;green mv-lg p-sm&lt;/span&gt;
-  &lt;span class="inline-block mt-xl mb-sm mr-md ml-lg pt-xl pb-sm pr-lg pl-md blue font-mono"&gt;blue mt-xl mb-sm mr-md ml-lg pt-xl pb-sm pr-lg pl-md&lt;/span&gt;
-  &lt;span class="inline-block m-sm p-xl red font-mono"&gt;red m-sm p-xl&lt;/span&gt;
-&lt;/div&gt;</code></pre>
-      <h3>Positioning</h3>
-      <p>
-        Aluminum CSS provides a set of positioning utilities. You can use the classes <code>fixed, absolute, relative, sticky, static, top-[0/sm/md/lg/xl], right-[0/sm/md/lg/xl], bottom-[0/sm/md/lg/xl], left-[0/sm/md/lg/xl]</code> to position elements.
-      </p>
-      <div class="relative" style="height: 200px; width: 200px; background-color: lightgray">
-        <div class="absolute debug top-0 left-0">top-0, left-0</div>
-        <div class="absolute debug top-xl left-xl">top-xl, left-xl</div>
-        <div class="absolute debug bottom-lg right-sm">bottom-lg right-sm</div>
-      </div>
-      <pre><code class="language-html">&lt;div class="relative" style="height: 200px; width: 200px; background-color: lightgray"&gt;
-  &lt;div class="absolute debug top-0 left-0"&gt;top-0, left-0&lt;/div&gt;
-  &lt;div class="absolute debug top-xl left-xl"&gt;top-xl, left-xl&lt;/div&gt;
-  &lt;div class="absolute debug bottom-lg right-sm"&gt;bottom-lg right-sm&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+      <div class="relative">
+  <div class="row gap-sm mb-sm">
+    <div class="debug"></div>
+    <div class="debug"></div>
+    <div class="debug"></div>
+  </div>
+  <div class="row gap-md mb-md">
+    <div class="debug"></div>
+    <div class="debug"></div>
+    <div class="debug"></div>
+  </div>
+  <div class="row gap-lg mb-lg">
+    <div class="debug"></div>
+    <div class="debug"></div>
+    <div class="debug"></div>
+  </div>
+  <div class="row gap-xl mb-xl">
+    <div class="debug"></div>
+    <div class="debug"></div>
+    <div class="debug"></div>
+  </div>
+  <div class="absolute top-xl right-xl debug">From top</div>
+  <div class="absolute bottom-sm right-sm debug">From bottom</div>
+  <div class="mh-lg mv-sm debug">
+    Large margin from left and right Small from top and bottom
+  </div>
+</div>
+
+      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;relative&quot;&gt;
+  &lt;div class&#x3D;&quot;row gap-sm mb-sm&quot;&gt;
+    &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;row gap-md mb-md&quot;&gt;
+    &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;row gap-lg mb-lg&quot;&gt;
+    &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;row gap-xl mb-xl&quot;&gt;
+    &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;absolute top-xl right-xl debug&quot;&gt;From top&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;absolute bottom-sm right-sm debug&quot;&gt;From bottom&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;mh-lg mv-sm debug&quot;&gt;
+    Large margin from left and right Small from top and bottom
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+</code></pre>
       <h3>Selective styling</h3>
       <p>
           Aluminium CSS is designed to be easily used with other CSS styles. You can apply it globally by putting the <code>.alu-all</code> class on the <code>body</code> element, or you can use it selectively by adding <code>.alu</code> class to specific elements.
@@ -128,246 +112,353 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       </p>
       <div class="column gap-md">
         <div>
-          <button>Styled via parent</button>
-        </div>
-        <div>
-          <button class="alu">Styled directly</button>
-        </div>
-        <div class="notalu">
-          <button>Unstyled via parent</button>
-        </div>
-        <div>
-          <button class="notalu">Unstyled directly</button>
-        </div>
+  <button>Styled via parent</button>
+</div>
+<div>
+  <button class="alu">Styled directly</button>
+</div>
+<div class="notalu">
+  <button>Unstyled via parent</button>
+</div>
+<div>
+  <button class="notalu">Unstyled directly</button>
+</div>
+
       </div>
-        <pre><code class="language-html">&lt;div class="column gap-md"&gt;
-  &lt;div&gt;
-    &lt;button&gt;Styled via parent&lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button class="alu"&gt;Styled directly&lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class="notalu"&gt;
-    &lt;button&gt;Unstyled via parent&lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;button class="notalu"&gt;Unstyled directly&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-      <h3 class="alu">Link</h3>
+      <pre><code class="language-html mv-md">&lt;div&gt;
+  &lt;button&gt;Styled via parent&lt;&#x2F;button&gt;
+&lt;&#x2F;div&gt;
+&lt;div&gt;
+  &lt;button class&#x3D;&quot;alu&quot;&gt;Styled directly&lt;&#x2F;button&gt;
+&lt;&#x2F;div&gt;
+&lt;div class&#x3D;&quot;notalu&quot;&gt;
+  &lt;button&gt;Unstyled via parent&lt;&#x2F;button&gt;
+&lt;&#x2F;div&gt;
+&lt;div&gt;
+  &lt;button class&#x3D;&quot;notalu&quot;&gt;Unstyled directly&lt;&#x2F;button&gt;
+&lt;&#x2F;div&gt;
+</code></pre>
+      <h3>Link</h3>
       <p>
           Link is a clickable element
       </p>
       <a href="#">Link</a>
-      <pre><code class="language-html">&lt;a href="#"&gt;Link&lt;/a&gt;</code></pre>
-      <h3 class="alu">Blockquote</h3>
+      <pre><code class="language-html mv-md">&lt;a href="#"&gt;Link&lt;/a&gt;</code></pre>
+      <h3>Abbreviation</h3>
+      <p>
+        Abbreviation is an abbreviation element
+      </p>
+      <p>
+        <abbr title="HyperText Markup Language">HTML</abbr> is the code that is used to structure a web page and its content.
+      </p>
+      <pre><code class="language-html mv-md">&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;</code></pre>
+      <h3>Table</h3>
+      <p>
+        Table is a table element
+      </p>
+      <table>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+    <th>Total</th>
+    <th>% increase</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$120</td>
+    <td>$425,212</td>
+    <td>+13%</td>
+  </tr>
+  <tr>
+    <td>Total</td>
+    <td>$100</td>
+    <td>$100</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+    <td>$100</td>
+    <td>$100</td>
+  </tr>
+</table>
+
+      <pre><code class="language-html mv-md">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Month&lt;&#x2F;th&gt;
+    &lt;th&gt;Savings&lt;&#x2F;th&gt;
+    &lt;th&gt;Total&lt;&#x2F;th&gt;
+    &lt;th&gt;% increase&lt;&#x2F;th&gt;
+  &lt;&#x2F;tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;January&lt;&#x2F;td&gt;
+    &lt;td&gt;$120&lt;&#x2F;td&gt;
+    &lt;td&gt;$425,212&lt;&#x2F;td&gt;
+    &lt;td&gt;+13%&lt;&#x2F;td&gt;
+  &lt;&#x2F;tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Total&lt;&#x2F;td&gt;
+    &lt;td&gt;$100&lt;&#x2F;td&gt;
+    &lt;td&gt;$100&lt;&#x2F;td&gt;
+    &lt;td&gt;$100&lt;&#x2F;td&gt;
+  &lt;&#x2F;tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;January&lt;&#x2F;td&gt;
+    &lt;td&gt;$100&lt;&#x2F;td&gt;
+    &lt;td&gt;$100&lt;&#x2F;td&gt;
+    &lt;td&gt;$100&lt;&#x2F;td&gt;
+  &lt;&#x2F;tr&gt;
+&lt;&#x2F;table&gt;
+</code></pre>
+      <h3>Blockquote</h3>
       <p>
         Blockquote is a section that is quoted from another source
       </p>
       <blockquote>
-        <p class="mb-md">It’s not faith in technology. It’s faith in people.</p>
-        ~ Steve Jobs
-      </blockquote>
-      <pre><code class="language-html">&lt;blockquote&gt;
-  &lt;p class="mb-md"&gt;It’s not faith in technology. It’s faith in people.&lt;/p&gt;
+  <p class="mb-md">It’s not faith in technology. It’s faith in people.</p>
   ~ Steve Jobs
-&lt;/blockquote&gt;</code></pre>
+</blockquote>
+
+      <pre><code class="language-html mv-md">&lt;blockquote&gt;
+  &lt;p class&#x3D;&quot;mb-md&quot;&gt;It’s not faith in technology. It’s faith in people.&lt;&#x2F;p&gt;
+  ~ Steve Jobs
+&lt;&#x2F;blockquote&gt;
+</code></pre>
       <h3>
         Input
       </h3>
       <p>
         Input is a text field element
       </p>
-      <pre><code class="language-html">&lt;input type="text" placeholder="Enter your name" /&gt;</code></pre>
       <div class="column gap-sm">
-        <input type="text" placeholder="Enter your name" />
-        <input type="text" disabled placeholder="Disabled input" />
-      </div>
+  <input type="text" placeholder="Enter your name" />
+  <input type="text" disabled placeholder="Disabled input" />
+</div>
+
+      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;column gap-sm&quot;&gt;
+  &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Enter your name&quot; &#x2F;&gt;
+  &lt;input type&#x3D;&quot;text&quot; disabled placeholder&#x3D;&quot;Disabled input&quot; &#x2F;&gt;
+&lt;&#x2F;div&gt;
+</code></pre>
       <h3>
         Textarea
       </h3>
       <p>
         Textarea is a multi-line text field element
       </p>
-      <pre><code class="language-html">&lt;textarea placeholder="Enter your message"&gt;&lt;/textarea&gt;</code></pre>
       <div class="column gap-sm">
-        <textarea placeholder="Enter your message"></textarea>
-        <textarea disabled placeholder="Disabled textarea"></textarea>
-      </div>
+  <textarea placeholder="Enter your message"></textarea>
+  <textarea disabled placeholder="Disabled textarea"></textarea>
+</div>
+
+      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;column gap-sm&quot;&gt;
+  &lt;textarea placeholder&#x3D;&quot;Enter your message&quot;&gt;&lt;&#x2F;textarea&gt;
+  &lt;textarea disabled placeholder&#x3D;&quot;Disabled textarea&quot;&gt;&lt;&#x2F;textarea&gt;
+&lt;&#x2F;div&gt;
+</code></pre>
       <h3>
         Checkbox
       </h3>
       <p>
         Checkbox is a checkbox element
       </p>
-      <pre><code class="language-html">&lt;input type="checkbox" /&gt;</code></pre>
       <div class="column gap-sm">
         <div class="checkbox">
-          <input id="check1" type="checkbox">
-          <label for="check1">Checkbox</label>
-        </div>
-        <div class="checkbox">
-          <input id="check2" type="checkbox" disabled>
-          <label for="check2">Disabled</label>
-        </div>
-        <div class="checkbox">
-          <input id="check3" type="checkbox" disabled checked>
-          <label for="check3">Disabled checked</label>
-        </div>
+  <input id="check1" type="checkbox" />
+  <label for="check1">Checkbox</label>
+</div>
+<div class="checkbox">
+  <input id="check2" type="checkbox" disabled />
+  <label for="check2">Disabled</label>
+</div>
+<div class="checkbox">
+  <input id="check3" type="checkbox" disabled checked />
+  <label for="check3">Disabled checked</label>
+</div>
+
       </div>
-      <pre</pre>
+      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;checkbox&quot;&gt;
+  &lt;input id&#x3D;&quot;check1&quot; type&#x3D;&quot;checkbox&quot; &#x2F;&gt;
+  &lt;label for&#x3D;&quot;check1&quot;&gt;Checkbox&lt;&#x2F;label&gt;
+&lt;&#x2F;div&gt;
+&lt;div class&#x3D;&quot;checkbox&quot;&gt;
+  &lt;input id&#x3D;&quot;check2&quot; type&#x3D;&quot;checkbox&quot; disabled &#x2F;&gt;
+  &lt;label for&#x3D;&quot;check2&quot;&gt;Disabled&lt;&#x2F;label&gt;
+&lt;&#x2F;div&gt;
+&lt;div class&#x3D;&quot;checkbox&quot;&gt;
+  &lt;input id&#x3D;&quot;check3&quot; type&#x3D;&quot;checkbox&quot; disabled checked &#x2F;&gt;
+  &lt;label for&#x3D;&quot;check3&quot;&gt;Disabled checked&lt;&#x2F;label&gt;
+&lt;&#x2F;div&gt;
+</code></pre>
       <h3>
         Radio
       </h3>
       <p>
         Radio is a radio button element
       </p>
-      <pre><code class="language-html">&lt;input type="radio" /&gt;</code></pre>
       <div class="column gap-sm">
         <div class="radio">
-          <input id="radio1" type="radio" name="radio-examples">
-          <label for="radio1">Radio</label>
-        </div>
-        <div class="radio">
-          <input id="radio2" type="radio" name="radio-examples">
-          <label for="radio2">Radio</label>
-        </div>
-        <div class="radio">
-          <input id="radio3" type="radio" name="radio-examples2" disabled>
-          <label for="radio3">Disabled</label>
-        </div>
-        <div class="radio">
-          <input id="radio4" type="radio" name="radio-examples2" disabled checked>
-          <label for="radio4">Disabled</label>
-        </div>
+  <input id="radio1" type="radio" name="radio-examples" />
+  <label for="radio1">Radio</label>
+</div>
+<div class="radio">
+  <input id="radio2" type="radio" name="radio-examples" />
+  <label for="radio2">Radio</label>
+</div>
+<div class="radio">
+  <input id="radio3" type="radio" name="radio-examples2" disabled />
+  <label for="radio3">Disabled</label>
+</div>
+<div class="radio">
+  <input id="radio4" type="radio" name="radio-examples2" disabled checked />
+  <label for="radio4">Disabled</label>
+</div>
+
       </div>
+      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;radio&quot;&gt;
+  &lt;input id&#x3D;&quot;radio1&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-examples&quot; &#x2F;&gt;
+  &lt;label for&#x3D;&quot;radio1&quot;&gt;Radio&lt;&#x2F;label&gt;
+&lt;&#x2F;div&gt;
+&lt;div class&#x3D;&quot;radio&quot;&gt;
+  &lt;input id&#x3D;&quot;radio2&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-examples&quot; &#x2F;&gt;
+  &lt;label for&#x3D;&quot;radio2&quot;&gt;Radio&lt;&#x2F;label&gt;
+&lt;&#x2F;div&gt;
+&lt;div class&#x3D;&quot;radio&quot;&gt;
+  &lt;input id&#x3D;&quot;radio3&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-examples2&quot; disabled &#x2F;&gt;
+  &lt;label for&#x3D;&quot;radio3&quot;&gt;Disabled&lt;&#x2F;label&gt;
+&lt;&#x2F;div&gt;
+&lt;div class&#x3D;&quot;radio&quot;&gt;
+  &lt;input id&#x3D;&quot;radio4&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-examples2&quot; disabled checked &#x2F;&gt;
+  &lt;label for&#x3D;&quot;radio4&quot;&gt;Disabled&lt;&#x2F;label&gt;
+&lt;&#x2F;div&gt;
+</code></pre>
       <h3>
         Button
       </h3>
       <p>
         Button is a clickable element
       </p>
-      <pre><code class="language-html">&lt;button class="primary"&gt;Primary&lt;/button&gt;
-&lt;button&gt;Secondary&lt;/button&gt;</code></pre>
-        <div class="row gap-md">
-          <button class="primary">Primary</button>
-          <button class="primary" disabled>Primary disabled</button>
-          <button>Secondary</button>
-          <button disabled>Disabled</button>
-        </div>
-        <h3>
-          Select
-        </h3>
-        <p>
-          Select is a dropdown element
-        </p>
-        <pre><code class="language-html">&lt;select&gt;
-  &lt;option&gt;Option 1&lt;/option&gt;
-  &lt;option&gt;Option 2&lt;/option&gt;
-  &lt;option&gt;Option 3&lt;/option&gt;
-&lt;/select&gt;</code></pre>
-        <select>
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-        </select>
-        <select disabled>
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-        </select>
-        <p>
-          Here is another paragraph of text. I can write anything I want here,
-          too.
-        </p>
+      <div class="row gap-md">
+        <button class="primary">Primary</button>
+<button class="primary" disabled>Primary disabled</button>
+<button>Secondary</button>
+<button disabled>Disabled</button>
+
+      </div>
+      <pre><code class="language-html mv-md">&lt;button class&#x3D;&quot;primary&quot;&gt;Primary&lt;&#x2F;button&gt;
+&lt;button class&#x3D;&quot;primary&quot; disabled&gt;Primary disabled&lt;&#x2F;button&gt;
+&lt;button&gt;Secondary&lt;&#x2F;button&gt;
+&lt;button disabled&gt;Disabled&lt;&#x2F;button&gt;
+</code></pre>
+      <h3>
+        Select
+      </h3>
+      <p>
+        Select is a dropdown element
+      </p>
+      <select>
+  <option>Option 1</option>
+  <option>Option 2</option>
+  <option>Option 3</option>
+</select>
+<select disabled>
+  <option>Option 1</option>
+  <option>Option 2</option>
+  <option>Option 3</option>
+</select>
+
+      <pre><code class="language-html mv-md">&lt;select&gt;
+  &lt;option&gt;Option 1&lt;&#x2F;option&gt;
+  &lt;option&gt;Option 2&lt;&#x2F;option&gt;
+  &lt;option&gt;Option 3&lt;&#x2F;option&gt;
+&lt;&#x2F;select&gt;
+&lt;select disabled&gt;
+  &lt;option&gt;Option 1&lt;&#x2F;option&gt;
+  &lt;option&gt;Option 2&lt;&#x2F;option&gt;
+  &lt;option&gt;Option 3&lt;&#x2F;option&gt;
+&lt;&#x2F;select&gt;
+</code></pre>
       <h3>
         Debug
       </h3>
       <p>
         Debug is a div element with a red border. Useful for debugging.
       </p>
-      <pre><code class="language-html">&lt;div class="debug"&gt;Debug&lt;/div&gt;</code></pre>
       <div class="debug">Debug</div>
+      <pre><code class="language-html mv-md">&lt;div class="debug"&gt;Debug&lt;/div&gt;</code></pre>
       <h3>
         Row
       </h3>
       <p>
         Row is a flex container
       </p>
-      <p>
-        <pre><code class="language-html">&lt;div class="row gap-md"&gt;
-  &lt;div class="debug"&gt;Item 1&lt;/div&gt;
-  &lt;div class="debug"&gt;Item 2&lt;/div&gt;
-  &lt;div class="debug"&gt;Item 3&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-      </p>
-      <div>
-        <div class="row gap-md">
-          <div class="debug">Item 1</div>
-          <div class="debug">Item 2</div>
-          <div class="debug">Item 3</div>
-        </div>
-      </div>
+      <div class="row gap-md">
+  <div class="debug">Item 1</div>
+  <div class="debug">Item 2</div>
+  <div class="debug">Item 3</div>
+</div>
+
+      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;row gap-md&quot;&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 1&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 2&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 3&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+</code></pre>
       <h3>
         Column
       </h3>
       <p>
         Column is a flex container
       </p>
-      <p>
-        <pre><code class="language-html">&lt;div class="column gap-md"&gt;
-  &lt;div class="debug"&gt;Item 1&lt;/div&gt;
-  &lt;div class="debug"&gt;Item 2&lt;/div&gt;
-  &lt;div class="debug"&gt;Item 3&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+      <div class="column gap-md">
+  <div class="debug">Item 1</div>
+  <div class="debug">Item 2</div>
+  <div class="debug">Item 3</div>
+</div>
+
+      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;column gap-md&quot;&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 1&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 2&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 3&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+</code></pre>
       </p>
-      <div>
-        <div class="column gap-md">
-          <div class="debug">Item 1</div>
-          <div class="debug">Item 2</div>
-          <div class="debug">Item 3</div>
-        </div>
-      </div>
       <h3>
         Centered row/column
       </h3>
       <p>
-        Centered items applies: justify-content: center; align-items: center;
+        Centered items applies: <code>justify-content: center; align-items: center;</code>
       </p>
+      <div class="row centered gap-md">
+  <div class="debug">Item 1</div>
+  <div class="debug">Item 2</div>
+  <div>Item 3</div>
+</div>
+
+      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;row centered gap-md&quot;&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 1&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 2&lt;&#x2F;div&gt;
+  &lt;div&gt;Item 3&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+</code></pre>
+      <h3>Spacer</h3>
       <p>
-        <pre><code class="language-html">&lt;div class="row centered gap-md"&gt;
-  &lt;div class="debug"&gt;Item 1&lt;/div&gt;
-  &lt;div class="debug"&gt;Item 2&lt;/div&gt;
-  &lt;div&gt;Item 3&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+        Spacer is a div element that fills the available space in a flexbox container
       </p>
-      <div>
-        <div class="row centered gap-md">
-          <div class="debug">Item 1</div>
-          <div class="debug">Item 2</div>
-          <div>Item 3</div>
-        </div>
-      </div>
-      <h3>
-        Inverted row/column
-      </h3>
-      <p>
-        Inverts the order of items in a row/column
-      </p>
-      <p>
-        <pre><code class="language-html">&lt;div class="column inverted gap-md"&gt;
-  &lt;div class="debug"&gt;Item 1&lt;/div&gt;
-  &lt;div class="debug"&gt;Item 2&lt;/div&gt;
-  &lt;div&gt;Item 3&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-      </p>
-      <div>
-        <div class="column inverted gap-md">
-          <div class="debug">Item 1</div>
-          <div class="debug">Item 2</div>
-          <div>Item 3</div>
-        </div>
-      </div>
+      <div class="row gap-md w-full">
+  <div class="debug">Item 1</div>
+  <div class="debug">Item 2</div>
+  <div class="spacer"></div>
+  <div class="debug">Item 3</div>
+</div>
+
+      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;row gap-md w-full&quot;&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 1&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 2&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;spacer&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 3&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+</code></pre>
     </div>
     <h3>
       Container
@@ -378,58 +469,122 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
     <p>
       Note: This isn't in the container div above to show that it actually works
     </p>
-    <p>
-      <pre><code class="language-html">&lt;div class="container"&gt;Hello, world!&lt;/div&gt;
-&lt;div class="container-padded"&gt;Check padding on small window size.&lt;/div&gt;</code></pre>
-    </p>
-    <div class="container">Hello, world!</div>
-    <div class="container-padded">Check padding on small window size.</div>
+    <div class="container">This is a container without any padding.</div>
+<div class="container-padded">
+  This is a container with tiny padding on smaller screens.
+</div>
+
   </div>
   <div class="container-padded">
+    <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;container&quot;&gt;This is a container without any padding.&lt;&#x2F;div&gt;
+&lt;div class&#x3D;&quot;container-padded&quot;&gt;
+  This is a container with tiny padding on smaller screens.
+&lt;&#x2F;div&gt;
+</code></pre>
+    <h3>Details</h3>
+    <p>
+      Details is a collapsible element
+    </p>
+    <div class="column gap-md" style="max-width: 500px">
+      <details>
+  <summary><span>Image</span></summary>
+  <img
+    src="/assets/girl.jpg"
+    alt="Girl"
+    style="width: 100%; max-width: 500px"
+  />
+</details>
+<details>
+  <summary><span>Proud of our work</span></summary>
+  <div class="ph-lg text-sm mb-md">
+    Details come here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec
+  </div>
+  <div class="ph-lg text-sm mb-lg">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+    sit amet, per no tota corrumpit intellegam, ex per quas nostrud corrumpit.
+    Ea alii sale interesset sed, ut graece liberavisse nam. Repudiare incorrupte
+    an vim, est ei case facete indoctum. Ei dicit doming partiendo per, ei
+    detraxit quaerendum liberavisse vim, omnes rationibus ei cum. Ut mei
+    explicari comprehensam definitionem.
+  </div>
+</details>
+
+    </div>
+    <pre><code class="language-html mv-md">&lt;details&gt;
+  &lt;summary&gt;&lt;span&gt;Image&lt;&#x2F;span&gt;&lt;&#x2F;summary&gt;
+  &lt;img
+    src&#x3D;&quot;&#x2F;assets&#x2F;girl.jpg&quot;
+    alt&#x3D;&quot;Girl&quot;
+    style&#x3D;&quot;width: 100%; max-width: 500px&quot;
+  &#x2F;&gt;
+&lt;&#x2F;details&gt;
+&lt;details&gt;
+  &lt;summary&gt;&lt;span&gt;Proud of our work&lt;&#x2F;span&gt;&lt;&#x2F;summary&gt;
+  &lt;div class&#x3D;&quot;ph-lg text-sm mb-md&quot;&gt;
+    Details come here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Donec
+  &lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;ph-lg text-sm mb-lg&quot;&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+    sit amet, per no tota corrumpit intellegam, ex per quas nostrud corrumpit.
+    Ea alii sale interesset sed, ut graece liberavisse nam. Repudiare incorrupte
+    an vim, est ei case facete indoctum. Ei dicit doming partiendo per, ei
+    detraxit quaerendum liberavisse vim, omnes rationibus ei cum. Ut mei
+    explicari comprehensam definitionem.
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;details&gt;
+</code></pre>
     <h3>
       Dialog
     </h3>
     <p>
       Dialog is a modal dialog element
     </p>
-    <pre><code class="language-html">&lt;dialog style="min-width: 400px;"&gt;
-  &lt;h5 class="mv-s mb-l"&gt;
-    Add new item
-  &lt;/h5&gt;
-  &lt;input class="mb-s" type="text" placeholder="Enter item name" /&gt;
-  &lt;div class="inverted-row gap-md"&gt;
-    &lt;button class="primary" onclick="document.getElementById('dialog-example').close()"&gt;Add&lt;/button&gt;
-    &lt;button onclick="document.getElementById('dialog-example').close()"&gt;Cancel&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/dialog&gt;
-&lt;button class="primary" onclick="document.getElementById('dialog-example').showModal()"&gt;Open dialog&lt;/button&gt;</code></pre>
-    <dialog id="dialog-example" style="min-width: 400px;">
-      <h5 class="mv-sm mb-lg">
-        Add new item
-      </h5>
-      <input class="mb-sm" type="text" placeholder="Enter item name" />
-      <div class="inverted-row gap-md">
-        <button class="primary" onclick="document.getElementById('dialog-example').close()">Add</button>
-        <button onclick="document.getElementById('dialog-example').close()">Cancel</button>
-      </div>
-    </dialog>
-    <button class="primary" onclick="document.getElementById('dialog-example').showModal()">Open dialog</button>
-    <h3>Spacer</h3>
-    <p>
-      Spacer is a div element that fills the available space in a flexbox container
-    </p>
-    <pre><code class="language-html">&lt;div class="row gap-md w-full"&gt;
-  &lt;div class="debug"&gt;Item 1&lt;/div&gt;
-  &lt;div class="debug"&gt;Item 2&lt;/div&gt;
-  &lt;div class="spacer"&gt;&lt;/div&gt;
-  &lt;div class="debug"&gt;Item 3&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-    <div class="row gap-md w-full">
-      <div class="debug">Item 1</div>
-      <div class="debug">Item 2</div>
-      <div class="spacer"></div>
-      <div class="debug">Item 3</div>
-    </div>
+    <dialog id="dialog-example" style="min-width: 400px">
+  <h5 class="mv-sm mb-lg">Add new item</h5>
+  <input class="mb-sm" type="text" placeholder="Enter item name" />
+  <div class="inverted-row gap-md">
+    <button
+      class="primary"
+      onclick="document.getElementById('dialog-example').close()"
+    >
+      Add
+    </button>
+    <button onclick="document.getElementById('dialog-example').close()">
+      Cancel
+    </button>
+  </div>
+</dialog>
+<button
+  class="primary"
+  onclick="document.getElementById('dialog-example').showModal()"
+>
+  Open dialog
+</button>
+
+    <pre><code class="language-html mv-md">&lt;dialog id&#x3D;&quot;dialog-example&quot; style&#x3D;&quot;min-width: 400px&quot;&gt;
+  &lt;h5 class&#x3D;&quot;mv-sm mb-lg&quot;&gt;Add new item&lt;&#x2F;h5&gt;
+  &lt;input class&#x3D;&quot;mb-sm&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Enter item name&quot; &#x2F;&gt;
+  &lt;div class&#x3D;&quot;inverted-row gap-md&quot;&gt;
+    &lt;button
+      class&#x3D;&quot;primary&quot;
+      onclick&#x3D;&quot;document.getElementById(&#39;dialog-example&#39;).close()&quot;
+    &gt;
+      Add
+    &lt;&#x2F;button&gt;
+    &lt;button onclick&#x3D;&quot;document.getElementById(&#39;dialog-example&#39;).close()&quot;&gt;
+      Cancel
+    &lt;&#x2F;button&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;dialog&gt;
+&lt;button
+  class&#x3D;&quot;primary&quot;
+  onclick&#x3D;&quot;document.getElementById(&#39;dialog-example&#39;).showModal()&quot;
+&gt;
+  Open dialog
+&lt;&#x2F;button&gt;
+</code></pre>
   </div>
   <div class="container-padded">
     <h3>Grid</h3>
@@ -438,144 +593,147 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       The classes mimic the Bootstrap grid system, but the implementation is based on CSS grid instead.
     </p>
     <div class="grid mb-lg">
-      <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
-      <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
-      <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
-      <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
-      <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
-      <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
-    </div>
-    <pre><code class="language-html">&lt;div class="grid"&gt;
-  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;col-lg-2 col-md-3 col-xs-6&lt;/div&gt;
-  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;col-lg-2 col-md-3 col-xs-6&lt;/div&gt;
-  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;col-lg-2 col-md-3 col-xs-6&lt;/div&gt;
-  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;col-lg-2 col-md-3 col-xs-6&lt;/div&gt;
-  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;col-lg-2 col-md-3 col-xs-6&lt;/div&gt;
-  &lt;div class="debug col-lg-2 col-md-3 col-xs-6"&gt;col-lg-2 col-md-3 col-xs-6&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+  <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
+  <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
+  <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
+  <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
+  <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
+  <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
+</div>
+
+    <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;grid mb-lg&quot;&gt;
+  &lt;div class&#x3D;&quot;debug col-lg-2 col-md-3 col-xs-6&quot;&gt;col-lg-2 col-md-3 col-xs-6&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug col-lg-2 col-md-3 col-xs-6&quot;&gt;col-lg-2 col-md-3 col-xs-6&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug col-lg-2 col-md-3 col-xs-6&quot;&gt;col-lg-2 col-md-3 col-xs-6&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug col-lg-2 col-md-3 col-xs-6&quot;&gt;col-lg-2 col-md-3 col-xs-6&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug col-lg-2 col-md-3 col-xs-6&quot;&gt;col-lg-2 col-md-3 col-xs-6&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug col-lg-2 col-md-3 col-xs-6&quot;&gt;col-lg-2 col-md-3 col-xs-6&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+</code></pre>
     <p>
       If no class is applied the column will be 1/12th of the grid.
     </p>
     <div class="grid">
-      <div class="debug col-lg-3 col-md-2 col-xs-6">col-lg-3 col-md-2 col-xs-6</div>
-      <div class="debug"></div>
-      <div class="debug"></div>
-      <div class="debug"></div>
-      <div class="debug"></div>
-      <div class="debug"></div>
-      <div class="debug"></div>
-    </div>
-    <pre><code class="language-html">&lt;div class="grid"&gt;
-  &lt;div class="debug col-lg-3 col-md-2 col-xs-6"&gt;col-lg-3 col-md-2 col-xs-6&lt;/div&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-  &lt;div class="debug"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+  <div class="debug col-lg-3 col-md-2 col-xs-6">col-lg-3 col-md-2 col-xs-6</div>
+  <div class="debug"></div>
+  <div class="debug"></div>
+  <div class="debug"></div>
+  <div class="debug"></div>
+  <div class="debug"></div>
+  <div class="debug"></div>
+</div>
+
+    <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;grid&quot;&gt;
+  &lt;div class&#x3D;&quot;debug col-lg-3 col-md-2 col-xs-6&quot;&gt;col-lg-3 col-md-2 col-xs-6&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+</code></pre>
     <h3>
       Navbar
     </h3>
     <p>
       Navbar is a navigation bar element
     </p>
-    <pre><code class="language-html">&lt;nav&gt;
-  &lt;div class="nav-top"&gt;
-    &lt;label for="nav-check" id="nav-button"&gt;
-      &lt;svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="30"
-      height="30"
-      fill="currentColor"
-      class="bi bi-list"
-      viewBox="0 0 16 16"
-      &gt;
-      &lt;path
-      fill-rule="evenodd"
-      d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-      /&gt;
-      &lt;/svg&gt;
-    &lt;/label&gt;
-    &lt;div class="font-mono"&gt;Aluminium CSS&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="nav-links"&gt;
-    &lt;a class="nav-link"&gt;Home&lt;/a&gt;
-    &lt;a class="nav-link"&gt;About&lt;/a&gt;
-    &lt;a class="nav-link"&gt;Contact&lt;/a&gt;
-    &lt;div class="spacer"&gt;&lt;/div&gt;
-    &lt;a class="nav-link"&gt;Login&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/nav&gt;
-</code></pre>
-  </div> 
   </div>
   <nav>
-    <input type="checkbox" id="nav-check" />
-    <div class="nav-top">
-      <label for="nav-check" id="nav-button">
-        <svg
+  <input type="checkbox" id="nav-check" />
+  <div class="nav-top">
+    <label for="nav-check" id="nav-button">
+      <svg
         xmlns="http://www.w3.org/2000/svg"
         width="30"
         height="30"
         fill="currentColor"
         class="bi bi-list"
         viewBox="0 0 16 16"
-        >
+      >
         <path
-        fill-rule="evenodd"
-        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+          fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
         />
-        </svg>
-      </label>
-      <div class="font-mono mh-md">Aluminium CSS</div>
-    </div>
-    <div class="nav-links">
-      <a class="nav-link">Home</a>
-      <a class="nav-link">About</a>
-      <a class="nav-link">Contact</a>
-      <div class="spacer"></div>
-      <a class="nav-link">Login</a>
-    </div>
-  </nav>
+      </svg>
+    </label>
+    <div class="font-mono mh-md">Aluminium CSS</div>
+  </div>
+  <div class="nav-links">
+    <a class="nav-link">Home</a>
+    <a class="nav-link">About</a>
+    <a class="nav-link">Contact</a>
+    <div class="spacer"></div>
+    <a class="nav-link">Login</a>
+  </div>
+</nav>
+
   <div class="container-padded">
+    <pre><code class="language-html mv-md">&lt;nav&gt;
+  &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;nav-check&quot; &#x2F;&gt;
+  &lt;div class&#x3D;&quot;nav-top&quot;&gt;
+    &lt;label for&#x3D;&quot;nav-check&quot; id&#x3D;&quot;nav-button&quot;&gt;
+      &lt;svg
+        xmlns&#x3D;&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;
+        width&#x3D;&quot;30&quot;
+        height&#x3D;&quot;30&quot;
+        fill&#x3D;&quot;currentColor&quot;
+        class&#x3D;&quot;bi bi-list&quot;
+        viewBox&#x3D;&quot;0 0 16 16&quot;
+      &gt;
+        &lt;path
+          fill-rule&#x3D;&quot;evenodd&quot;
+          d&#x3D;&quot;M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z&quot;
+        &#x2F;&gt;
+      &lt;&#x2F;svg&gt;
+    &lt;&#x2F;label&gt;
+    &lt;div class&#x3D;&quot;font-mono mh-md&quot;&gt;Aluminium CSS&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;nav-links&quot;&gt;
+    &lt;a class&#x3D;&quot;nav-link&quot;&gt;Home&lt;&#x2F;a&gt;
+    &lt;a class&#x3D;&quot;nav-link&quot;&gt;About&lt;&#x2F;a&gt;
+    &lt;a class&#x3D;&quot;nav-link&quot;&gt;Contact&lt;&#x2F;a&gt;
+    &lt;div class&#x3D;&quot;spacer&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;a class&#x3D;&quot;nav-link&quot;&gt;Login&lt;&#x2F;a&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;nav&gt;
+</code></pre>
     <h3>
       Footer
     </h3>
     <p>
       Footer is a footer element
     </p>
-    <pre><code class="language-html">&lt;footer&gt;
-  &lt;div class="container-padded"&gt;
-    &lt;div class="mb-s"&gt;
-      &lt;span class="font-mono"&gt;Aluminium CSS&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class="row gap-lg mb-l"&gt;
-      &lt;a&gt;Home&lt;/a&gt;
-      &lt;a&gt;About&lt;/a&gt;
-      &lt;a&gt;Contact&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class="text-sm"&gt;
-      Copyright &amp;copy; 2023 Aluminium CSS
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/footer&gt;</code></pre>
+    <pre><code class="language-html mv-md">&lt;footer&gt;
+  &lt;div class&#x3D;&quot;container-padded&quot;&gt;
+    &lt;div class&#x3D;&quot;mb-s&quot;&gt;
+      &lt;span class&#x3D;&quot;font-mono&quot;&gt;Aluminium CSS&lt;&#x2F;span&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;row gap-lg mb-l&quot;&gt;
+      &lt;a&gt;Home&lt;&#x2F;a&gt;
+      &lt;a&gt;About&lt;&#x2F;a&gt;
+      &lt;a&gt;Contact&lt;&#x2F;a&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;text-sm&quot;&gt;Copyright &amp;copy; 2023 Aluminium CSS&lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;footer&gt;
+</code></pre>
   </div>
   <footer>
-    <div class="container-padded">
-      <div class="mb-s">
-        <span class="font-mono">Aluminium CSS</span>
-      </div>
-      <div class="row gap-lg mb-l">
-        <a>Home</a>
-        <a>About</a>
-        <a>Contact</a>
-      </div>
-      <div class="text-sm">
-        Copyright &copy; 2023 Aluminium CSS
-      </div>
+  <div class="container-padded">
+    <div class="mb-s">
+      <span class="font-mono">Aluminium CSS</span>
     </div>
-  </footer>
+    <div class="row gap-lg mb-l">
+      <a>Home</a>
+      <a>About</a>
+      <a>Contact</a>
+    </div>
+    <div class="text-sm">Copyright &copy; 2023 Aluminium CSS</div>
+  </div>
+</footer>
+
   <script>hljs.highlightAll();</script>
   </body>
 </html>
