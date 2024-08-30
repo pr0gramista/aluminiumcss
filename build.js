@@ -47,6 +47,7 @@ const outputPage = mustache.render(template, {
   selective: fs.readFileSync("parts/selective.html", "utf8"),
   container: fs.readFileSync("parts/container.html", "utf8"),
   positioning: fs.readFileSync("parts/positioning.html", "utf8"),
+  customization: fs.readFileSync("parts/customization.html", "utf8"),
 });
 
 fs.writeFileSync("index.html", outputPage);

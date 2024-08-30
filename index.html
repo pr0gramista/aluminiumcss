@@ -15,7 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   </head>
   <body class="alu-all">
-    <div class="container-padded">
+    <div class="container">
       <h1>
         <div class="row align-items gap-md">
           <img src="/icon.jpg" alt="Aluminum CSS" class="mr-lg" style="width: 100%; max-width: 64px;" />  
@@ -27,25 +27,49 @@
       <p>
         Aluminum CSS is a minimal CSS boilerplate make your page shine.
       </p>
-      <h3>Installation</h3>
+      <div class="row gap-sm">
+        <a href="https://github.com/pr0gramista/aluminiumcss">GitHub</a>
+        <span>|</span>
+        <a href="https://aluminiumcss.pr0gramista.com/cute">Cute demo</a>
+        <span>|</span>
+        <a href="https://www.npmjs.com/package/aluminiumcss">npm</a>
+      </div>
+      <h3 id="installation">Installation</h3>
+      <p>Aluminium CSS works best as a single link tag in the `<head>` of your HTML document:</p>
+      <pre><code class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aluminiumcss/dist/aluminium.min.css"&gt;</pre></code>
       <p>
-        Aluminum CSS is available as a NPM package or a single file served via CDN.
+        You can also install Aluminium CSS via NPM:
       </p>
       <pre><code class="language-bash">npm install aluminiumcss</code></pre>
-<pre><code class="language-javascript">// In your JS file with a bundler
+      <p>
+        And then import it in your JS file, assuming you are using a bundler:
+      </p>
+      <pre><code class="language-javascript">// In your JS file with a bundler
 require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       </code></pre>
-      <p>To use the CDN version, add the following script tag to your head HTML element:</p>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aluminiumcss/dist/aluminium.min.css">
-      <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aluminiumcss/dist/aluminium.min.css"&gt;</pre></code>
-      <h3>Customization</h3>
       <p>
-        Aluminum CSS is easily customizable via a selection of CSS variables.
+        To apply styles <code>.alu-all</code> to your body class or apply <code>.alu</code> to particular elements.
       </p>
-      <h3>Margins, paddings, gaps</h3>
+      <h3 id="customization">Customization</h3>
+      <p>
+        Aluminum CSS is easily customizable via a <a href="https://github.com/pr0gramista/aluminiumcss/blob/main/style.css">selection of CSS variables</a>. Check <a href="/cute">the cutest demo</a> to see how far you can get with it.
+      </p>
+      <pre><code class="language-html">&lt;style&gt;
+  :root {
+    --alu-font-primary: &quot;Nunito Sans&quot;, Arial, Helvetica, sans-serif;
+    --alu-font-heading: &quot;Playwrite DK Loopet&quot;, cursive;
+
+    --alu-border-width: 2px;
+    --alu-border-color: #ffc8c7;
+    --alu-border-radius: 6px;
+  }
+&lt;&#x2F;style&gt;
+</code></pre>
+      <h3 id="spacing">Spacing - margins, paddings, gaps</h3>
       <p>
         Aluminum CSS uses a consistent spacing system that ensures good readability and visual balance.
-        There are four sizes: <code>sm, md, lg, xl</code>. To apply margins, paddings, gaps you can use Tailwind CSS like classes.
+        There are four sizes: <code>sm, md, lg, xl</code>. To apply margins, paddings, gaps you can use Tailwind CSS like classes like <code>pt-sm</code> or <code>gap-md</code>.
+        There are also classes for positioning elements like <code>top-sm</code> or <code>right-xl</code>.
       </p>
       <div class="relative">
   <div class="row gap-sm mb-sm">
@@ -103,15 +127,16 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   &lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
 </code></pre>
-      <h3>Selective styling</h3>
+      <h3 id="selective">Selective styling</h3>
       <p>
           Aluminium CSS is designed to be easily used with other CSS styles. You can apply it globally by putting the <code>.alu-all</code> class on the <code>body</code> element, or you can use it selectively by adding <code>.alu</code> class to specific elements.
       </p>
       <p>
-        If you want to remove styling from certain elements you can apply <code>.notalu</code> to the elements or their parent.
+        If you are using <code>.alu-all</code> but you want to remove styling from certain elements you can apply <code>.notalu</code> to the elements or their parent.
       </p>
       <div class="column gap-md">
-        <div>
+        <!-- .alu-all is applied to the body -->
+<div>
   <button>Styled via parent</button>
 </div>
 <div>
@@ -125,7 +150,8 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 </div>
 
       </div>
-      <pre><code class="language-html mv-md">&lt;div&gt;
+      <pre><code class="language-html mv-md">&lt;!-- .alu-all is applied to the body --&gt;
+&lt;div&gt;
   &lt;button&gt;Styled via parent&lt;&#x2F;button&gt;
 &lt;&#x2F;div&gt;
 &lt;div&gt;
@@ -138,82 +164,18 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   &lt;button class&#x3D;&quot;notalu&quot;&gt;Unstyled directly&lt;&#x2F;button&gt;
 &lt;&#x2F;div&gt;
 </code></pre>
-      <h3>Link</h3>
+      <h3 id="link">Link</h3>
+      <a href="#link">Link</a>
+      <pre><code class="language-html mv-md">&lt;a href="#link"&gt;Link&lt;/a&gt;</code></pre>
+      <h3 id="abbr">Abbreviation</h3>
       <p>
-          Link is a clickable element
-      </p>
-      <a href="#">Link</a>
-      <pre><code class="language-html mv-md">&lt;a href="#"&gt;Link&lt;/a&gt;</code></pre>
-      <h3>Abbreviation</h3>
-      <p>
-        Abbreviation is an abbreviation element
+        Abbreviation can be used to show an acronym or abbreviation. Hover over the abbreviation to see the full text.
       </p>
       <p>
         <abbr title="HyperText Markup Language">HTML</abbr> is the code that is used to structure a web page and its content.
       </p>
-      <pre><code class="language-html mv-md">&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;</code></pre>
-      <h3>Table</h3>
-      <p>
-        Table is a table element
-      </p>
-      <table>
-  <tr>
-    <th>Month</th>
-    <th>Savings</th>
-    <th>Total</th>
-    <th>% increase</th>
-  </tr>
-  <tr>
-    <td>January</td>
-    <td>$120</td>
-    <td>$425,212</td>
-    <td>+13%</td>
-  </tr>
-  <tr>
-    <td>Total</td>
-    <td>$100</td>
-    <td>$100</td>
-    <td>$100</td>
-  </tr>
-  <tr>
-    <td>January</td>
-    <td>$100</td>
-    <td>$100</td>
-    <td>$100</td>
-  </tr>
-</table>
-
-      <pre><code class="language-html mv-md">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Month&lt;&#x2F;th&gt;
-    &lt;th&gt;Savings&lt;&#x2F;th&gt;
-    &lt;th&gt;Total&lt;&#x2F;th&gt;
-    &lt;th&gt;% increase&lt;&#x2F;th&gt;
-  &lt;&#x2F;tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;January&lt;&#x2F;td&gt;
-    &lt;td&gt;$120&lt;&#x2F;td&gt;
-    &lt;td&gt;$425,212&lt;&#x2F;td&gt;
-    &lt;td&gt;+13%&lt;&#x2F;td&gt;
-  &lt;&#x2F;tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Total&lt;&#x2F;td&gt;
-    &lt;td&gt;$100&lt;&#x2F;td&gt;
-    &lt;td&gt;$100&lt;&#x2F;td&gt;
-    &lt;td&gt;$100&lt;&#x2F;td&gt;
-  &lt;&#x2F;tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;January&lt;&#x2F;td&gt;
-    &lt;td&gt;$100&lt;&#x2F;td&gt;
-    &lt;td&gt;$100&lt;&#x2F;td&gt;
-    &lt;td&gt;$100&lt;&#x2F;td&gt;
-  &lt;&#x2F;tr&gt;
-&lt;&#x2F;table&gt;
-</code></pre>
-      <h3>Blockquote</h3>
-      <p>
-        Blockquote is a section that is quoted from another source
-      </p>
+      <pre><code class="language-html mv-md">&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; is the code that is used to structure a web page and its content.</code></pre>
+      <h3 id="blockquote">Blockquote</h3>
       <blockquote>
   <p class="mb-md">It’s not faith in technology. It’s faith in people.</p>
   ~ Steve Jobs
@@ -224,12 +186,72 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   ~ Steve Jobs
 &lt;&#x2F;blockquote&gt;
 </code></pre>
-      <h3>
-        Input
+      <h3 id="debug">
+        Debug
       </h3>
       <p>
-        Input is a text field element
+        Debug is a div element with minimum size and a bit of color. Useful for debugging.
       </p>
+      <div class="debug">Debug</div>
+      <pre><code class="language-html mv-md">&lt;div class="debug"&gt;Debug&lt;/div&gt;</code></pre>
+      <h3 id="table">Table</h3>
+      <table>
+  <tr>
+    <th>Country</th>
+    <th>Capital</th>
+    <th>Population</th>
+    <th>Flag</th>
+  </tr>
+  <tr>
+    <td>Poland</td>
+    <td>Warsaw</td>
+    <td>38m</td>
+    <td>🇵🇱</td>
+  </tr>
+  <tr>
+    <td>Germany</td>
+    <td>Berlin</td>
+    <td>85m</td>
+    <td>🇩🇪</td>
+  </tr>
+  <tr>
+    <td>Iceland</td>
+    <td>Reykjavik</td>
+    <td>400k</td>
+    <td>🇮🇸</td>
+  </tr>
+</table>
+
+      <pre><code class="language-html mv-md">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Country&lt;&#x2F;th&gt;
+    &lt;th&gt;Capital&lt;&#x2F;th&gt;
+    &lt;th&gt;Population&lt;&#x2F;th&gt;
+    &lt;th&gt;Flag&lt;&#x2F;th&gt;
+  &lt;&#x2F;tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Poland&lt;&#x2F;td&gt;
+    &lt;td&gt;Warsaw&lt;&#x2F;td&gt;
+    &lt;td&gt;38m&lt;&#x2F;td&gt;
+    &lt;td&gt;🇵🇱&lt;&#x2F;td&gt;
+  &lt;&#x2F;tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Germany&lt;&#x2F;td&gt;
+    &lt;td&gt;Berlin&lt;&#x2F;td&gt;
+    &lt;td&gt;85m&lt;&#x2F;td&gt;
+    &lt;td&gt;🇩🇪&lt;&#x2F;td&gt;
+  &lt;&#x2F;tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Iceland&lt;&#x2F;td&gt;
+    &lt;td&gt;Reykjavik&lt;&#x2F;td&gt;
+    &lt;td&gt;400k&lt;&#x2F;td&gt;
+    &lt;td&gt;🇮🇸&lt;&#x2F;td&gt;
+  &lt;&#x2F;tr&gt;
+&lt;&#x2F;table&gt;
+</code></pre>
+      <h3 id="input">
+        Input
+      </h3>
       <div class="column gap-sm">
   <input type="text" placeholder="Enter your name" />
   <input type="text" disabled placeholder="Disabled input" />
@@ -240,7 +262,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   &lt;input type&#x3D;&quot;text&quot; disabled placeholder&#x3D;&quot;Disabled input&quot; &#x2F;&gt;
 &lt;&#x2F;div&gt;
 </code></pre>
-      <h3>
+      <h3 id="textarea">
         Textarea
       </h3>
       <p>
@@ -256,12 +278,9 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   &lt;textarea disabled placeholder&#x3D;&quot;Disabled textarea&quot;&gt;&lt;&#x2F;textarea&gt;
 &lt;&#x2F;div&gt;
 </code></pre>
-      <h3>
+      <h3 id="checkbox">
         Checkbox
       </h3>
-      <p>
-        Checkbox is a checkbox element
-      </p>
       <div class="column gap-sm">
         <div class="checkbox">
   <input id="check1" type="checkbox" />
@@ -290,12 +309,9 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   &lt;label for&#x3D;&quot;check3&quot;&gt;Disabled checked&lt;&#x2F;label&gt;
 &lt;&#x2F;div&gt;
 </code></pre>
-      <h3>
+      <h3 id="radio">
         Radio
       </h3>
-      <p>
-        Radio is a radio button element
-      </p>
       <div class="column gap-sm">
         <div class="radio">
   <input id="radio1" type="radio" name="radio-examples" />
@@ -332,12 +348,9 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   &lt;label for&#x3D;&quot;radio4&quot;&gt;Disabled&lt;&#x2F;label&gt;
 &lt;&#x2F;div&gt;
 </code></pre>
-      <h3>
+      <h3 id="button">
         Button
       </h3>
-      <p>
-        Button is a clickable element
-      </p>
       <div class="row gap-md">
         <button class="primary">Primary</button>
 <button class="primary" disabled>Primary disabled</button>
@@ -350,12 +363,9 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 &lt;button&gt;Secondary&lt;&#x2F;button&gt;
 &lt;button disabled&gt;Disabled&lt;&#x2F;button&gt;
 </code></pre>
-      <h3>
+      <h3 id="select">
         Select
       </h3>
-      <p>
-        Select is a dropdown element
-      </p>
       <select>
   <option>Option 1</option>
   <option>Option 2</option>
@@ -378,15 +388,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   &lt;option&gt;Option 3&lt;&#x2F;option&gt;
 &lt;&#x2F;select&gt;
 </code></pre>
-      <h3>
-        Debug
-      </h3>
-      <p>
-        Debug is a div element with a red border. Useful for debugging.
-      </p>
-      <div class="debug">Debug</div>
-      <pre><code class="language-html mv-md">&lt;div class="debug"&gt;Debug&lt;/div&gt;</code></pre>
-      <h3>
+      <h3 id="row">
         Row
       </h3>
       <p>
@@ -404,7 +406,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   &lt;div class&#x3D;&quot;debug&quot;&gt;Item 3&lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
 </code></pre>
-      <h3>
+      <h3 id="column">
         Column
       </h3>
       <p>
@@ -423,7 +425,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 &lt;&#x2F;div&gt;
 </code></pre>
       </p>
-      <h3>
+      <h3 id="centered">
         Centered row/column
       </h3>
       <p>
@@ -441,7 +443,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   &lt;div&gt;Item 3&lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
 </code></pre>
-      <h3>Spacer</h3>
+      <h3 id="spacer">Spacer</h3>
       <p>
         Spacer is a div element that fills the available space in a flexbox container
       </p>
@@ -460,42 +462,32 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 &lt;&#x2F;div&gt;
 </code></pre>
     </div>
-    <h3>
+    <h3 id="container">
       Container
     </h3>
     <p>
-      Container is just a div with maximum width and margin auto
+      Container is just a div with maximum width and auto margins. There is also a bit of padding added.
     </p>
     <p>
-      Note: This isn't in the container div above to show that it actually works
+      Note: This section is not in the container div above to show how it works.
     </p>
-    <div class="container">This is a container without any padding.</div>
-<div class="container-padded">
-  This is a container with tiny padding on smaller screens.
-</div>
+    <div class="container">This is a container</div>
 
   </div>
-  <div class="container-padded">
-    <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;container&quot;&gt;This is a container without any padding.&lt;&#x2F;div&gt;
-&lt;div class&#x3D;&quot;container-padded&quot;&gt;
-  This is a container with tiny padding on smaller screens.
-&lt;&#x2F;div&gt;
+  <div class="container">
+    <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;container&quot;&gt;This is a container&lt;&#x2F;div&gt;
 </code></pre>
-    <h3>Details</h3>
+    <h3 id="details">Details</h3>
     <p>
       Details is a collapsible element
     </p>
     <div class="column gap-md" style="max-width: 500px">
       <details>
   <summary><span>Image</span></summary>
-  <img
-    src="/girl.jpg"
-    alt="Girl"
-    style="width: 100%; max-width: 500px"
-  />
+  <img src="/girl.jpg" alt="Girl" style="width: 100%; max-width: 500px" />
 </details>
 <details>
-  <summary><span>Proud of our work</span></summary>
+  <summary><span>Block of text</span></summary>
   <div class="ph-lg text-sm mb-md">
     Details come here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Donec
@@ -513,14 +505,10 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
     </div>
     <pre><code class="language-html mv-md">&lt;details&gt;
   &lt;summary&gt;&lt;span&gt;Image&lt;&#x2F;span&gt;&lt;&#x2F;summary&gt;
-  &lt;img
-    src&#x3D;&quot;&#x2F;assets&#x2F;girl.jpg&quot;
-    alt&#x3D;&quot;Girl&quot;
-    style&#x3D;&quot;width: 100%; max-width: 500px&quot;
-  &#x2F;&gt;
+  &lt;img src&#x3D;&quot;&#x2F;girl.jpg&quot; alt&#x3D;&quot;Girl&quot; style&#x3D;&quot;width: 100%; max-width: 500px&quot; &#x2F;&gt;
 &lt;&#x2F;details&gt;
 &lt;details&gt;
-  &lt;summary&gt;&lt;span&gt;Proud of our work&lt;&#x2F;span&gt;&lt;&#x2F;summary&gt;
+  &lt;summary&gt;&lt;span&gt;Block of text&lt;&#x2F;span&gt;&lt;&#x2F;summary&gt;
   &lt;div class&#x3D;&quot;ph-lg text-sm mb-md&quot;&gt;
     Details come here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Donec
@@ -535,7 +523,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   &lt;&#x2F;div&gt;
 &lt;&#x2F;details&gt;
 </code></pre>
-    <h3>
+    <h3 id="dialog">
       Dialog
     </h3>
     <p>
@@ -586,8 +574,8 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 &lt;&#x2F;button&gt;
 </code></pre>
   </div>
-  <div class="container-padded">
-    <h3>Grid</h3>
+  <div class="container">
+    <h3 id="grid">Grid</h3>
     <p>
       A responsive grid system. The grid is 12 columns wide and will stack on smaller screens.
       The classes mimic the Bootstrap grid system, but the implementation is based on CSS grid instead.
@@ -633,7 +621,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
 </code></pre>
-    <h3>
+    <h3 id="nav">
       Navbar
     </h3>
     <p>
@@ -661,15 +649,17 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
     <div class="font-mono mh-md">Aluminium CSS</div>
   </div>
   <div class="nav-links">
-    <a class="nav-link">Home</a>
-    <a class="nav-link">About</a>
-    <a class="nav-link">Contact</a>
+    <a class="nav-link" href="#installation">Installation</a>
+    <a class="nav-link" href="#customization">Customization</a>
+    <a class="nav-link" href="#grid">Grid</a>
     <div class="spacer"></div>
-    <a class="nav-link">Login</a>
+    <a class="nav-link" href="https://github.com/pr0gramista/aluminiumcss"
+      >GitHub</a
+    >
   </div>
 </nav>
 
-  <div class="container-padded">
+  <div class="container">
     <pre><code class="language-html mv-md">&lt;nav&gt;
   &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;nav-check&quot; &#x2F;&gt;
   &lt;div class&#x3D;&quot;nav-top&quot;&gt;
@@ -691,15 +681,17 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
     &lt;div class&#x3D;&quot;font-mono mh-md&quot;&gt;Aluminium CSS&lt;&#x2F;div&gt;
   &lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;nav-links&quot;&gt;
-    &lt;a class&#x3D;&quot;nav-link&quot;&gt;Home&lt;&#x2F;a&gt;
-    &lt;a class&#x3D;&quot;nav-link&quot;&gt;About&lt;&#x2F;a&gt;
-    &lt;a class&#x3D;&quot;nav-link&quot;&gt;Contact&lt;&#x2F;a&gt;
+    &lt;a class&#x3D;&quot;nav-link&quot; href&#x3D;&quot;#installation&quot;&gt;Installation&lt;&#x2F;a&gt;
+    &lt;a class&#x3D;&quot;nav-link&quot; href&#x3D;&quot;#customization&quot;&gt;Customization&lt;&#x2F;a&gt;
+    &lt;a class&#x3D;&quot;nav-link&quot; href&#x3D;&quot;#grid&quot;&gt;Grid&lt;&#x2F;a&gt;
     &lt;div class&#x3D;&quot;spacer&quot;&gt;&lt;&#x2F;div&gt;
-    &lt;a class&#x3D;&quot;nav-link&quot;&gt;Login&lt;&#x2F;a&gt;
+    &lt;a class&#x3D;&quot;nav-link&quot; href&#x3D;&quot;https:&#x2F;&#x2F;github.com&#x2F;pr0gramista&#x2F;aluminiumcss&quot;
+      &gt;GitHub&lt;&#x2F;a
+    &gt;
   &lt;&#x2F;div&gt;
 &lt;&#x2F;nav&gt;
 </code></pre>
-    <h3>
+    <h3 id="footer">
       Footer
     </h3>
     <p>

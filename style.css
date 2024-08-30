@@ -611,15 +611,8 @@
 .alu-all .container:not(.notalu):not(.notalu .container),
 .container.alu-all {
   max-width: var(--alu-container-width);
-  padding: 0 var(--alu-md-gap);
   margin: 0 auto;
-}
-
-.alu-all .container-padded:not(.notalu):not(.notalu .container-padded),
-.container-padded.alu-all {
-  max-width: var(--alu-container-width);
   padding: 0 var(--alu-md-gap);
-  margin: 0 auto;
 }
 
 .alu-all body,

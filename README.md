@@ -1,8 +1,8 @@
-![Logo](assets/icon64.jpg)
+![Logo](/icon64.jpg)
 # Aluminum CSS
 Minimal CSS boilerplate to make your next page shine. 
 
-[Docs](https://pr0gramista.github.io/aluminiumcss) | [Cute demo]([https://demo.](https://pr0gramista.github.io/aluminiumcss)) | [npm](https://www.npmjs.com/package/aluminiumcss)
+[Docs](https://aluminiumcss.pr0gramista.com) | [Cute demo](https://aluminiumcss.pr0gramista.com/cute) | [npm](https://www.npmjs.com/package/aluminiumcss)
 
 ## Features
 - CSS only
@@ -31,3 +31,9 @@ require('aluminiumcss/dist/aluminium.min.css')
 ## Motivation
 I have seen way too many bare HTML pages. While many other CSS styles exist there are't many that are minimal and easy to customize.
 I also kept missing some of the core Tailwind CSS utilities, so I included a variation of them in this project.
+
+## Contributing
+Contributions are welcome, but please keep in mind that this project is meant to be a minimal CSS boilerplate. If you are unsure about the implementation of a feature, please open an issue first and I'll be happy to help 💛
+
+## License
+MIT

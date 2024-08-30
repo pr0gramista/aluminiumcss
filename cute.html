@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Derailed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="dist/aluminium.min.css" />
+    <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --alu-font-primary: "Poppins", Arial, Helvetica, sans-serif;
+        --alu-font-heading: "Playwrite DK Loopet", cursive;
+
+        --alu-border-width: 2px;
+        --alu-border-color: #ffc8c7;
+        --alu-border-radius: 6px;
+
+        --alu-nav-background: #190d0f;
+        --alu-nav-color: #ffdbe3;
+        --alu-nav-menu-hover-background: #402228;
+
+        --alu-footer-background: #190d0f;
+        --alu-footer-color: #ffdbe3;
+
+        --alu-primary-color: white;
+        --alu-link-color: #e88e97;
+        --alu-secondary-color: #bd4055;
+
+        --alu-focus-color: #ff99a3cc;
+        --alu-active-color: #e37683;
+
+        --alu-button-primary-background: #ffd4d7;
+        --alu-button-primary-color: #9c1944;
+        --alu-button-disabled-background: rgb(255, 212, 212, 0.3);
+
+        --alu-input-font-family: var(--alu-font-primary);
+        --alu-input-padding: 0.5rem 0.75rem;
+      }
+    </style>
+  </head>
+  <body class="alu-all">
+    <nav>
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-top">
+        <label for="nav-check" id="nav-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </label>
+        <div class="mh-md">✨ Cute ✨</div>
+      </div>
+      <div class="nav-links">
+        <div class="spacer"></div>
+        <a href="https://aluminiumcss.pr0gramista.com" class="nav-link"
+          >Aluminium CSS</a
+        >
+        <a href="https://github.com/pr0gramista/aluminiumcss" class="nav-link"
+          >GitHub</a
+        >
+      </div>
+    </nav>
+    <div class="p-xl">
+      <div class="container">
+        <div class="grid gap-xl">
+          <div
+            class="col-xs-12 col-md-6 column justify-content gap-md"
+            style="text-align: right"
+          >
+            <h1>
+              We make your page
+              <span style="color: var(--alu-link-color); line-height: 5rem"
+                >shine again!</span
+              >
+            </h1>
+            <p>
+              This is a demo page for it to show how customizable Aluminium CSS
+              can be. Forget ugly default styles. Add Aluminium CSS to your page
+              and watch it ✨
+            </p>
+            <div>
+              <button class="primary">Sponsor us</button>
+              <button>Use for free</button>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <img
+              style="max-width: 500px; width: 100%; max-height: 500px"
+              src="/girl.jpg"
+              alt="Girl"
+            />
+          </div>
+          <div class="col-xs-12 pv-lg">
+            <h5 style="text-align: center">What they're saying about us</h5>
+            <div class="row gap-md" style="justify-content: center">
+              <div class="grid">
+                <div class="col-xs-12 col-md-4">
+                  <blockquote>
+                    <p>
+                      I am working for a big corporation. I had no desire to
+                      build pages anymore, but with the help of Aluminium CSS, I
+                      was able to enjoy it once again.
+                    </p>
+                    <p>~ John, ⭐️⭐️⭐️⭐️⭐️</p>
+                  </blockquote>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <blockquote>
+                    <p>
+                      Best decision in my life. I have never touched CSS and now
+                      I can continue do it.
+                    </p>
+                    <p>~ Janet, ⭐️⭐️⭐️⭐️⭐️</p>
+                  </blockquote>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                  <blockquote>
+                    <p>Wtf are CSS variables? So awesome!</p>
+                    <p>~ Ricky, ⭐️⭐️⭐️⭐️⭐️</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 pv-lg">
+            <div class="column gap-md">
+              <h4>Sign for our newsletter</h4>
+              <input type="text" placeholder="Enter your email address" />
+              <div class="checkbox">
+                <input id="check1" type="checkbox" />
+                <label for="check1"
+                  >I agree to sell my soul according to
+                  <a href="https://aluminiumcss.pr0gramista.com/"
+                    >the terms and conditions</a
+                  ></label
+                >
+              </div>
+              <div>
+                <button class="primary">Sign up</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <img
+              style="max-width: 500px; width: 100%; max-height: 500px"
+              src="/newsletter.jpg"
+              alt="Girl"
+            />
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="column gap-md">
+              <h3>How it works</h3>
+              <details>
+                <summary><span>Stepping out of the box 🐈</span></summary>
+                <div class="ph-lg text-sm mb-lg">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  euismod, nisl eget consectetur pretium, purus nunc aliquet
+                  nulla, nec hendrerit nisi diam sit amet magna. Nullam eget
+                  nisi eu purus ultrices euismod. Sed euismod, nisl eget
+                  consectetur pretium, purus nunc aliquet nulla, nec hendrerit
+                  nisi diam sit amet magna. Nullam eget nisi eu purus ultrices
+                  euismod.
+                </div>
+              </details>
+              <details>
+                <summary><span class="ml-sm">Pure CSS ⚡️</span></summary>
+                <div class="ph-lg text-sm mb-lg">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  euismod, nisl eget consectetur pretium, purus nunc aliquet
+                  nulla, nec hendrerit nisi diam sit amet magna. Nullam eget
+                  nisi eu purus ultrices euismod. Sed euismod, nisl eget
+                  consectetur pretium, purus nunc aliquet nulla, nec hendrerit
+                  nisi diam sit amet magna. Nullam eget nisi eu purus ultrices
+                  euismod.
+                </div>
+              </details>
+              <details>
+                <summary><span>Paint it as you wish 🎨</span></summary>
+                <div class="ph-lg text-sm mb-lg">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                  euismod, nisl eget consectetur pretium, purus nunc aliquet
+                  nulla, nec hendrerit nisi diam sit amet magna. Nullam eget
+                  nisi eu purus ultrices euismod. Sed euismod, nisl eget
+                  consectetur pretium, purus nunc aliquet nulla, nec hendrerit
+                  nisi diam sit amet magna. Nullam eget nisi eu purus ultrices
+                  euismod.
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6 align-items justify-content column">
+            <h3>Our plans</h3>
+            <table>
+              <tr>
+                <th>Name</th>
+                <th>Features</th>
+                <th>Price</th>
+                <th>Support</th>
+              </tr>
+              <tr>
+                <td>Standard</td>
+                <td>All</td>
+                <td>Free</td>
+                <td>None</td>
+              </tr>
+              <tr>
+                <td>Premium</td>
+                <td>All</td>
+                <td>Free</td>
+                <td>None</td>
+              </tr>
+              <tr>
+                <td>Ultimate</td>
+                <td>All</td>
+                <td>Free</td>
+                <td>None</td>
+              </tr>
+              <tr>
+                <td>Ultimate+</td>
+                <td>All</td>
+                <td>Free</td>
+                <td>None</td>
+              </tr>
+              <tr>
+                <td>Ultimate Elite+</td>
+                <td>All</td>
+                <td>Free</td>
+                <td>None</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="mb-lg">
+          <span>✨ Cute ✨</span>
+        </div>
+        <div class="row gap-lg mb-lg">
+          <a href="https://aluminiumcss.turbofuro.com">Aluminium CSS</a>
+          <a href="https://github.com/pr0gramista/aluminiumcss">GitHub</a>
+        </div>
+        <div class="text-sm">Copyright &copy; 2024</div>
+      </div>
+    </footer>
+  </body>
+</html>
