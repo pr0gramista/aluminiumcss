@@ -1,8 +1,10 @@
 {
   "name": "aluminiumcss",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Minimal CSS boilerplate to make your next page shine",
-  "main": "build.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "node build.js",
     "dev": "nodemon --watch 'style.css' --watch 'index.template.html' --watch parts build.js",
