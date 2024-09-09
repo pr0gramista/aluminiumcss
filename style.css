@@ -723,7 +723,23 @@ th.alu {
 
 /* Inputs */
 .alu-all input[type="text"]:not(.notalu):not(.notalu input),
-input[type="text"].alu {
+.alu-all input[type="password"]:not(.notalu):not(.notalu input),
+.alu-all input[type="color"]:not(.notalu):not(.notalu input),
+.alu-all input[type="date"]:not(.notalu):not(.notalu input),
+.alu-all input[type="time"]:not(.notalu):not(.notalu input),
+.alu-all input[type="week"]:not(.notalu):not(.notalu input),
+.alu-all input[type="number"]:not(.notalu):not(.notalu input),
+.alu-all input[type="datetime-local"]:not(.notalu):not(.notalu input),
+.alu-all input[type="month"]:not(.notalu):not(.notalu input),
+input[type="text"].alu,
+input[type="password"].alu,
+input[type="color"].alu,
+input[type="date"].alu,
+input[type="time"].alu,
+input[type="week"].alu,
+input[type="number"].alu,
+input[type="datetime-local"].alu,
+input[type="month"].alu {
   border-radius: var(--alu-border-radius);
   padding-block: unset;
   padding-inline: unset;
@@ -820,6 +836,16 @@ button.primary.alu:disabled {
   border-color: var(--alu-button-disabled-background);
 }
 
+input[type="file"]:not(.notalu):not(.notalu input)::file-selector-button,
+input[type="file"].alu::file-selector-button {
+  margin-right: var(--alu-md-gap);
+}
+
+.alu-all input[type="submit"]:not(.notalu):not(.notalu input),
+input[type="submit"].alu,
+.alu-all
+  input[type="file"]:not(.notalu):not(.notalu input)::file-selector-button,
+input[type="file"].alu::file-selector-button,
 .alu-all button:not(.notalu button):not(.notalu),
 button.alu {
   border-radius: var(--alu-border-radius);
