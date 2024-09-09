@@ -33,6 +33,11 @@
   --alu-details-background: #f5f5f5;
   --alu-details-color: black;
 
+  --alu-progress-background: #f5f5f5;
+  --alu-progress-height: var(--alu-md-gap);
+
+  --alu-spinner-size: 24px;
+
   --alu-focus-color: #3d79d4cc;
   --alu-active-color: #3d79d4;
 
@@ -624,7 +629,7 @@ body.alu {
 }
 
 .alu-all .debug:not(.notalu):not(.notalu .debug),
-.debug.alu-all {
+.debug.alu {
   border: 1px solid red;
   min-width: 50px;
   min-height: 50px;
@@ -632,7 +637,7 @@ body.alu {
 }
 
 .alu-all a:not(.notalu):not(.notalu a),
-a.alu-all {
+a.alu {
   text-decoration: underline;
   color: var(--alu-link-color);
 }
@@ -652,6 +657,46 @@ blockquote.alu {
   margin-top: var(--alu-lg-gap);
   margin-bottom: var(--alu-lg-gap);
   color: var(--alu-blockquote-color);
+}
+
+.alu-all progress:not(.notalu):not(.notalu progress),
+progress.alu {
+  border-width: var(--alu-border-width);
+  border-style: solid;
+  border-color: var(--alu-border-color);
+  height: var(--alu-progress-height);
+  border-radius: var(--alu-border-radius);
+  accent-color: var(--alu-active-color);
+}
+
+.alu-all progress:not(.notalu):not(.notalu progress)::-webkit-progress-bar,
+progress.alu::-webkit-progress-bar {
+  background: var(--alu-progress-background);
+}
+
+.alu-all progress:not(.notalu):not(.notalu progress)::-webkit-progress-value,
+progress.alu::-webkit-progress-value {
+  background: var(--alu-active-color);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.alu-all .spinner:not(.notalu):not(.notalu .spinner),
+.spinner.alu {
+  width: var(--alu-spinner-size);
+  height: var(--alu-spinner-size);
+  border: 2px solid var(--alu-active-color);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 1s linear infinite;
 }
 
 .alu-all pre:not(.notalu):not(.notalu pre),

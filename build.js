@@ -48,6 +48,8 @@ const outputPage = mustache.render(template, {
   container: fs.readFileSync("parts/container.html", "utf8"),
   positioning: fs.readFileSync("parts/positioning.html", "utf8"),
   customization: fs.readFileSync("parts/customization.html", "utf8"),
+  progress: fs.readFileSync("parts/progress.html", "utf8"),
+  spinner: fs.readFileSync("parts/spinner.html", "utf8"),
 });
 
 fs.writeFileSync("index.html", outputPage);
