@@ -503,7 +503,7 @@
 
 .alu-all .p-md:not(.notalu):not(.notalu .p-md),
 .alu.p-md {
-  margin: var(--alu-md-gap);
+  padding: var(--alu-md-gap);
 }
 
 .alu-all .pt-md:not(.notalu):not(.notalu .pt-md),
@@ -826,11 +826,6 @@ input.alu:focus-visible {
   outline: none;
 }
 
-.alu-all input[type="text"]:not(.notalu):not(.notalu input[type="text"]),
-input.alu[type="text"] {
-  width: 100%;
-}
-
 .alu-all select:not(.notalu):not(.notalu select),
 select.alu {
   border-radius: var(--alu-border-radius);
@@ -923,7 +918,6 @@ button.alu:disabled {
 .alu-all textarea:not(.notalu):not(.notalu textarea),
 textarea.alu {
   border-radius: var(--alu-border-radius);
-  width: 100%;
   padding: var(--alu-input-padding);
   font-family: var(--alu-input-font-family);
   border-width: var(--alu-border-width);
