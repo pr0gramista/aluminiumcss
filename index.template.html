@@ -62,7 +62,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         There are also classes for positioning elements like <code>top-sm</code> or <code>right-xl</code>.
       </p>
       {{{positioning}}}
-      <pre><code class="language-html mv-md">{{positioning}}</code></pre>
+      <pre><code class="language-html my-md">{{positioning}}</code></pre>
       <h3 id="selective">Selective styling</h3>
       <p>
           Aluminium CSS is designed to be easily used with other CSS styles. You can apply it globally by putting the <code>.alu-all</code> class on the <code>body</code> element, or you can use it selectively by adding <code>.alu</code> class to specific elements.
@@ -73,10 +73,12 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       <div class="column gap-md">
         {{{selective}}}
       </div>
-      <pre><code class="language-html mv-md">{{selective}}</code></pre>
+      <pre><code class="language-html my-md">{{selective}}</code></pre>
       <h3 id="link">Link</h3>
       <a href="#link">Link</a>
-      <pre><code class="language-html mv-md">&lt;a href="#link"&gt;Link&lt;/a&gt;</code></pre>
+      <a href="#link" class="interactive">Link interactive</a>
+      <pre><code class="language-html my-md">&lt;a href="#link"&gt;Link&lt;/a&gt;
+&lt;a class="interactive" href="#link"&gt;Link interactive&lt;/a&gt;</code></pre>
       <h3 id="abbr">Abbreviation</h3>
       <p>
         Abbreviation can be used to show an acronym or abbreviation. Hover over the abbreviation to see the full text.
@@ -84,19 +86,19 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       <p>
         <abbr title="HyperText Markup Language">HTML</abbr> is the code that is used to structure a web page and its content.
       </p>
-      <pre><code class="language-html mv-md">&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; is the code that is used to structure a web page and its content.</code></pre>
+      <pre><code class="language-html my-md">&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; is the code that is used to structure a web page and its content.</code></pre>
       <h3 id="blockquote">Blockquote</h3>
       {{{blockquote}}}
-      <pre><code class="language-html mv-md">{{blockquote}}</code></pre>
+      <pre><code class="language-html my-md">{{blockquote}}</code></pre>
       <h3 id="progress">Progress</h3>
       <p>
         While the <code>progress</code> element has ability to show indeterminate progress, it is not supported by Aluminium CSS. To show indeterminate progress you can use the <a href="#spinner">spinner</a> element instead.
       </p>
       {{{progress}}}
-      <pre><code class="language-html mv-md">{{progress}}</code></pre>
+      <pre><code class="language-html my-md">{{progress}}</code></pre>
       <h3 id="spinner">Spinner</h3>
       {{{spinner}}}
-      <pre><code class="language-html mv-md">{{spinner}}</code></pre>
+      <pre><code class="language-html my-md">{{spinner}}</code></pre>
       <h3 id="debug">
         Debug
       </h3>
@@ -104,15 +106,15 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         Debug is a div element with minimum size and a bit of color. Useful for debugging.
       </p>
       <div class="debug">Debug</div>
-      <pre><code class="language-html mv-md">&lt;div class="debug"&gt;Debug&lt;/div&gt;</code></pre>
+      <pre><code class="language-html my-md">&lt;div class="debug"&gt;Debug&lt;/div&gt;</code></pre>
       <h3 id="table">Table</h3>
       {{{table}}}
-      <pre><code class="language-html mv-md">{{table}}</code></pre>
+      <pre><code class="language-html my-md">{{table}}</code></pre>
       <h3 id="input">
         Input
       </h3>
       {{{input}}}
-      <pre><code class="language-html mv-md">{{input}}</code></pre>
+      <pre><code class="language-html my-md">{{input}}</code></pre>
       <h3 id="textarea">
         Textarea
       </h3>
@@ -120,33 +122,33 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         Textarea is a multi-line text field element
       </p>
       {{{textarea}}}
-      <pre><code class="language-html mv-md">{{textarea}}</code></pre>
+      <pre><code class="language-html my-md">{{textarea}}</code></pre>
       <h3 id="checkbox">
         Checkbox
       </h3>
       <div class="column gap-sm">
         {{{checkbox}}}
       </div>
-      <pre><code class="language-html mv-md">{{checkbox}}</code></pre>
+      <pre><code class="language-html my-md">{{checkbox}}</code></pre>
       <h3 id="radio">
         Radio
       </h3>
       <div class="column gap-sm">
         {{{radio}}}
       </div>
-      <pre><code class="language-html mv-md">{{radio}}</code></pre>
+      <pre><code class="language-html my-md">{{radio}}</code></pre>
       <h3 id="button">
         Button
       </h3>
       <div class="row gap-md">
         {{{button}}}
       </div>
-      <pre><code class="language-html mv-md">{{button}}</code></pre>
+      <pre><code class="language-html my-md">{{button}}</code></pre>
       <h3 id="select">
         Select
       </h3>
       {{{select}}}
-      <pre><code class="language-html mv-md">{{select}}</code></pre>
+      <pre><code class="language-html my-md">{{select}}</code></pre>
       <h3 id="row">
         Row
       </h3>
@@ -154,7 +156,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         Row is a flex container
       </p>
       {{{row}}}
-      <pre><code class="language-html mv-md">{{row}}</code></pre>
+      <pre><code class="language-html my-md">{{row}}</code></pre>
       <h3 id="column">
         Column
       </h3>
@@ -162,22 +164,22 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         Column is a flex container
       </p>
       {{{column}}}
-      <pre><code class="language-html mv-md">{{column}}</code></pre>
+      <pre><code class="language-html my-md">{{column}}</code></pre>
       </p>
       <h3 id="centered">
         Centered row/column
       </h3>
       <p>
-        Centered items applies: <code>justify-content: center; align-items: center;</code>
+        Centered items applies either one or both of <code>justify-content: center; align-items: center;</code>
       </p>
       {{{centered}}}
-      <pre><code class="language-html mv-md">{{centered}}</code></pre>
+      <pre><code class="language-html my-md">{{centered}}</code></pre>
       <h3 id="spacer">Spacer</h3>
       <p>
         Spacer is a div element that fills the available space in a flexbox container
       </p>
       {{{spacer}}}
-      <pre><code class="language-html mv-md">{{spacer}}</code></pre>
+      <pre><code class="language-html my-md">{{spacer}}</code></pre>
     </div>
     <h3 id="container">
       Container
@@ -191,7 +193,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
     {{{container}}}
   </div>
   <div class="container">
-    <pre><code class="language-html mv-md">{{container}}</code></pre>
+    <pre><code class="language-html my-md">{{container}}</code></pre>
     <h3 id="details">Details</h3>
     <p>
       Details is a collapsible element
@@ -199,7 +201,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
     <div class="column gap-md" style="max-width: 500px">
       {{{details}}}
     </div>
-    <pre><code class="language-html mv-md">{{details}}</code></pre>
+    <pre><code class="language-html my-md">{{details}}</code></pre>
     <h3 id="dialog">
       Dialog
     </h3>
@@ -207,7 +209,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       Dialog is a modal dialog element
     </p>
     {{{dialog}}}
-    <pre><code class="language-html mv-md">{{dialog}}</code></pre>
+    <pre><code class="language-html my-md">{{dialog}}</code></pre>
   </div>
   <div class="container">
     <h3 id="grid">Grid</h3>
@@ -216,12 +218,12 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       The classes mimic the Bootstrap grid system, but the implementation is based on CSS grid instead.
     </p>
     {{{grid}}}
-    <pre><code class="language-html mv-md">{{grid}}</code></pre>
+    <pre><code class="language-html my-md">{{grid}}</code></pre>
     <p>
       If no class is applied the column will be 1/12th of the grid.
     </p>
     {{{gridDefault}}}
-    <pre><code class="language-html mv-md">{{gridDefault}}</code></pre>
+    <pre><code class="language-html my-md">{{gridDefault}}</code></pre>
     <h3 id="nav">
       Navbar
     </h3>
@@ -231,14 +233,14 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   </div>
   {{{nav}}}
   <div class="container">
-    <pre><code class="language-html mv-md">{{nav}}</code></pre>
+    <pre><code class="language-html my-md">{{nav}}</code></pre>
     <h3 id="footer">
       Footer
     </h3>
     <p>
       Footer is a footer element
     </p>
-    <pre><code class="language-html mv-md">{{footer}}</code></pre>
+    <pre><code class="language-html my-md">{{footer}}</code></pre>
   </div>
   {{{footer}}}
   <script>hljs.highlightAll();</script>

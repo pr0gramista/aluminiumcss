@@ -94,12 +94,12 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   </div>
   <div class="absolute top-xl right-xl debug">From top</div>
   <div class="absolute bottom-sm right-sm debug">From bottom</div>
-  <div class="mh-lg mv-sm debug">
+  <div class="mh-lg my-sm debug">
     Large margin from left and right Small from top and bottom
   </div>
 </div>
 
-      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;relative&quot;&gt;
+      <pre><code class="language-html my-md">&lt;div class&#x3D;&quot;relative&quot;&gt;
   &lt;div class&#x3D;&quot;row gap-sm mb-sm&quot;&gt;
     &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
     &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
@@ -122,7 +122,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   &lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;absolute top-xl right-xl debug&quot;&gt;From top&lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;absolute bottom-sm right-sm debug&quot;&gt;From bottom&lt;&#x2F;div&gt;
-  &lt;div class&#x3D;&quot;mh-lg mv-sm debug&quot;&gt;
+  &lt;div class&#x3D;&quot;mh-lg my-sm debug&quot;&gt;
     Large margin from left and right Small from top and bottom
   &lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
@@ -150,7 +150,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 </div>
 
       </div>
-      <pre><code class="language-html mv-md">&lt;!-- .alu-all is applied to the body --&gt;
+      <pre><code class="language-html my-md">&lt;!-- .alu-all is applied to the body --&gt;
 &lt;div&gt;
   &lt;button&gt;Styled via parent&lt;&#x2F;button&gt;
 &lt;&#x2F;div&gt;
@@ -166,7 +166,9 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 </code></pre>
       <h3 id="link">Link</h3>
       <a href="#link">Link</a>
-      <pre><code class="language-html mv-md">&lt;a href="#link"&gt;Link&lt;/a&gt;</code></pre>
+      <a href="#link" class="interactive">Link interactive</a>
+      <pre><code class="language-html my-md">&lt;a href="#link"&gt;Link&lt;/a&gt;
+&lt;a class="interactive" href="#link"&gt;Link interactive&lt;/a&gt;</code></pre>
       <h3 id="abbr">Abbreviation</h3>
       <p>
         Abbreviation can be used to show an acronym or abbreviation. Hover over the abbreviation to see the full text.
@@ -174,14 +176,14 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       <p>
         <abbr title="HyperText Markup Language">HTML</abbr> is the code that is used to structure a web page and its content.
       </p>
-      <pre><code class="language-html mv-md">&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; is the code that is used to structure a web page and its content.</code></pre>
+      <pre><code class="language-html my-md">&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; is the code that is used to structure a web page and its content.</code></pre>
       <h3 id="blockquote">Blockquote</h3>
       <blockquote>
   <p class="mb-md">It’s not faith in technology. It’s faith in people.</p>
   ~ Steve Jobs
 </blockquote>
 
-      <pre><code class="language-html mv-md">&lt;blockquote&gt;
+      <pre><code class="language-html my-md">&lt;blockquote&gt;
   &lt;p class&#x3D;&quot;mb-md&quot;&gt;It’s not faith in technology. It’s faith in people.&lt;&#x2F;p&gt;
   ~ Steve Jobs
 &lt;&#x2F;blockquote&gt;
@@ -192,12 +194,12 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       </p>
       <progress value="75" max="100"></progress>
 
-      <pre><code class="language-html mv-md">&lt;progress value&#x3D;&quot;75&quot; max&#x3D;&quot;100&quot;&gt;&lt;&#x2F;progress&gt;
+      <pre><code class="language-html my-md">&lt;progress value&#x3D;&quot;75&quot; max&#x3D;&quot;100&quot;&gt;&lt;&#x2F;progress&gt;
 </code></pre>
       <h3 id="spinner">Spinner</h3>
       <div class="spinner"></div>
 
-      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;spinner&quot;&gt;&lt;&#x2F;div&gt;
+      <pre><code class="language-html my-md">&lt;div class&#x3D;&quot;spinner&quot;&gt;&lt;&#x2F;div&gt;
 </code></pre>
       <h3 id="debug">
         Debug
@@ -206,7 +208,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         Debug is a div element with minimum size and a bit of color. Useful for debugging.
       </p>
       <div class="debug">Debug</div>
-      <pre><code class="language-html mv-md">&lt;div class="debug"&gt;Debug&lt;/div&gt;</code></pre>
+      <pre><code class="language-html my-md">&lt;div class="debug"&gt;Debug&lt;/div&gt;</code></pre>
       <h3 id="table">Table</h3>
       <table>
   <tr>
@@ -235,7 +237,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   </tr>
 </table>
 
-      <pre><code class="language-html mv-md">&lt;table&gt;
+      <pre><code class="language-html my-md">&lt;table&gt;
   &lt;tr&gt;
     &lt;th&gt;Country&lt;&#x2F;th&gt;
     &lt;th&gt;Capital&lt;&#x2F;th&gt;
@@ -277,7 +279,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   <input type="submit" />
 </div>
 
-      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;column gap-sm&quot;&gt;
+      <pre><code class="language-html my-md">&lt;div class&#x3D;&quot;column gap-sm&quot;&gt;
   &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Enter your name&quot; &#x2F;&gt;
   &lt;input type&#x3D;&quot;text&quot; disabled placeholder&#x3D;&quot;Disabled input&quot; &#x2F;&gt;
   &lt;input type&#x3D;&quot;password&quot; placeholder&#x3D;&quot;Password&quot; &#x2F;&gt;
@@ -300,7 +302,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   <textarea disabled placeholder="Disabled textarea"></textarea>
 </div>
 
-      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;column gap-sm&quot;&gt;
+      <pre><code class="language-html my-md">&lt;div class&#x3D;&quot;column gap-sm&quot;&gt;
   &lt;textarea placeholder&#x3D;&quot;Enter your message&quot;&gt;&lt;&#x2F;textarea&gt;
   &lt;textarea disabled placeholder&#x3D;&quot;Disabled textarea&quot;&gt;&lt;&#x2F;textarea&gt;
 &lt;&#x2F;div&gt;
@@ -323,7 +325,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 </div>
 
       </div>
-      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;checkbox&quot;&gt;
+      <pre><code class="language-html my-md">&lt;div class&#x3D;&quot;checkbox&quot;&gt;
   &lt;input id&#x3D;&quot;check1&quot; type&#x3D;&quot;checkbox&quot; &#x2F;&gt;
   &lt;label for&#x3D;&quot;check1&quot;&gt;Checkbox&lt;&#x2F;label&gt;
 &lt;&#x2F;div&gt;
@@ -358,7 +360,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 </div>
 
       </div>
-      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;radio&quot;&gt;
+      <pre><code class="language-html my-md">&lt;div class&#x3D;&quot;radio&quot;&gt;
   &lt;input id&#x3D;&quot;radio1&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-examples&quot; &#x2F;&gt;
   &lt;label for&#x3D;&quot;radio1&quot;&gt;Radio&lt;&#x2F;label&gt;
 &lt;&#x2F;div&gt;
@@ -385,7 +387,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 <button disabled>Disabled</button>
 
       </div>
-      <pre><code class="language-html mv-md">&lt;button class&#x3D;&quot;primary&quot;&gt;Primary&lt;&#x2F;button&gt;
+      <pre><code class="language-html my-md">&lt;button class&#x3D;&quot;primary&quot;&gt;Primary&lt;&#x2F;button&gt;
 &lt;button class&#x3D;&quot;primary&quot; disabled&gt;Primary disabled&lt;&#x2F;button&gt;
 &lt;button&gt;Secondary&lt;&#x2F;button&gt;
 &lt;button disabled&gt;Disabled&lt;&#x2F;button&gt;
@@ -404,7 +406,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   <option>Option 3</option>
 </select>
 
-      <pre><code class="language-html mv-md">&lt;select&gt;
+      <pre><code class="language-html my-md">&lt;select&gt;
   &lt;option&gt;Option 1&lt;&#x2F;option&gt;
   &lt;option&gt;Option 2&lt;&#x2F;option&gt;
   &lt;option&gt;Option 3&lt;&#x2F;option&gt;
@@ -427,7 +429,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   <div class="debug">Item 3</div>
 </div>
 
-      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;row gap-md&quot;&gt;
+      <pre><code class="language-html my-md">&lt;div class&#x3D;&quot;row gap-md&quot;&gt;
   &lt;div class&#x3D;&quot;debug&quot;&gt;Item 1&lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;debug&quot;&gt;Item 2&lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;debug&quot;&gt;Item 3&lt;&#x2F;div&gt;
@@ -445,7 +447,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   <div class="debug">Item 3</div>
 </div>
 
-      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;column gap-md&quot;&gt;
+      <pre><code class="language-html my-md">&lt;div class&#x3D;&quot;column gap-md&quot;&gt;
   &lt;div class&#x3D;&quot;debug&quot;&gt;Item 1&lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;debug&quot;&gt;Item 2&lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;debug&quot;&gt;Item 3&lt;&#x2F;div&gt;
@@ -456,15 +458,67 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         Centered row/column
       </h3>
       <p>
-        Centered items applies: <code>justify-content: center; align-items: center;</code>
+        Centered items applies either one or both of <code>justify-content: center; align-items: center;</code>
       </p>
-      <div class="row centered gap-md">
+      <div class="row center gap-md mb-sm">
+  <div class="debug">Item 1</div>
+  <div class="debug">Item 2</div>
+  <div>Item 3</div>
+</div>
+<div class="row center-x gap-md mb-sm">
+  <div class="debug">Item 1</div>
+  <div class="debug">Item 2</div>
+  <div>Item 3</div>
+</div>
+<div class="row center-y gap-md mb-sm">
+  <div class="debug">Item 1</div>
+  <div class="debug">Item 2</div>
+  <div>Item 3</div>
+</div>
+<div
+  class="column center-x gap-md mb-sm"
+  style="height: 200px; background: #eee"
+>
+  <div class="debug">Item 1</div>
+  <div class="debug">Item 2</div>
+  <div>Item 3</div>
+</div>
+<div
+  class="column center-y gap-md mb-sm"
+  style="height: 200px; background: #eee"
+>
   <div class="debug">Item 1</div>
   <div class="debug">Item 2</div>
   <div>Item 3</div>
 </div>
 
-      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;row centered gap-md&quot;&gt;
+      <pre><code class="language-html my-md">&lt;div class&#x3D;&quot;row center gap-md mb-sm&quot;&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 1&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 2&lt;&#x2F;div&gt;
+  &lt;div&gt;Item 3&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;div class&#x3D;&quot;row center-x gap-md mb-sm&quot;&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 1&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 2&lt;&#x2F;div&gt;
+  &lt;div&gt;Item 3&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;div class&#x3D;&quot;row center-y gap-md mb-sm&quot;&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 1&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 2&lt;&#x2F;div&gt;
+  &lt;div&gt;Item 3&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;div
+  class&#x3D;&quot;column center-x gap-md mb-sm&quot;
+  style&#x3D;&quot;height: 200px; background: #eee&quot;
+&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 1&lt;&#x2F;div&gt;
+  &lt;div class&#x3D;&quot;debug&quot;&gt;Item 2&lt;&#x2F;div&gt;
+  &lt;div&gt;Item 3&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;div
+  class&#x3D;&quot;column center-y gap-md mb-sm&quot;
+  style&#x3D;&quot;height: 200px; background: #eee&quot;
+&gt;
   &lt;div class&#x3D;&quot;debug&quot;&gt;Item 1&lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;debug&quot;&gt;Item 2&lt;&#x2F;div&gt;
   &lt;div&gt;Item 3&lt;&#x2F;div&gt;
@@ -481,7 +535,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   <div class="debug">Item 3</div>
 </div>
 
-      <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;row gap-md w-full&quot;&gt;
+      <pre><code class="language-html my-md">&lt;div class&#x3D;&quot;row gap-md w-full&quot;&gt;
   &lt;div class&#x3D;&quot;debug&quot;&gt;Item 1&lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;debug&quot;&gt;Item 2&lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;spacer&quot;&gt;&lt;&#x2F;div&gt;
@@ -502,7 +556,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 
   </div>
   <div class="container">
-    <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;container&quot;&gt;This is a container&lt;&#x2F;div&gt;
+    <pre><code class="language-html my-md">&lt;div class&#x3D;&quot;container&quot;&gt;This is a container&lt;&#x2F;div&gt;
 </code></pre>
     <h3 id="details">Details</h3>
     <p>
@@ -515,11 +569,11 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 </details>
 <details>
   <summary><span>Block of text</span></summary>
-  <div class="ph-lg text-sm mb-md">
+  <div class="px-lg text-sm mb-md">
     Details come here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Donec
   </div>
-  <div class="ph-lg text-sm mb-lg">
+  <div class="px-lg text-sm mb-lg">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
     sit amet, per no tota corrumpit intellegam, ex per quas nostrud corrumpit.
     Ea alii sale interesset sed, ut graece liberavisse nam. Repudiare incorrupte
@@ -530,17 +584,17 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 </details>
 
     </div>
-    <pre><code class="language-html mv-md">&lt;details&gt;
+    <pre><code class="language-html my-md">&lt;details&gt;
   &lt;summary&gt;&lt;span&gt;Image&lt;&#x2F;span&gt;&lt;&#x2F;summary&gt;
   &lt;img src&#x3D;&quot;&#x2F;girl.jpg&quot; alt&#x3D;&quot;Girl&quot; style&#x3D;&quot;width: 100%; max-width: 500px&quot; &#x2F;&gt;
 &lt;&#x2F;details&gt;
 &lt;details&gt;
   &lt;summary&gt;&lt;span&gt;Block of text&lt;&#x2F;span&gt;&lt;&#x2F;summary&gt;
-  &lt;div class&#x3D;&quot;ph-lg text-sm mb-md&quot;&gt;
+  &lt;div class&#x3D;&quot;px-lg text-sm mb-md&quot;&gt;
     Details come here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Donec
   &lt;&#x2F;div&gt;
-  &lt;div class&#x3D;&quot;ph-lg text-sm mb-lg&quot;&gt;
+  &lt;div class&#x3D;&quot;px-lg text-sm mb-lg&quot;&gt;
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
     sit amet, per no tota corrumpit intellegam, ex per quas nostrud corrumpit.
     Ea alii sale interesset sed, ut graece liberavisse nam. Repudiare incorrupte
@@ -557,7 +611,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
       Dialog is a modal dialog element
     </p>
     <dialog id="dialog-example" style="min-width: 400px">
-  <h5 class="mv-sm mb-lg">Add new item</h5>
+  <h5 class="my-sm mb-lg">Add new item</h5>
   <input class="mb-sm" type="text" placeholder="Enter item name" />
   <div class="inverted-row gap-md">
     <button
@@ -578,8 +632,8 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   Open dialog
 </button>
 
-    <pre><code class="language-html mv-md">&lt;dialog id&#x3D;&quot;dialog-example&quot; style&#x3D;&quot;min-width: 400px&quot;&gt;
-  &lt;h5 class&#x3D;&quot;mv-sm mb-lg&quot;&gt;Add new item&lt;&#x2F;h5&gt;
+    <pre><code class="language-html my-md">&lt;dialog id&#x3D;&quot;dialog-example&quot; style&#x3D;&quot;min-width: 400px&quot;&gt;
+  &lt;h5 class&#x3D;&quot;my-sm mb-lg&quot;&gt;Add new item&lt;&#x2F;h5&gt;
   &lt;input class&#x3D;&quot;mb-sm&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Enter item name&quot; &#x2F;&gt;
   &lt;div class&#x3D;&quot;inverted-row gap-md&quot;&gt;
     &lt;button
@@ -616,7 +670,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   <div class="debug col-lg-2 col-md-3 col-xs-6">col-lg-2 col-md-3 col-xs-6</div>
 </div>
 
-    <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;grid mb-lg&quot;&gt;
+    <pre><code class="language-html my-md">&lt;div class&#x3D;&quot;grid mb-lg&quot;&gt;
   &lt;div class&#x3D;&quot;debug col-lg-2 col-md-3 col-xs-6&quot;&gt;col-lg-2 col-md-3 col-xs-6&lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;debug col-lg-2 col-md-3 col-xs-6&quot;&gt;col-lg-2 col-md-3 col-xs-6&lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;debug col-lg-2 col-md-3 col-xs-6&quot;&gt;col-lg-2 col-md-3 col-xs-6&lt;&#x2F;div&gt;
@@ -638,7 +692,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   <div class="debug"></div>
 </div>
 
-    <pre><code class="language-html mv-md">&lt;div class&#x3D;&quot;grid&quot;&gt;
+    <pre><code class="language-html my-md">&lt;div class&#x3D;&quot;grid&quot;&gt;
   &lt;div class&#x3D;&quot;debug col-lg-3 col-md-2 col-xs-6&quot;&gt;col-lg-3 col-md-2 col-xs-6&lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;debug&quot;&gt;&lt;&#x2F;div&gt;
@@ -687,7 +741,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 </nav>
 
   <div class="container">
-    <pre><code class="language-html mv-md">&lt;nav&gt;
+    <pre><code class="language-html my-md">&lt;nav&gt;
   &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;nav-check&quot; &#x2F;&gt;
   &lt;div class&#x3D;&quot;nav-top&quot;&gt;
     &lt;label for&#x3D;&quot;nav-check&quot; id&#x3D;&quot;nav-button&quot;&gt;
@@ -724,7 +778,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
     <p>
       Footer is a footer element
     </p>
-    <pre><code class="language-html mv-md">&lt;footer&gt;
+    <pre><code class="language-html my-md">&lt;footer&gt;
   &lt;div class&#x3D;&quot;container&quot;&gt;
     &lt;div class&#x3D;&quot;mb-s&quot;&gt;
       &lt;span class&#x3D;&quot;font-mono&quot;&gt;Aluminium CSS&lt;&#x2F;span&gt;

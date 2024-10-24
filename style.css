@@ -279,14 +279,14 @@
   margin-right: auto;
 }
 
-.alu-all .mh-auto:not(.notalu):not(.notalu .mh-auto),
-.alu.mh-auto {
+.alu-all .mx-auto:not(.notalu):not(.notalu .mx-auto),
+.alu.mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
-.alu-all .mv-auto:not(.notalu):not(.notalu .mv-auto),
-.alu.mv-auto {
+.alu-all .my-auto:not(.notalu):not(.notalu .my-auto),
+.alu.my-auto {
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -311,14 +311,14 @@
   margin-bottom: var(--alu-sm-gap);
 }
 
-.alu-all .mv-sm:not(.notalu):not(.notalu .mv-sm),
-.alu.mv-sm {
+.alu-all .my-sm:not(.notalu):not(.notalu .my-sm),
+.alu.my-sm {
   margin-top: var(--alu-sm-gap);
   margin-bottom: var(--alu-sm-gap);
 }
 
-.alu-all .mh-sm:not(.notalu):not(.notalu .mh-sm),
-.alu.mh-sm {
+.alu-all .mx-sm:not(.notalu):not(.notalu .mx-sm),
+.alu.mx-sm {
   margin-left: var(--alu-sm-gap);
   margin-right: var(--alu-sm-gap);
 }
@@ -353,14 +353,14 @@
   margin-bottom: var(--alu-md-gap);
 }
 
-.alu-all .mv-md:not(.notalu):not(.notalu .mv-md),
-.alu.mv-md {
+.alu-all .my-md:not(.notalu):not(.notalu .my-md),
+.alu.my-md {
   margin-top: var(--alu-md-gap);
   margin-bottom: var(--alu-md-gap);
 }
 
-.alu-all .mh-md:not(.notalu):not(.notalu .mh-md),
-.alu.mh-md {
+.alu-all .mx-md:not(.notalu):not(.notalu .mx-md),
+.alu.mx-md {
   margin-left: var(--alu-md-gap);
   margin-right: var(--alu-md-gap);
 }
@@ -395,14 +395,14 @@
   margin-bottom: var(--alu-lg-gap);
 }
 
-.alu-all .mv-lg:not(.notalu):not(.notalu .mv-lg),
-.alu.mv-lg {
+.alu-all .my-lg:not(.notalu):not(.notalu .my-lg),
+.alu.my-lg {
   margin-top: var(--alu-lg-gap);
   margin-bottom: var(--alu-lg-gap);
 }
 
-.alu-all .mh-lg:not(.notalu):not(.notalu .mh-lg),
-.alu.mh-lg {
+.alu-all .mx-lg:not(.notalu):not(.notalu .mx-lg),
+.alu.mx-lg {
   margin-left: var(--alu-lg-gap);
   margin-right: var(--alu-lg-gap);
 }
@@ -437,14 +437,14 @@
   margin-bottom: var(--alu-xl-gap);
 }
 
-.alu-all .mv-xl:not(.notalu):not(.notalu .mv-xl),
-.alu.mv-xl {
+.alu-all .my-xl:not(.notalu):not(.notalu .my-xl),
+.alu.my-xl {
   margin-top: var(--alu-xl-gap);
   margin-bottom: var(--alu-xl-gap);
 }
 
-.alu-all .mh-xl:not(.notalu):not(.notalu .mh-xl),
-.alu.mh-xl {
+.alu-all .mx-xl:not(.notalu):not(.notalu .mx-xl),
+.alu.mx-xl {
   margin-left: var(--alu-xl-gap);
   margin-right: var(--alu-xl-gap);
 }
@@ -474,14 +474,14 @@
   padding-bottom: var(--alu-sm-gap);
 }
 
-.alu-all .pv-sm:not(.notalu):not(.notalu .pv-sm),
-.alu.pv-sm {
+.alu-all .px-sm:not(.notalu):not(.notalu .px-sm),
+.alu.px-sm {
   padding-top: var(--alu-sm-gap);
   padding-bottom: var(--alu-sm-gap);
 }
 
-.alu-all .ph-sm:not(.notalu):not(.notalu .ph-sm),
-.alu.ph-sm {
+.alu-all .px-sm:not(.notalu):not(.notalu .px-sm),
+.alu.px-sm {
   padding-left: var(--alu-sm-gap);
   padding-right: var(--alu-sm-gap);
 }
@@ -516,14 +516,14 @@
   padding-bottom: var(--alu-md-gap);
 }
 
-.alu-all .pv-md:not(.notalu):not(.notalu .pv-md),
-.alu.pv-md {
+.alu-all .px-md:not(.notalu):not(.notalu .px-md),
+.alu.px-md {
   padding-top: var(--alu-md-gap);
   padding-bottom: var(--alu-md-gap);
 }
 
-.alu-all .ph-md:not(.notalu):not(.notalu .ph-md),
-.alu.ph-md {
+.alu-all .px-md:not(.notalu):not(.notalu .px-md),
+.alu.px-md {
   padding-left: var(--alu-md-gap);
   padding-right: var(--alu-md-gap);
 }
@@ -553,14 +553,14 @@
   padding-bottom: var(--alu-lg-gap);
 }
 
-.alu-all .pv-lg:not(.notalu):not(.notalu .pv-lg),
-.alu.pv-lg {
+.alu-all .px-lg:not(.notalu):not(.notalu .px-lg),
+.alu.px-lg {
   padding-top: var(--alu-lg-gap);
   padding-bottom: var(--alu-lg-gap);
 }
 
-.alu-all .ph-lg:not(.notalu):not(.notalu .ph-lg),
-.alu.ph-lg {
+.alu-all .px-lg:not(.notalu):not(.notalu .px-lg),
+.alu.px-lg {
   padding-left: var(--alu-lg-gap);
   padding-right: var(--alu-lg-gap);
 }
@@ -590,14 +590,14 @@
   padding-bottom: var(--alu-xl-gap);
 }
 
-.alu-all .pv-xl:not(.notalu):not(.notalu .pv-xl),
-.alu.pv-xl {
+.alu-all .px-xl:not(.notalu):not(.notalu .px-xl),
+.alu.px-xl {
   padding-top: var(--alu-xl-gap);
   padding-bottom: var(--alu-xl-gap);
 }
 
-.alu-all .ph-xl:not(.notalu):not(.notalu .ph-xl),
-.alu.ph-xl {
+.alu-all .px-xl:not(.notalu):not(.notalu .px-xl),
+.alu.px-xl {
   padding-left: var(--alu-xl-gap);
   padding-right: var(--alu-xl-gap);
 }
@@ -646,6 +646,17 @@ a.alu {
 a.alu:focus {
   box-shadow: 0 0 0 2px var(--alu-focus-color);
   outline: none;
+}
+
+.alu-all a.interactive:not(.notalu):not(.notalu a),
+a.alu.interactive {
+  text-decoration: none;
+  color: var(--alu-link-color);
+}
+
+.alu-all a.interactive:not(.notalu):not(.notalu a):hover,
+a.alu.interactive:hover {
+  text-decoration: underline;
 }
 
 .alu-all blockquote:not(.notalu):not(.notalu a),
@@ -1278,20 +1289,35 @@ h6.alu {
   flex-direction: column;
 }
 
-.alu-all .centered:not(.notalu):not(.notalu .centered),
-.centered.alu {
+.alu-all .center:not(.notalu):not(.notalu .center),
+.center.alu {
   justify-content: center;
   align-items: center;
 }
 
-.alu-all .align-items:not(.notalu):not(.notalu .align-items),
-.align-items.alu {
+.alu-all .row.center-x:not(.notalu):not(.notalu .row.center-x),
+.row.center-x.alu {
+  justify-content: center;
+}
+
+.alu-all .row.center-y:not(.notalu):not(.notalu .row.center-y),
+.row.center-y.alu {
   align-items: center;
 }
 
-.alu-all .justify-content:not(.notalu):not(.notalu .justify-content),
-.justify-content.alu {
+.alu-all .column.center-x:not(.notalu):not(.notalu .column.center-x),
+.column.center-x.alu {
+  align-items: center;
+}
+
+.alu-all .column.center-y:not(.notalu):not(.notalu .column.center-y),
+.column.center-y.alu {
   justify-content: center;
+}
+
+.alu-all .grow:not(.notalu):not(.notalu .grow),
+.alu.grow {
+  flex-grow: 1;
 }
 
 .alu-all .spacer:not(.notalu):not(.notalu .spacer),
