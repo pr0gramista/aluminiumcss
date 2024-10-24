@@ -1,6 +1,6 @@
 {
   "name": "aluminiumcss",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Minimal CSS boilerplate to make your next page shine",
   "files": [
     "dist"
