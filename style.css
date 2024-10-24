@@ -659,6 +659,11 @@ a.alu.interactive:hover {
   text-decoration: underline;
 }
 
+.alu-all a.non-interactive:not(.notalu):not(.notalu a),
+a.alu.non-interactive {
+  text-decoration: none;
+}
+
 .alu-all blockquote:not(.notalu):not(.notalu a),
 blockquote.alu {
   border-left: var(--alu-blockquote-ornamentation);
