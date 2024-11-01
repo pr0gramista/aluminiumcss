@@ -94,7 +94,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   </div>
   <div class="absolute top-xl right-xl debug">From top</div>
   <div class="absolute bottom-sm right-sm debug">From bottom</div>
-  <div class="mh-lg my-sm debug">
+  <div class="mx-lg my-sm debug">
     Large margin from left and right Small from top and bottom
   </div>
 </div>
@@ -122,7 +122,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
   &lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;absolute top-xl right-xl debug&quot;&gt;From top&lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;absolute bottom-sm right-sm debug&quot;&gt;From bottom&lt;&#x2F;div&gt;
-  &lt;div class&#x3D;&quot;mh-lg my-sm debug&quot;&gt;
+  &lt;div class&#x3D;&quot;mx-lg my-sm debug&quot;&gt;
     Large margin from left and right Small from top and bottom
   &lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
@@ -132,7 +132,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
           Aluminium CSS is designed to be easily used with other CSS styles. You can apply it globally by putting the <code>.alu-all</code> class on the <code>body</code> element, or you can use it selectively by adding <code>.alu</code> class to specific elements.
       </p>
       <p>
-        If you are using <code>.alu-all</code> but you want to remove styling from certain elements you can apply <code>.notalu</code> to the elements or their parent.
+        If you are using <code>.alu-all</code> but you want to remove styling from certain elements you can apply <code>.not-alu</code> to particular elements or <code>.not-alu-all</code> to their parent.
       </p>
       <div class="column gap-md">
         <!-- .alu-all is applied to the body -->
@@ -142,11 +142,18 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 <div>
   <button class="alu">Styled directly</button>
 </div>
-<div class="notalu">
+<div class="not-alu-all">
   <button>Unstyled via parent</button>
 </div>
 <div>
-  <button class="notalu">Unstyled directly</button>
+  <button class="not-alu">Unstyled directly</button>
+</div>
+<!-- Debug styles should not be applied as not-alu is added -->
+<div class="debug not-alu">
+  <button>
+    Still styled because <code>.not-alu</code> does not cancel
+    <code>.alu-all</code>
+  </button>
 </div>
 
       </div>
@@ -157,11 +164,18 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
 &lt;div&gt;
   &lt;button class&#x3D;&quot;alu&quot;&gt;Styled directly&lt;&#x2F;button&gt;
 &lt;&#x2F;div&gt;
-&lt;div class&#x3D;&quot;notalu&quot;&gt;
+&lt;div class&#x3D;&quot;not-alu-all&quot;&gt;
   &lt;button&gt;Unstyled via parent&lt;&#x2F;button&gt;
 &lt;&#x2F;div&gt;
 &lt;div&gt;
-  &lt;button class&#x3D;&quot;notalu&quot;&gt;Unstyled directly&lt;&#x2F;button&gt;
+  &lt;button class&#x3D;&quot;not-alu&quot;&gt;Unstyled directly&lt;&#x2F;button&gt;
+&lt;&#x2F;div&gt;
+&lt;!-- Debug styles should not be applied as not-alu is added --&gt;
+&lt;div class&#x3D;&quot;debug not-alu&quot;&gt;
+  &lt;button&gt;
+    Still styled because &lt;code&gt;.not-alu&lt;&#x2F;code&gt; does not cancel
+    &lt;code&gt;.alu-all&lt;&#x2F;code&gt;
+  &lt;&#x2F;button&gt;
 &lt;&#x2F;div&gt;
 </code></pre>
       <h3 id="link">Link</h3>
@@ -734,7 +748,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         />
       </svg>
     </label>
-    <div class="font-mono mh-md">Aluminium CSS</div>
+    <div class="font-mono mx-md">Aluminium CSS</div>
   </div>
   <div class="nav-links">
     <a class="nav-link" href="#installation">Installation</a>
@@ -766,7 +780,7 @@ require('aluminiumcss/dist/aluminium.min.css')</code></pre>
         &#x2F;&gt;
       &lt;&#x2F;svg&gt;
     &lt;&#x2F;label&gt;
-    &lt;div class&#x3D;&quot;font-mono mh-md&quot;&gt;Aluminium CSS&lt;&#x2F;div&gt;
+    &lt;div class&#x3D;&quot;font-mono mx-md&quot;&gt;Aluminium CSS&lt;&#x2F;div&gt;
   &lt;&#x2F;div&gt;
   &lt;div class&#x3D;&quot;nav-links&quot;&gt;
     &lt;a class&#x3D;&quot;nav-link&quot; href&#x3D;&quot;#installation&quot;&gt;Installation&lt;&#x2F;a&gt;

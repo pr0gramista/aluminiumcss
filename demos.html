@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aluminum CSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/jpeg" href="/icon.jpg" />
+    <link rel="stylesheet" type="text/css" href="dist/aluminium.min.css" />
+    <style>
+      .background {
+        min-height: 100vh;
+      }
+
+      .window {
+        border: var(--alu-border-width) solid var(--alu-border-color);
+        background: var(--alu-summary-background);
+        max-width: 400px;
+        width: 95%;
+        padding: var(--alu-xl-gap);
+      }
+    </style>
+  </head>
+  <body class="alu-all">
+    <div class="column centered background">
+      <div class="window">
+        <div class="text-xl mb-lg">Sign in</div>
+        <form action="/login" method="post">
+          <div class="column gap-sm mb-md">
+            <label>Password</label>
+            <input name="token" type="password" />
+          </div>
+          <input type="hidden" name="redirect" value="{{redirect}}" />
+          <button>Sign in</button>
+          {{#error}}
+          <div class="mt-md" style="color: red">{{error}}</div>
+          {{/error}}
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

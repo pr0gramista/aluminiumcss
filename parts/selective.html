@@ -5,9 +5,16 @@
 <div>
   <button class="alu">Styled directly</button>
 </div>
-<div class="notalu">
+<div class="not-alu-all">
   <button>Unstyled via parent</button>
 </div>
 <div>
-  <button class="notalu">Unstyled directly</button>
+  <button class="not-alu">Unstyled directly</button>
+</div>
+<!-- Debug styles should not be applied as not-alu is added -->
+<div class="debug not-alu">
+  <button>
+    Still styled because <code>.not-alu</code> does not cancel
+    <code>.alu-all</code>
+  </button>
 </div>
