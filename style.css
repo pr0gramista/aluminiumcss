@@ -38,6 +38,7 @@
 
   --alu-spinner-size: 24px;
 
+  --alu-background: white;
   --alu-focus-color: #3d79d4cc;
   --alu-active-color: #3d79d4;
 
@@ -66,6 +67,7 @@
   --alu-input-font-family: var(--alu-font-mono);
   --alu-input-font-size: var(--alu-font-size-sm);
   --alu-input-line-height: var(--alu-line-height-sm);
+  --alu-input-background: var(--alu-background);
 
   --alu-blockquote-ornamentation: 4px solid var(--alu-border-color);
   --alu-blockquote-color: var(--alu-secondary-color);
@@ -811,6 +813,7 @@ input[type="month"].alu {
   border-width: var(--alu-border-width);
   line-height: var(--alu-input-line-height);
   font-size: var(--alu-input-font-size);
+  background: var(--alu-input-background);
   outline: none;
   border-style: solid;
   border-color: var(--alu-border-color);
@@ -864,7 +867,7 @@ select.alu {
   outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: transparent;
+  background: var(--alu-input-background);
   background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
   background-repeat: no-repeat;
   background-position-x: 100%;
@@ -879,6 +882,34 @@ select.alu {
 select.alu:focus {
   box-shadow: 0 0 0 2px var(--alu-focus-color);
   outline: none;
+}
+
+.alu-all select[multiple]:not(.not-alu):not(.not-alu-all select[multiple]),
+select[multiple].alu {
+  border-radius: var(--alu-border-radius);
+  padding-block: unset;
+  padding-inline: unset;
+  /* padding: var(--alu-input-padding); */
+  border-width: var(--alu-border-width);
+  border-style: solid;
+  border-color: var(--alu-border-color);
+  font-family: var(--alu-input-font-family);
+  line-height: var(--alu-input-line-height);
+  font-size: var(--alu-input-font-size);
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  transition: border-color var(--alu-transition-duration),
+    background-color var(--alu-transition-duration),
+    box-shadow var(--alu-transition-duration);
+}
+
+.alu-all
+  select[multiple]:not(.not-alu):not(.not-alu-all select[multiple])
+  > option,
+select[multiple].alu > option {
+  padding: var(--alu-input-padding);
 }
 
 .alu-all select:not(.not-alu):not(.not-alu-all select):disabled,
@@ -948,6 +979,7 @@ textarea.alu {
   border-width: var(--alu-border-width);
   line-height: var(--alu-input-line-height);
   font-size: var(--alu-input-font-size);
+  background: var(--alu-input-background);
   outline: none;
   border-style: solid;
   border-color: var(--alu-border-color);
@@ -1433,6 +1465,7 @@ footer.alu {
     -webkit-appearance: none;
     -moz-appearance: none;
     height: 20px;
+    background: var(--alu-input-background);
     outline: none;
     display: inline-block;
     vertical-align: top;
@@ -1515,6 +1548,7 @@ footer.alu {
     vertical-align: top;
     position: relative;
     cursor: pointer;
+    background: var(--alu-input-background);
     border: var(--alu-border-width) solid var(--alu-border-color);
     transition: border-color var(--alu-transition-duration),
       background-color var(--alu-transition-duration),
