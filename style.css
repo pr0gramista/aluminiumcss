@@ -845,6 +845,13 @@ input[type="text"].alu::placeholder {
   color: var(--alu-secondary-color);
 }
 
+.alu-all
+  input[type="color"]:not(.not-alu):not(.not-alu-all input[type="color"]),
+input[type="color"].alu {
+  padding: 2px;
+  min-height: 40px;
+}
+
 /* For standard range / checkbox / radio using keyboard */
 .alu-all input:not(.not-alu):not(.not-alu-all input):focus-visible,
 input.alu:focus-visible {
