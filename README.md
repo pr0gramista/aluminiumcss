@@ -1,4 +1,4 @@
-![Logo](/icon64.jpg)
+![Logo](https://github.com/pr0gramista/aluminiumcss/raw/main/icon64.jpg)
 # Aluminum CSS
 Minimal CSS boilerplate to make your next page shine. 
 
