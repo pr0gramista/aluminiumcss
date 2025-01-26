@@ -28,6 +28,8 @@ And then import it in your JS file, assuming you are using a bundler:
 require('aluminiumcss/dist/aluminium.min.css')
 ```
 
+To apply styles add `.alu-all` to your body class or use `.alu` to particular elements.
+
 ## Motivation
 I have seen way too many bare HTML pages. While many other CSS styles exist there are't many that are minimal and easy to customize.
 I also kept missing some of the core Tailwind CSS utilities, so I included a variation of them in this project.
