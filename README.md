@@ -28,7 +28,7 @@ And then import it in your JS file, assuming you are using a bundler:
 require('aluminiumcss/dist/aluminium.min.css')
 ```
 
-To apply styles add `.alu-all` to your body class or use `.alu` to particular elements.
+To apply styles add `.alu-all` to your body class or use `.alu` on particular elements.
 
 ## Motivation
 I have seen way too many bare HTML pages. While many other CSS styles exist there are't many that are minimal and easy to customize.
