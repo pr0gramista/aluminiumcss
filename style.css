@@ -1378,7 +1378,6 @@ nav.alu {
   min-height: var(--alu-nav-height);
   position: sticky;
   display: flex;
-  justify-items: center;
   align-items: center;
   background: var(--alu-nav-background);
   color: var(--alu-nav-color);
